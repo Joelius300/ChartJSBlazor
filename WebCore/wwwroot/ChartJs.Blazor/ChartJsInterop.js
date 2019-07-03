@@ -19,6 +19,10 @@ if (!document.getElementById(cssId)) {  // only include once
     head.appendChild(link);
 }
 
+function getStringRep(object) {
+    return JSON.stringify(object);
+}
+
 
 /* Set up all the chartjs interop stuff */
 

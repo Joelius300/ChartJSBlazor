@@ -16,21 +16,33 @@ namespace ChartJs.Blazor.ChartJS
 {
     public static class ChartJsInterop
     {
-        public static Task<bool> SetupChart(this IJSRuntime jsRuntime, ChartConfigBase chartConfig)
+        public static async Task<bool> SetupChart(this IJSRuntime jsRuntime, ChartConfigBase chartConfig)
         {
             try
             {
+                Console.WriteLine();
+                Console.WriteLine("Direct: ");
+                Console.WriteLine(await jsRuntime.GetJsonRep(chartConfig));
+
                 dynamic dynParam = StripNulls(chartConfig);
                 Dictionary<string, object> param = ConvertExpandoObjectToDictionary(dynParam);
-                return jsRuntime.InvokeAsync<bool>("ChartJSInterop.SetupChart", param);
+
+                Console.WriteLine();
+                Console.WriteLine("Parsed to Expando and then dict: ");
+                Console.WriteLine(await jsRuntime.GetJsonRep(param));
+
+                return await jsRuntime.InvokeAsync<bool>("ChartJSInterop.SetupChart", param);
             }
             catch (Exception exp)
             {
                 Console.WriteLine($"Error while setting up chart: {exp.Message}");
             }
 
-            return Task.FromResult<bool>(false);
+            //return Task.FromResult<bool>(false);
+            return false;
         }
+
+        private static Task<string> GetJsonRep(this IJSRuntime jSRuntime, object obj) => jSRuntime.InvokeAsync<string>("getStringRep", obj);
 
         /// <summary>
         /// This method is specifically used to convert an <see cref="ExpandoObject"/> with a Tree structure to a <see cref="Dictionary{string, object}"/>.
@@ -78,9 +90,9 @@ namespace ChartJs.Blazor.ChartJS
         {
             try
             {
-                dynamic dynParam = StripNulls(chartConfig);
-                Dictionary<string, object> param = ConvertExpandoObjectToDictionary(dynParam);
-                return jsRuntime.InvokeAsync<bool>("ChartJSInterop.UpdateChart", param);
+                //dynamic dynParam = StripNulls(chartConfig);
+                //Dictionary<string, object> param = ConvertExpandoObjectToDictionary(dynParam);
+                return jsRuntime.InvokeAsync<bool>("ChartJSInterop.UpdateChart", chartConfig);
             }
             catch (Exception exp)
             {
@@ -99,14 +111,18 @@ namespace ChartJs.Blazor.ChartJS
         /// </summary>
         /// <param name="chartConfig"></param>
         /// <returns></returns>
-        private static ExpandoObject StripNulls(ChartConfigBase chartConfig)
+        private static ExpandoObject StripNulls(object chartConfig)
         {
             // Serializing with the custom serializer settings remove null members
             var cleanChartConfigStr = JsonConvert.SerializeObject(chartConfig, JsonSerializerSettings);
 
+            Console.WriteLine();
+            Console.WriteLine("The clean json string serialized from json.net");
+            Console.WriteLine(cleanChartConfigStr);
+
             // Get back an ExpandoObject dynamic with the clean config - having an ExpandoObject allows us to add/replace members regardless of type
             dynamic clearConfigExpando = JsonConvert.DeserializeObject<ExpandoObject>(cleanChartConfigStr, new ExpandoObjectConverter());
-
+            return clearConfigExpando;
             // Restore any .net refs that need to be passed intact
             var dynamicChartConfig = (dynamic) chartConfig;
             if (dynamicChartConfig?.Options?.Legend?.OnClick != null
@@ -136,5 +152,100 @@ namespace ChartJs.Blazor.ChartJS
                 NamingStrategy = new CamelCaseNamingStrategy(true, false)
             }
         };
+
+
+        public static async Task DemoSOThing(this IJSRuntime jsRuntime)
+        {
+            SomeConfig config = new SomeConfig
+            {
+                Options = new SomeOptions   // it can contain complex types
+                {
+                    SomeInt = 2,            // it can contain primative types
+                    SomeString = null,
+                    Axes = new List<Axis>   // it can contain complex lists
+                    {
+                        new Axis(),
+                        new Axis
+                        {
+                            SomeString = "axisString"
+                        }
+                    }
+                },
+                Data = new SomeData
+                {
+                    Data = new List<int> { 1, 2, 3, 4, 5 },     // it can contain primative lists
+                    SomeString = "asdf",
+                    SomeStringEnum = MyStringEnum.Test          // it can contain objects with custom parsing (for JSON.NET, not the parsing that's done when invoking the JS sadly
+                }
+            };
+
+            Console.WriteLine();
+            Console.WriteLine("Direct: ");
+            Console.WriteLine(await jsRuntime.GetJsonRep(config));
+
+            dynamic dynParam = StripNulls(config);
+            Dictionary<string, object> param = ConvertExpandoObjectToDictionary(dynParam);
+
+            Console.WriteLine();
+            Console.WriteLine("Parsed to Expando and then dict: ");
+            Console.WriteLine(await jsRuntime.GetJsonRep(param));
+        }
+
+        public class SomeConfig
+        {
+            public SomeOptions Options { get; set; }
+            public SomeData Data { get; set; }
+        }
+
+        public class SomeOptions
+        {
+            public int SomeInt { get; set; }
+
+            public string SomeString { get; set; }
+
+            public List<Axis> Axes { get; set; }
+        }
+
+        public class SomeData
+        {
+            public List<int> Data { get; set; }
+
+            public string SomeString { get; set; }
+
+            public MyStringEnum SomeStringEnum { get; set; }
+        }
+
+        public class Axis
+        {
+            public string SomeString { get; set; }
+        }
+
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public class MyStringEnum
+        {
+            public static MyStringEnum Test => new MyStringEnum("someTestThing");
+
+
+            private readonly string _value;
+            private MyStringEnum(string stringRep) => _value = stringRep;
+            public override string ToString() => _value;
+        }
+
+        public class JsonStringEnumConverter : JsonConverter<MyStringEnum>
+        {
+            public sealed override bool CanRead => false;
+            public sealed override bool CanWrite => true;
+
+            public sealed override MyStringEnum ReadJson(JsonReader reader, Type objectType, MyStringEnum existingValue, bool hasExistingValue, JsonSerializer serializer)
+            {
+                throw new NotImplementedException("Don't use me to read JSON");
+            }
+
+            public override void WriteJson(JsonWriter writer, MyStringEnum value, JsonSerializer serializer)
+            {
+                // ToString was overwritten by StringEnum -> safe to just print the string representation
+                writer.WriteValue(value.ToString());
+            }
+        }
     }
 }
