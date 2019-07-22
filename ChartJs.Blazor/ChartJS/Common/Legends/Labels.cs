@@ -15,13 +15,12 @@
         /// </summary>
         public int FontSize { get; set; } = 12;
 
-        // TODO: implement with enum (normal, italic, oblique, initial, inherit)
         /// <summary>
         /// Font style of text.
         ///
         /// <para>Supported fonts: http://www.chartjs.org/docs/latest/configuration/legend.html#legend-label-configuration </para>
         /// </summary>
-        public string FontStyle { get; set; } = "normal";
+        public FontStyle FontStyle { get; set; } = FontStyle.normal;
 
         /// <summary>
         /// Color of text.

@@ -491,6 +491,36 @@
             </summary>
             
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Legends.FontStyle">
+            <summary>
+            The font style of the labels.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Legends.FontStyle.normal">
+            <summary>
+            The normal font style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Legends.FontStyle.italic">
+            <summary>
+            The italic font style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Legends.FontStyle.oblique">
+            <summary>
+            The oblique font style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Legends.FontStyle.initial">
+            <summary>
+            The initial font style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Legends.FontStyle.inherit">
+            <summary>
+            The inherit font style.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration">
             <summary>
             The legend label configuration is nested below the legend configuration
@@ -1080,6 +1110,61 @@
             Configuration for time related stuff
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.LineChart.BorderCapStyle">
+            <summary>
+            The border cap style. See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for more options.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.BorderCapStyle.butt">
+            <summary>
+            The butt border cap style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.BorderCapStyle.round">
+            <summary>
+            The round border cap style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.BorderCapStyle.square">
+            <summary>
+            The square border cap style.
+            </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.LineChart.BorderJoinStyle">
+            <summary>
+            The border join style. See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for more options.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.BorderJoinStyle.bevel">
+            <summary>
+            The bevel border join style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.BorderJoinStyle.round">
+            <summary>
+            The round border join style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.BorderJoinStyle.miter">
+            <summary>
+            The miter border join style.
+            </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.LineChart.CubicInterpolationMode">
+            <summary>
+            The cubic interpolation mode. See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for more options.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.CubicInterpolationMode.defaultMode">
+            <summary>
+            The default cubic interpolation mode.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.LineChart.CubicInterpolationMode.monotone">
+            <summary>
+            The monotone cubic interpolation mode.
+            </summary>
+        </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.GridLine.Display">
             <summary>
             If false, do not display grid lines for this axis.
@@ -1229,14 +1314,12 @@
             <summary>
             Cap style of the line.
             <para>See <see cref="!:https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap"></see> for options.</para>
-            <para>TODO: Implement options</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineChartDataset`1.BorderJoinStyle">
             <summary>
             Line joint style.
             <para>See <see cref="!:https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin"></see> for options.</para>
-            <para>TODO: Implement options</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineChartDataset`1.CubicInterpolationMode">

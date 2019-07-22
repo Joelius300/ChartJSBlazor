@@ -38,7 +38,7 @@ namespace ChartJs.Blazor.ChartJS.BubbleChart
         /// </summary>
         public string Label { get; set; }
 
-        public string PointStyle { get; set; } = BubbleChartPointStyle.circle.ToString();
+        public BubbleChartPointStyle PointStyle { get; set; } = BubbleChartPointStyle.circle;
 
         public int Rotation { get; set; } = 0;
 
