@@ -11,23 +11,18 @@
     <LangVersion>7.3</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <VersionPrefix>0.3</VersionPrefix>
-    <!--<VersionSuffix>alpha-$(PoorMansBuildNumber)</VersionSuffix>-->
     <Title>ChartJs.Blazor</Title>
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
-    <Company>Marius Muntean</Company>
-    <Authors>Marius Muntean</Authors>
-    <Description>CharJs charts for Blazor.
-Supports both client- and server-side projects. See the samples
-
-Supports: LineChart, BarChart, RadarCart, Doughnut- and Pie-Chart, BubbleChart, MixedChart; Polar Area Chart
-
-Chart Legend with custom handler for Item generation and events - Jvascript and .Net handlers supported.</Description>
-    <RepositoryUrl>https://github.com/mariusmuntean/ChartJs.Blazor</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/mariusmuntean/ChartJs.Blazor</PackageProjectUrl>
+    <Company>Joel Liechti</Company>
+    <Authors>Joel Liechti</Authors>
+    <Description>CharJs charts for Blazor. Supports both client- and server-side projects. See the samples.
+      Supports: LineChart, BarChart, RadarCart, Doughnut- and Pie-Chart, BubbleChart, MixedChart, Polar Area Chart,
+      Chart Legend with custom handler for Item generation and events - Jvascript and .Net handlers supported.</Description>
+    <RepositoryUrl>https://github.com/Joelius300/ChartJSBlazor</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Joelius300/ChartJSBlazor</PackageProjectUrl>
     <PackageTags>ChartJS Blazor ASP.Net Core</PackageTags>
     <PackageSummary>Library of useful components to be used within Blazor. Starting off with a simple ChartJS port to Blazor.</PackageSummary>
-    <PackageReleaseNotes>Can be used with Blazor 0.9.0
-Fixed disappearing charts when navigating away and back - Thanks to the community for the PRs</PackageReleaseNotes>
+    <PackageReleaseNotes>Can be used with Blazor 0.9.0. Fixed disappearing charts when navigating away and back - Thanks to the community for the PRs</PackageReleaseNotes>
     <AssemblyName>ChartJs.Blazor</AssemblyName>
     <RootNamespace>ChartJs.Blazor</RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -41,7 +36,7 @@ Fixed disappearing charts when navigating away and back - Thanks to the communit
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Joel Liechti\Desktop\Projekte\VS 19\DynamicChartJSBlazor\ChartJs.Blazor\ChartJs.Blazor.xml</DocumentationFile>
+    <DocumentationFile>..\ChartJs.Blazor\ChartJs.Blazor.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -88,8 +83,4 @@ Fixed disappearing charts when navigating away and back - Thanks to the communit
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>
-
-  <!--<ItemGroup>
-    <BlazorGenerate Remove="Shared\ChartJsRadarChart.cshtml" />
-  </ItemGroup>-->
 </Project>
