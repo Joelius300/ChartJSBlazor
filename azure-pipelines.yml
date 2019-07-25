@@ -10,6 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
+  projectName: 'ChartJs.Blazor'
   buildConfiguration: 'Release'
 
 steps:
@@ -21,3 +22,17 @@ steps:
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    vstsFeed: '5bc5c955-1ed9-4c66-9bb6-ff086ddae859'
+    packagesToPack: '**/$(projectName)/*.csproj'
+    versioningScheme: 'byBuildNumber'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/$(projectName)/*.nupkg'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'NugetOrgServer'
