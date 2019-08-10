@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ChartJs.Blazor.Util.Color;
+using System.Collections.Generic;
 
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
 {
@@ -6,7 +7,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     /// The point labels sub-config of the <see cref="LinearRadialAxis"/> class.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
     /// </summary>
-    public class PointLabels
+    public class PointLabel
     {
         /// <summary>
         /// Gets the font color for point labels.
@@ -33,6 +34,6 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the height of an individual line of text.
         /// /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
         /// </summary>
-        public string LineHeight { get; set; } = "1.2";
+        public double LineHeight { get; set; } = 1.2;
     }
 }

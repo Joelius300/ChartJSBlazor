@@ -1,7 +1,10 @@
 using ChartJs.Blazor.Util.Color;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common
 {
+    /// <summary>
+    /// The grid line sub-config class.
+    /// </summary>
     public class GridLine
     {
         /// <summary>
