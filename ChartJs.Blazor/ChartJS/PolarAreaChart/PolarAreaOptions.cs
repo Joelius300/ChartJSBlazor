@@ -1,6 +1,7 @@
 ﻿using System;
 using ChartJs.Blazor.ChartJS.Common;
 using ChartJs.Blazor.ChartJS.Common.Properties;
+using ChartJs.Blazor.ChartJS.PolarAreaChart.Axis;
 
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart
 {
@@ -18,5 +19,10 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
         /// Gets or sets the animation the chart uses.
         /// </summary>
         public PieDoughnutAnimation Animation { get; set; }
+
+        /// <summary>
+        /// The scales for this chart.
+        /// </summary>
+        public LinearRadialAxis Scale { get; set; }
     }
 }
