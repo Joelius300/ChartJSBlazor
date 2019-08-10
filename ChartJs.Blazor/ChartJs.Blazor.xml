@@ -217,6 +217,22 @@
              <param name="chartConfig"></param>
              <returns></returns>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Axis">
+            <summary>
+            As per documentation here https://www.chartjs.org/docs/latest/axes/#common-configuration.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Axis.Display">
+            <summary>
+            Controls the axis global visibility (visible when <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisDisplay.True"/>, hidden when <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisDisplay.False"/>). 
+            When display: <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisDisplay.Auto"/>, the axis is visible only if at least one associated dataset is visible.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Axis.Weight">
+            <summary>
+            The weight used to sort the axis. Higher weights are further away from the chart area.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.BaseChartConfigOptions">
             <summary>
             The base config for the options-subconfig of a chart
@@ -882,22 +898,6 @@
             <param name="methodInfo"></param>
             <exception cref="T:System.ArgumentException">Thrown if the method info is not for a static method</exception>
         </member>
-        <member name="T:ChartJs.Blazor.ChartJS.LineChart.Axes.Axis">
-            <summary>
-            As per documentation here https://www.chartjs.org/docs/latest/axes/#common-configuration
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.LineChart.Axes.Axis.Display">
-            <summary>
-            Controls the axis global visibility (visible when <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisDisplay.True"/>, hidden when <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisDisplay.False"/>). 
-            When display: <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisDisplay.Auto"/>, the axis is visible only if at least one associated dataset is visible.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.LineChart.Axes.Axis.Weight">
-            <summary>
-            The weight used to sort the axis. Higher weights are further away from the chart area.
-            </summary>
-        </member>
         <member name="T:ChartJs.Blazor.ChartJS.LineChart.Axes.CartesianAxis">
             <summary>
             As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/#common-configuration
@@ -1216,7 +1216,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.LineChart.LineChartConfig">
             <summary>
-            Config for a <see cref="T:ChartJs.Blazor.Charts.ChartJsLineChart"/>
+            Config for a <see cref="!:Charts.ChartJsLineChart"/>
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.LineChart.LineChartConfig.#ctor">
@@ -1259,7 +1259,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.LineChart.LineChartDataset`1">
             <summary>
-            A dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsLineChart"/>
+            A dataset for a <see cref="!:Charts.ChartJsLineChart"/>
             </summary>
             <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
         </member>
@@ -1685,7 +1685,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PieChart.PieChartDataset">
             <summary>
-            A dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsPieChart"/>
+            A dataset for a <see cref="!:Charts.ChartJsPieChart"/>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PieChart.PieChartDataset.Type">
@@ -1778,7 +1778,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaChartConfig">
             <summary>
-            Config for a <see cref="T:ChartJs.Blazor.Charts.ChartJsPolarAreaChart"/>
+            Config for a <see cref="!:ChartJsPolarAreaChart"/>
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaChartConfig.#ctor">
@@ -1803,7 +1803,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaDataset">
             <summary>
-            A dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsPolarAreaChart"/>
+            A dataset for a <see cref="!:ChartJsPolarAreaChart"/>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaDataset.Type">
