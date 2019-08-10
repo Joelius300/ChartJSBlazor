@@ -989,12 +989,12 @@
             The actual title to display
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.PieDoughnutAnimation.AnimateRotate">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation.AnimateRotate">
             <summary>
             If true, the chart will animate in with a rotation animation. This property is in the options.animation object.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.PieDoughnutAnimation.AnimateScale">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation.AnimateScale">
             <summary>
             If true, will animate scaling the chart from the center outwards.
             </summary>

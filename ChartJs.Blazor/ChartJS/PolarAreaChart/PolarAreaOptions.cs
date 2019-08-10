@@ -18,7 +18,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
         /// <summary>
         /// Gets or sets the animation the chart uses.
         /// </summary>
-        public PieDoughnutAnimation Animation { get; set; }
+        public ArcAnimation Animation { get; set; }
 
         /// <summary>
         /// The scales for this chart.
