@@ -17,13 +17,13 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the grid lines configuration.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#grid-line-configuration </para>
         /// </summary>
-        public GridLine GridLines { get; set; }
+        public GridLines GridLines { get; set; }
 
         /// <summary>
         /// Gets or sets the point labels configuration.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
         /// </summary>
-        public PointLabel PointLabels { get; set; }
+        public PointLabels PointLabels { get; set; }
 
         /// <summary>
         /// Gets or sets the grid lines configuration.

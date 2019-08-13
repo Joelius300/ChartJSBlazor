@@ -17,20 +17,20 @@
         public int AutoSkipPadding { get; set; }
 
         /// <summary>
-        /// Distance in pixels to offset the label from the centre point of the tick (in the x direction for the x axis, and the y direction for the y axis). 
+        /// Distance in pixels to offset the label from the centre point of the ticks (in the x direction for the x axis, and the y direction for the y axis). 
         /// <para>Note: this can cause labels at the edges to be cropped by the edge of the canvas.</para>
         /// </summary>
         public int LabelOffset { get; set; }
 
         /// <summary>
-        /// Maximum rotation for tick labels when rotating to condense labels. 
+        /// Maximum rotation for ticks labels when rotating to condense labels. 
         /// <para>Note: Rotation doesn't occur until necessary.</para>
         /// <para>Note: Only applicable to horizontal scales.</para>
         /// </summary>
         public int? MaxRotation { get; set; }
 
         /// <summary>
-        /// Minimum rotation for tick labels. 
+        /// Minimum rotation for ticks labels. 
         /// <para>Note: Only applicable to horizontal scales.</para>
         /// </summary>
         public int? MinRotation { get; set; }
@@ -42,7 +42,7 @@
         public bool? Mirror { get; set; }
 
         /// <summary>
-        /// Padding between the tick label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. 
+        /// Padding between the ticks label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. 
         /// When set on a horizontal axis, this applies in the vertical (Y) direction.
         /// </summary>
         public int Padding { get; set; }

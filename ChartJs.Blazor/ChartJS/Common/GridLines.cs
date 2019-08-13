@@ -5,7 +5,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     /// <summary>
     /// The grid line sub-config class.
     /// </summary>
-    public class GridLine
+    public class GridLines
     {
         /// <summary>
         /// If false, do not display grid lines for this axis.

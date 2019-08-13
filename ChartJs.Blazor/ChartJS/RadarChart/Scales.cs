@@ -3,7 +3,7 @@ using ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks;
 
 namespace ChartJs.Blazor.ChartJS.RadarChart
 {
-    public class Scale
+    public class Scales
     {
         public CartesianTicks Ticks { get; set; }
     }

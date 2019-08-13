@@ -7,7 +7,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     /// The point labels sub-config of the <see cref="LinearRadialAxis"/> class.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
     /// </summary>
-    public class PointLabel
+    public class PointLabels
     {
         /// <summary>
         /// Gets the font color for point labels.
