@@ -2071,7 +2071,7 @@
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.LineHeight">
             <summary>
             Gets or sets the height of an individual line of text.
-            /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaChartConfig">
@@ -2171,7 +2171,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaOptions.Scale">
             <summary>
-            The scales for this chart.
+            The scale (axis) for this chart.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarChartDataset.Label">
