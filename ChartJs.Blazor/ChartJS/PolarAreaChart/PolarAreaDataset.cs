@@ -26,7 +26,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
         /// Gets or sets the border align. When 'center' is set, the borders of arcs next to each other will overlap.
         /// When 'inner' is set, it is guaranteed that all the borders are not overlap.
         /// </summary>
-        public string BorderAlign { get; set; } = "center";
+        public string BorderAlign { get; set; }
 
         /// <summary>
         /// Gets the border color of the arcs in the dataset.

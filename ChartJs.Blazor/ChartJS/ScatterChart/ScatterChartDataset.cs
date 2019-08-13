@@ -14,7 +14,7 @@ namespace ChartJs.Blazor.ChartJS.ScatterChart
 
         public ChartTypes Type { get; } = ChartTypes.Scatter;
 
-        public string Label { get; set; } = "";
+        public string Label { get; set; }
 
         /// <summary>
         /// The ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis

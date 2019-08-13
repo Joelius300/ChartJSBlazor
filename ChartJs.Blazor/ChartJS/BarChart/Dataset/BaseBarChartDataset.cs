@@ -26,7 +26,7 @@ namespace ChartJs.Blazor.ChartJS.BarChart.Dataset
         /// <summary>
         /// The label for the dataset which appears in the legend and tooltips.
         /// </summary>
-        public string Label { get; set; } = "";
+        public string Label { get; set; }
 
         /// <summary>
         /// The ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis

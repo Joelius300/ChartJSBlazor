@@ -17,7 +17,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the color of the angled lines.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public string Color { get; set; } = "rgba(0, 0, 0, 0.1)";
+        public string Color { get; set; }
 
         /// <summary>
         /// Gets or sets the width of the angled lines.

@@ -12,12 +12,12 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// Gets or sets the font color for tick labels.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public string FontColor { get; set; } = "#666";
+        public string FontColor { get; set; }
 
         /// <summary>
         /// Gets or sets the font family for the tick labels, follows CSS font-family options.
         /// </summary>
-        public string FontFamily { get; set; } = "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        public string FontFamily { get; set; }
 
         /// <summary>
         /// Gets or sets the font size for the tick labels.
@@ -27,7 +27,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <summary>
         /// Gets or sets the font style for the tick labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
         /// </summary>
-        public string FontStyle { get; set; } = "normal";
+        public string FontStyle { get; set; }
 
         /// <summary>
         /// Gets or sets the height of an individual line of text.

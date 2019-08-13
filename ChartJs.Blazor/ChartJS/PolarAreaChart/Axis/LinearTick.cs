@@ -12,7 +12,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the color of the label backdrops.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public string BackdropColor { get; set; } = "rgba(255, 255, 255, 0.75)";
+        public string BackdropColor { get; set; }
 
         /// <summary>
         /// Gets or sets the horizontal padding of label backdrop.

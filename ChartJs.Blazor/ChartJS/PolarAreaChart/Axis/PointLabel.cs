@@ -16,11 +16,6 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         public List<string> FontColor { get; } = new List<string>();
 
         /// <summary>
-        /// Gets or sets the font family to use when rendering labels.
-        /// </summary>
-        public string FontFamily { get; set; } = "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-
-        /// <summary>
         /// Gets or sets the font size in pixels.
         /// </summary>
         public int FontSize { get; set; } = 10;
@@ -28,7 +23,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// <summary>
         /// Gets or sets the font style to use when rendering point labels.
         /// </summary>
-        public string FontStyle { get; set; } = "normal";
+        public string FontStyle { get; set; }
 
         /// <summary>
         /// Gets or sets the height of an individual line of text.

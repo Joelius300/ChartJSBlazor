@@ -11,7 +11,7 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
         /// <summary>
         /// The label for the dataset which appears in the legend and tooltips.
         /// </summary>
-        public string Label { get; set; } = "";
+        public string Label { get; set; }
 
         /// <summary>
         /// The fill color under the line.
