@@ -27,7 +27,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         public PointLabels PointLabels { get; set; }
 
         /// <summary>
-        /// Gets or sets the grid lines configuration.
+        /// Gets or sets the ticks configuration.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#tick-options </para>
         /// </summary>
         public LinearTicks Ticks { get; set; }
