@@ -21,7 +21,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
         public ArcAnimation Animation { get; set; }
 
         /// <summary>
-        /// The scales for this chart.
+        /// The scale (axis) for this chart.
         /// </summary>
         public LinearRadialAxis Scale { get; set; }
     }
