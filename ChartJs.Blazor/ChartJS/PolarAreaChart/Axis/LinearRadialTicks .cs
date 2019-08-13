@@ -6,7 +6,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     /// The linear ticks sub-config of the <see cref="LinearRadialAxis"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
     /// </summary>
-    public abstract class LinearTicks
+    public abstract class LinearRadialTicks 
     {
         /// <summary>
         /// Gets or sets the color of the label backdrops.

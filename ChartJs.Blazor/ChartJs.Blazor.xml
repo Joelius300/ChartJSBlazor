@@ -558,7 +558,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.GridLines">
             <summary>
-            The grid line sub-config class.
+            The grid lines sub-config of an <see cref="T:ChartJs.Blazor.ChartJS.Common.Axis"/>.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.GridLines.Display">
@@ -895,13 +895,13 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.MajorTicks">
             <summary>
-            The minor sub-config of <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>.
+            The major ticks.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#major-tick-configuration </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.Enabled">
             <summary>
-            Gets or sets the value indicating whether this options are used to show major ticks.
+            Gets or sets the value indicating whether these options are used to show major ticks.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.FontColor">
@@ -933,7 +933,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.MinorTicks">
             <summary>
-            The minor sub-config of a <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>.
+            The minor ticks.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#minor-tick-configuration </para>
             </summary>
         </member>
@@ -1016,7 +1016,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Ticks">
             <summary>
-            The ticks.
+            The ticks-subconfig of an <see cref="T:ChartJs.Blazor.ChartJS.Common.Axis"/>.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#tick-configuration </para>
             </summary>
         </member>
@@ -1059,12 +1059,12 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.Minor">
             <summary>
-            Gets or sets the minor ticks configuration. Omitted options are inherited from options above.
+            Gets or sets the minor ticks configuration. Omitted options are inherited from options above (See <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.Major">
             <summary>
-            Gets or sets the major ticks configuration. Omitted options are inherited from options above.
+            Gets or sets the major ticks configuration. Omitted options are inherited from options above (See <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.Padding">
@@ -1912,13 +1912,13 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines">
             <summary>
-            An angle line.
+            The angle lines sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/linear.html </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines.Display">
             <summary>
-            Gets or sets the value indicating whether this <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines"/> is displayed or not.
+            Gets or sets the value indicating whether the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines"/> are displayed or not.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines.Color">
@@ -1970,85 +1970,85 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis.Ticks">
             <summary>
-            Gets or sets the grid lines configuration.
+            Gets or sets the ticks configuration.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#tick-options </para>
             </summary>
         </member>
-        <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks">
+        <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks">
             <summary>
-            Linear ticks.
+            The linear ticks sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.BackdropColor">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.BackdropColor">
             <summary>
             Gets or sets the color of the label backdrops.
             <para>See <see cref="T:ChartJs.Blazor.Util.Color.ColorUtil"/> for working with colors.</para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.BackdropPaddingX">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.BackdropPaddingX">
             <summary>
             Gets or sets the horizontal padding of label backdrop.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.BackdropPaddingY">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.BackdropPaddingY">
             <summary>
             Gets or sets the vertical padding of label backdrop.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.BeginAtZero">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.BeginAtZero">
             <summary>
             Gets or sets the value indicating whether the scale will include 0 if it is not already included.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.Min">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.Min">
             <summary>
             Gets or sets the user defined minimum number for the scale, overrides minimum value from data.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.Max">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.Max">
             <summary>
             Gets or sets the user defined maximum number for the scale, overrides minimum value from data.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.MaxTicksLimit">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.MaxTicksLimit">
             <summary>
             Gets or sets the maximum number of ticks and gridlines to show.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.Precision">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.Precision">
             <summary>
             If defined and StepSize is not specified, the step size will be rounded to this many decimal places.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.StepSize">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.StepSize">
             <summary>
             Gets or sets the user defined fixed step size for the scale.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.SuggestedMax">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.SuggestedMax">
             <summary>
             Gets or sets the adjustment used when calculating the maximum data value.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.SuggestedMin">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.SuggestedMin">
             <summary>
             Gets or sets the adjustment used when calculating the minimum data value.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTicks.ShowLabelBackdrop">
+        <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks.ShowLabelBackdrop">
             <summary>
             Gets or sets the value indicating whether a background is drawn behind the tick labels.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels">
             <summary>
-            Point labels.
+            The point labels sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
             </summary>
         </member>

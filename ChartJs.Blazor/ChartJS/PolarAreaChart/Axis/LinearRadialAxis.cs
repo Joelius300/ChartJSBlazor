@@ -30,6 +30,6 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the ticks configuration.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#tick-options </para>
         /// </summary>
-        public LinearTicks Ticks { get; set; }
+        public LinearRadialTicks Ticks { get; set; }
     }
 }
