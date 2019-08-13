@@ -6,7 +6,7 @@ using ChartJs.Blazor.ChartJS.PolarAreaChart.Axis;
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart
 {
     /// <summary>
-    /// The options-subconfig of a <see cref="PolarAreaChartConfig"/>
+    /// The options-subconfig of a <see cref="PolarAreaChartConfig"/>.
     /// </summary>
     public class PolarAreaOptions : BaseChartConfigOptions
     {

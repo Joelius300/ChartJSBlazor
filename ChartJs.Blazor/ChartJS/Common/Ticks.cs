@@ -3,7 +3,7 @@
 namespace ChartJs.Blazor.ChartJS.Common
 {
     /// <summary>
-    /// The base config for the tick-subconfig of a chart.
+    /// The ticks.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#tick-configuration </para>
     /// </summary>
     public class Ticks

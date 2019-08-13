@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
 {
     /// <summary>
-    /// The point labels sub-config of the <see cref="LinearRadialAxis"/> class.
+    /// Point labels.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
     /// </summary>
     public class PointLabels

@@ -3,6 +3,7 @@
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
 {
     /// <summary>
+    /// A linear readial axis.
     /// As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html.
     /// </summary>
     public class LinearRadialAxis
