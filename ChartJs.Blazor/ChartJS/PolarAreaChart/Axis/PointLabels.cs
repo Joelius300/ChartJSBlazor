@@ -27,7 +27,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
 
         /// <summary>
         /// Gets or sets the height of an individual line of text.
-        /// /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
+        /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
         /// </summary>
         public double LineHeight { get; set; } = 1.2;
     }
