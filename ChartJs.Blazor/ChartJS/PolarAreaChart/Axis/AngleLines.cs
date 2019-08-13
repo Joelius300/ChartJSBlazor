@@ -6,10 +6,10 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     /// An angle line.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/linear.html </para>
     /// </summary>
-    public class AngleLine
+    public abstract class AngleLines
     {
         /// <summary>
-        /// Gets or sets the value indicating whether this <see cref="AngleLine"/> is displayed or not.
+        /// Gets or sets the value indicating whether this <see cref="AngleLines"/> is displayed or not.
         /// </summary>
         public bool Display { get; set; } = true;
 

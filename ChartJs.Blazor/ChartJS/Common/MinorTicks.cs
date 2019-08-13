@@ -6,7 +6,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     /// The minor sub-config of a <see cref="Ticks"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#minor-tick-configuration </para>
     /// </summary>
-    public class MinorTicks
+    public abstract class MinorTicks
     {
         /// <summary>
         /// Gets or sets the font color for <see cref="Ticks"/> labels.

@@ -12,7 +12,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the angle lines configuration. Check
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#angle-line-options </para>
         /// </summary>
-        public AngleLine AngleLines { get; set; }
+        public AngleLines AngleLines { get; set; }
 
         /// <summary>
         /// Gets or sets the grid lines configuration.
@@ -30,6 +30,6 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the grid lines configuration.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#tick-options </para>
         /// </summary>
-        public LinearTick Ticks { get; set; }
+        public LinearTicks Ticks { get; set; }
     }
 }

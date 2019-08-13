@@ -6,7 +6,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     /// The ticks.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#tick-configuration </para>
     /// </summary>
-    public class Ticks
+    public abstract class Ticks
     {
         /// <summary>
         /// Gets or sets the value indicating whether this shows <see cref="Ticks"/> marks.

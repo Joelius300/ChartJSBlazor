@@ -6,7 +6,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     /// The minor sub-config of <see cref="Ticks"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#major-tick-configuration </para>
     /// </summary>
-    public class MajorTicks
+    public abstract class MajorTicks
     {
         /// <summary>
         /// Gets or sets the value indicating whether this options are used to show major ticks.
