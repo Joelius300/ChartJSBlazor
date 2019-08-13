@@ -901,7 +901,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTick.Enabled">
             <summary>
-            Gets or sets a value indicating whether this options are used to show major ticks.
+            Gets or sets the value indicating whether this options are used to show major ticks.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTick.FontColor">
@@ -1022,7 +1022,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Tick.Display">
             <summary>
-            Gets or sets a value indicating whether this shows tick marks.
+            Gets or sets the value indicating whether this shows tick marks.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Tick.FontColor">
@@ -1054,7 +1054,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Tick.Reverse">
             <summary>
-            Gets or sets a value indicating whether the order of tick labels is reversed.
+            Gets or sets the value indicating whether the order of tick labels is reversed.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Tick.Minor">
@@ -1600,7 +1600,7 @@
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.LineChart.Moment.Equals(System.Object)">
             <summary>
-            Returns a value indicating whether this instance is equal to a specified object.
+            Returns the value indicating whether this instance is equal to a specified object.
             </summary>
             <param name="obj">The object to compare to this instance.</param>
             <returns>true if the other object is a wrapper for the same <see cref="T:System.DateTime"/> value 
@@ -1918,7 +1918,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLine.Display">
             <summary>
-            Gets or sets a value indicating whether this <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLine"/> is displayed or not.
+            Gets or sets the value indicating whether this <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLine"/> is displayed or not.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLine.Color">
@@ -1997,7 +1997,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTick.BeginAtZero">
             <summary>
-            Gets or sets a value indicating whether the scale will include 0 if it is not already included.
+            Gets or sets the value indicating whether the scale will include 0 if it is not already included.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTick.Min">
@@ -2042,7 +2042,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearTick.ShowLabelBackdrop">
             <summary>
-            Gets or sets a value indicating whether a background is drawn behind the tick labels.
+            Gets or sets the value indicating whether a background is drawn behind the tick labels.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabel">

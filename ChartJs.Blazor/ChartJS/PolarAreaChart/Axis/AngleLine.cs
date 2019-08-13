@@ -9,7 +9,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     public class AngleLine
     {
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="AngleLine"/> is displayed or not.
+        /// Gets or sets the value indicating whether this <see cref="AngleLine"/> is displayed or not.
         /// </summary>
         public bool Display { get; set; } = true;
 

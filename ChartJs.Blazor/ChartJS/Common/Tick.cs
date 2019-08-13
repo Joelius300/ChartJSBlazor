@@ -9,7 +9,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     public class Tick
     {
         /// <summary>
-        /// Gets or sets a value indicating whether this shows tick marks.
+        /// Gets or sets the value indicating whether this shows tick marks.
         /// </summary>
         public bool Display { get; set; } = true;
 
@@ -41,7 +41,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         public double LineHeight { get; set; } = 1.2;
 
         /// <summary>
-        /// Gets or sets a value indicating whether the order of tick labels is reversed.
+        /// Gets or sets the value indicating whether the order of tick labels is reversed.
         /// </summary>
         public bool Reverse { get; set; } = false;
 

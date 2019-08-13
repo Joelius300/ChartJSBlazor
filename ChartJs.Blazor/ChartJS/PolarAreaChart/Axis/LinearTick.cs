@@ -25,7 +25,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         public int BackdropPaddingY { get; set; } = 2;
 
         /// <summary>
-        /// Gets or sets a value indicating whether the scale will include 0 if it is not already included.
+        /// Gets or sets the value indicating whether the scale will include 0 if it is not already included.
         /// </summary>
         public bool BeginAtZero { get; set; } = false;
 
@@ -70,7 +70,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         public double SuggestedMin { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether a background is drawn behind the tick labels.
+        /// Gets or sets the value indicating whether a background is drawn behind the tick labels.
         /// </summary>
         public bool ShowLabelBackdrop { get; set; } = true;
     }

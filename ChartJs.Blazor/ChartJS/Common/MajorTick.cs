@@ -9,7 +9,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     public class MajorTick
     {
         /// <summary>
-        /// Gets or sets a value indicating whether this options are used to show major ticks.
+        /// Gets or sets the value indicating whether this options are used to show major ticks.
         /// </summary>
         public bool Enabled { get; set; } = false;
 
