@@ -3,7 +3,7 @@
 namespace ChartJs.Blazor.ChartJS.Common
 {
     /// <summary>
-    /// The ticks.
+    /// The ticks-subconfig of an <see cref="Axis"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#tick-configuration </para>
     /// </summary>
     public abstract class Ticks
@@ -46,12 +46,12 @@ namespace ChartJs.Blazor.ChartJS.Common
         public bool Reverse { get; set; } = false;
 
         /// <summary>
-        /// Gets or sets the minor ticks configuration. Omitted options are inherited from options above.
+        /// Gets or sets the minor ticks configuration. Omitted options are inherited from options above (See <see cref="Ticks"/>).
         /// </summary>
         public MinorTicks Minor { get; set; }
 
         /// <summary>
-        /// Gets or sets the major ticks configuration. Omitted options are inherited from options above.
+        /// Gets or sets the major ticks configuration. Omitted options are inherited from options above (See <see cref="Ticks"/>).
         /// </summary>
         public MajorTicks Major { get; set; }
 

@@ -3,7 +3,7 @@
 namespace ChartJs.Blazor.ChartJS.Common
 {
     /// <summary>
-    /// The minor sub-config of a <see cref="Ticks"/>.
+    /// The minor ticks.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#minor-tick-configuration </para>
     /// </summary>
     public abstract class MinorTicks
