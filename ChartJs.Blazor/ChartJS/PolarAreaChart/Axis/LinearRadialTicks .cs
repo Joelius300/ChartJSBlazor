@@ -1,4 +1,5 @@
-﻿using ChartJs.Blazor.Util.Color;
+﻿using ChartJs.Blazor.ChartJS.Common;
+using ChartJs.Blazor.Util.Color;
 
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
 {
@@ -6,7 +7,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     /// The linear ticks sub-config of the <see cref="LinearRadialAxis"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
     /// </summary>
-    public abstract class LinearRadialTicks 
+    public abstract class LinearRadialTicks : Ticks
     {
         /// <summary>
         /// Gets or sets the color of the label backdrops.
@@ -33,13 +34,13 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the user defined minimum number for the scale, overrides minimum value from data.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
         /// </summary>
-        public double Min { get; set; }
+        public double? Min { get; set; }
 
         /// <summary>
         /// Gets or sets the user defined maximum number for the scale, overrides minimum value from data.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
         /// </summary>
-        public double Max { get; set; }
+        public double? Max { get; set; }
 
         /// <summary>
         /// Gets or sets the maximum number of ticks and gridlines to show.
@@ -49,25 +50,25 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// <summary>
         /// If defined and StepSize is not specified, the step size will be rounded to this many decimal places.
         /// </summary>
-        public int Precision { get; set; }
+        public int? Precision { get; set; }
 
         /// <summary>
         /// Gets or sets the user defined fixed step size for the scale.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
         /// </summary>
-        public double StepSize { get; set; }
+        public double? StepSize { get; set; }
 
         /// <summary>
         /// Gets or sets the adjustment used when calculating the maximum data value.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
         /// </summary>
-        public double SuggestedMax { get; set; }
+        public double? SuggestedMax { get; set; }
 
         /// <summary>
         /// Gets or sets the adjustment used when calculating the minimum data value.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings </para>
         /// </summary>
-        public double SuggestedMin { get; set; }
+        public double? SuggestedMin { get; set; }
 
         /// <summary>
         /// Gets or sets the value indicating whether a background is drawn behind the tick labels.
