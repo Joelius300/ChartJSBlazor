@@ -23,14 +23,14 @@
         public int LabelOffset { get; set; }
 
         /// <summary>
-        /// Maximum rotation for ticks labels when rotating to condense labels. 
+        /// Maximum rotation for tick labels when rotating to condense labels. 
         /// <para>Note: Rotation doesn't occur until necessary.</para>
         /// <para>Note: Only applicable to horizontal scales.</para>
         /// </summary>
         public int? MaxRotation { get; set; }
 
         /// <summary>
-        /// Minimum rotation for ticks labels. 
+        /// Minimum rotation for tick labels. 
         /// <para>Note: Only applicable to horizontal scales.</para>
         /// </summary>
         public int? MinRotation { get; set; }

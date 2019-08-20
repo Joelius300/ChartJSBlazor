@@ -1219,14 +1219,14 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks.CartesianTicks.MaxRotation">
             <summary>
-            Maximum rotation for ticks labels when rotating to condense labels. 
+            Maximum rotation for tick labels when rotating to condense labels. 
             <para>Note: Rotation doesn't occur until necessary.</para>
             <para>Note: Only applicable to horizontal scales.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks.CartesianTicks.MinRotation">
             <summary>
-            Minimum rotation for ticks labels. 
+            Minimum rotation for tick labels. 
             <para>Note: Only applicable to horizontal scales.</para>
             </summary>
         </member>
