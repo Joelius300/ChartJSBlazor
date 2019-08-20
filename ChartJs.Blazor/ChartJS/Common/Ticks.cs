@@ -46,12 +46,12 @@ namespace ChartJs.Blazor.ChartJS.Common
         public bool Reverse { get; set; } = false;
 
         /// <summary>
-        /// Gets or sets the minor ticks configuration. Omitted options are inherited from options above (See <see cref="Ticks"/>).
+        /// Gets or sets the minor ticks configuration. Omitted options are inherited from options above (see <see cref="Ticks"/>).
         /// </summary>
         public MinorTicks Minor { get; set; }
 
         /// <summary>
-        /// Gets or sets the major ticks configuration. Omitted options are inherited from options above (See <see cref="Ticks"/>).
+        /// Gets or sets the major ticks configuration. Omitted options are inherited from options above (see <see cref="Ticks"/>).
         /// </summary>
         public MajorTicks Major { get; set; }
 
