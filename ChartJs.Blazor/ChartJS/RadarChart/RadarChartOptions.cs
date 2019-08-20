@@ -4,6 +4,6 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
 {
     public class RadarChartOptions : BaseChartConfigOptions
     {
-        public Scales Scales { get; set; }
+        public Scale Scale { get; set; }
     }
 }

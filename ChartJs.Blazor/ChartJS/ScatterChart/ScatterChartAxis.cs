@@ -6,7 +6,7 @@
         public string Text { get; set; }
         public string Position { get; set; }
 
-        public string Type { get; set; }
+        public string Type { get; set; } = "linear";
 
         public string Id { get; set; }
 
