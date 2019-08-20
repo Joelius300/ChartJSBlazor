@@ -3,29 +3,29 @@
 namespace ChartJs.Blazor.ChartJS.Common
 {
     /// <summary>
-    /// The minor ticks.
+    /// The minor ticks sub-config of the tick-configuration (see <see cref="Ticks"/>).
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#minor-tick-configuration </para>
     /// </summary>
     public abstract class MinorTicks
     {
         /// <summary>
-        /// Gets or sets the font color for <see cref="Ticks"/> labels.
+        /// Gets or sets the font color for a tick's labels.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string FontColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the font family for the <see cref="Ticks"/> labels, follows CSS font-family options.
+        /// Gets or sets the font family for a tick's label, follows CSS font-family options.
         /// </summary>
         public string FontFamily { get; set; }
 
         /// <summary>
-        /// Gets or sets the font size for the <see cref="Ticks"/> labels.
+        /// Gets or sets the font size for a tick's label.
         /// </summary>
         public int FontSize { get; set; } = 12;
 
         /// <summary>
-        /// Gets or sets the font style for the <see cref="Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+        /// Gets or sets the font style for a tick's label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
         /// </summary>
         public string FontStyle { get; set; }
 

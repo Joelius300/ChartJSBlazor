@@ -3,7 +3,7 @@ using ChartJs.Blazor.Util.Color;
 namespace ChartJs.Blazor.ChartJS.Common
 {
     /// <summary>
-    /// The grid lines sub-config of an <see cref="Axis"/>.
+    /// The grid lines sub-config of the axis-configuration (see <see cref="Axis"/>).
     /// </summary>
     public class GridLines
     {
