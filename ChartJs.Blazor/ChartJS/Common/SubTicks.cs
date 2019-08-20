@@ -1,4 +1,6 @@
 ﻿
+using ChartJs.Blazor.Util.Color;
+
 namespace ChartJs.Blazor.ChartJS.Common
 {
     /// <summary>
