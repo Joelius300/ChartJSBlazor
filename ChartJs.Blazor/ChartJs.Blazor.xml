@@ -558,7 +558,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.GridLines">
             <summary>
-            The grid lines sub-config of an <see cref="T:ChartJs.Blazor.ChartJS.Common.Axis"/>.
+            The grid lines sub-config of the axis-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.Common.Axis"/>).
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.GridLines.Display">
@@ -895,7 +895,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.MajorTicks">
             <summary>
-            The major ticks.
+            The major ticks sub-config of the tick-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#major-tick-configuration </para>
             </summary>
         </member>
@@ -904,64 +904,10 @@
             Gets or sets the value indicating whether these options are used to show major ticks.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.FontColor">
-            <summary>
-            Gets or sets the font color for <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels.
-            <para>See <see cref="T:ChartJs.Blazor.Util.Color.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.FontFamily">
-            <summary>
-            Gets or sets the font family for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-family options.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.FontSize">
-            <summary>
-            Gets or sets the font size for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.FontStyle">
-            <summary>
-            Gets or sets the font style for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MajorTicks.LineHeight">
-            <summary>
-            Gets or sets the height of an individual line of text.
-            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
-            </summary>
-        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.MinorTicks">
             <summary>
-            The minor ticks.
+            The minor ticks sub-config of the tick-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#minor-tick-configuration </para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MinorTicks.FontColor">
-            <summary>
-            Gets or sets the font color for <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels.
-            <para>See <see cref="T:ChartJs.Blazor.Util.Color.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MinorTicks.FontFamily">
-            <summary>
-            Gets or sets the font family for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-family options.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MinorTicks.FontSize">
-            <summary>
-            Gets or sets the font size for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MinorTicks.FontStyle">
-            <summary>
-            Gets or sets the font style for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.MinorTicks.LineHeight">
-            <summary>
-            Gets or sets the height of an individual line of text.
-            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Properties.Animation">
@@ -1014,9 +960,41 @@
             If true, the hover mode only applies when the mouse position intersects an item on the chart.
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.SubTicks">
+            <summary>
+            The base class for minor and major ticks (see <see cref="T:ChartJs.Blazor.ChartJS.Common.MinorTicks"/> and see <see cref="T:ChartJs.Blazor.ChartJS.Common.MajorTicks"/>).
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontColor">
+            <summary>
+            Gets or sets the font color for a tick's labels.
+            <para>See <see cref="T:ChartJs.Blazor.Util.Color.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontFamily">
+            <summary>
+            Gets or sets the font family for a tick's label, follows CSS font-family options.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontSize">
+            <summary>
+            Gets or sets the font size for a tick's label.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontStyle">
+            <summary>
+            Gets or sets the font style for a tick's label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.LineHeight">
+            <summary>
+            Gets or sets the height of an individual line of text.
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/line-height </para>
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Ticks">
             <summary>
-            The ticks-subconfig of an <see cref="T:ChartJs.Blazor.ChartJS.Common.Axis"/>.
+            The ticks-subconfig of the axis-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.Common.Axis"/>).
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/styling.html#tick-configuration </para>
             </summary>
         </member>
@@ -1059,12 +1037,12 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.Minor">
             <summary>
-            Gets or sets the minor ticks configuration. Omitted options are inherited from options above (See <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
+            Gets or sets the minor ticks configuration. Omitted options are inherited from options above (see <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.Major">
             <summary>
-            Gets or sets the major ticks configuration. Omitted options are inherited from options above (See <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
+            Gets or sets the major ticks configuration. Omitted options are inherited from options above (see <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/>).
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.Padding">
@@ -1912,13 +1890,13 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines">
             <summary>
-            The angle lines sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
+            The angle lines sub-config of the linear-radial-axis-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>).
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/linear.html </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines.Display">
             <summary>
-            Gets or sets the value indicating whether the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines"/> are displayed or not.
+            Gets or sets the value indicating whether the angle line is displayed or not.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.AngleLines.Color">
@@ -1947,7 +1925,7 @@
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis">
             <summary>
             A linear readial axis.
-            As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis.AngleLines">
@@ -2048,13 +2026,13 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels">
             <summary>
-            The point labels sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
+            The point labels sub-config of the linear-radial-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>).
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.FontColor">
             <summary>
-            Gets the font color for point labels.
+            Gets the font color for a point label.
             <para>See <see cref="T:ChartJs.Blazor.Util.Color.ColorUtil"/> for working with colors.</para>
             </summary>
         </member>
@@ -2065,7 +2043,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.FontStyle">
             <summary>
-            Gets or sets the font style to use when rendering point labels.
+            Gets or sets the font style to use when rendering a point label.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.LineHeight">
