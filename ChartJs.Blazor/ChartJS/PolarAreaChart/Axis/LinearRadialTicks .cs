@@ -4,7 +4,7 @@ using ChartJs.Blazor.Util.Color;
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
 {
     /// <summary>
-    /// The linear ticks sub-config of the <see cref="LinearRadialAxis"/>.
+    /// The ticks sub-config of the <see cref="LinearRadialAxis"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
     /// </summary>
     public class LinearRadialTicks : Ticks

@@ -920,6 +920,21 @@
             Defines the duration of the animation
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation">
+            <summary>
+            The animation-subconfig of the options for a radial chart.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation.AnimateRotate">
+            <summary>
+            If true, the chart will animate in with a rotation animation.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation.AnimateScale">
+            <summary>
+            If true, will animate scaling the chart from the center outwards.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Properties.OptionsTitle">
             <summary>
             Represents the title of a chart
@@ -933,16 +948,6 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.OptionsTitle.Text">
             <summary>
             The actual title to display
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation.AnimateRotate">
-            <summary>
-            If true, the chart will animate in with a rotation animation. This property is in the options.animation object.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.ArcAnimation.AnimateScale">
-            <summary>
-            If true, will animate scaling the chart from the center outwards.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips">
@@ -1191,7 +1196,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks.CartesianTicks.LabelOffset">
             <summary>
-            Distance in pixels to offset the label from the centre point of the ticks (in the x direction for the x axis, and the y direction for the y axis). 
+            Distance in pixels to offset the label from the centre point of the tick (in the x direction for the x axis, and the y direction for the y axis).
             <para>Note: this can cause labels at the edges to be cropped by the edge of the canvas.</para>
             </summary>
         </member>
@@ -1216,7 +1221,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks.CartesianTicks.Padding">
             <summary>
-            Padding between the ticks label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. 
+            Padding between the tick label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. 
             When set on a horizontal axis, this applies in the vertical (Y) direction.
             </summary>
         </member>
@@ -1875,7 +1880,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PieChart.PieChartOptions.Animation">
             <summary>
-            Gets or sets the animation the chart uses.
+            Gets or sets the animation-configuration for this chart.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PieChart.PieChartOptions.Rotation">
@@ -1930,7 +1935,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis.AngleLines">
             <summary>
-            Gets or sets the angle lines configuration. Check
+            Gets or sets the angle lines configuration.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#angle-line-options </para>
             </summary>
         </member>
@@ -1954,7 +1959,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialTicks">
             <summary>
-            The linear ticks sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
+            The ticks sub-config of the <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>.
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
             </summary>
         </member>
@@ -2026,7 +2031,7 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels">
             <summary>
-            The point labels sub-config of the linear-radial-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>).
+            The point labels sub-config of the linear-radial-axis-configuration (see <see cref="T:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.LinearRadialAxis"/>).
             <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options </para>
             </summary>
         </member>
@@ -2144,7 +2149,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaOptions.Animation">
             <summary>
-            Gets or sets the animation the chart uses.
+            Gets or sets the animation-configuration for this chart.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaOptions.Scale">

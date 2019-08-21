@@ -25,7 +25,7 @@ namespace ChartJs.Blazor.ChartJS.PieChart
         public int CutoutPercentage { get; set; } = 0;
 
         /// <summary>
-        /// Gets or sets the animation the chart uses.
+        /// Gets or sets the animation-configuration for this chart.
         /// </summary>
         public ArcAnimation Animation { get; set; }
 

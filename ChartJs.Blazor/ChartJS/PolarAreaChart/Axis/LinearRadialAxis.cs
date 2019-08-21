@@ -9,7 +9,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
     public class LinearRadialAxis
     {
         /// <summary>
-        /// Gets or sets the angle lines configuration. Check
+        /// Gets or sets the angle lines configuration.
         /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/radial/linear.html#angle-line-options </para>
         /// </summary>
         public AngleLines AngleLines { get; set; }

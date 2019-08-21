@@ -6,7 +6,7 @@ namespace ChartJs.Blazor.ChartJS.Common
     /// <summary>
     /// The base class for minor and major ticks (see <see cref="MinorTicks"/> and see <see cref="MajorTicks"/>).
     /// </summary>
-    public class SubTicks
+    public abstract class SubTicks
     {
         /// <summary>
         /// Gets or sets the font color for a tick's labels.

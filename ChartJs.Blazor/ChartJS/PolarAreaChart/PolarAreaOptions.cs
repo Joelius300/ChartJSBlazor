@@ -16,7 +16,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
         public double StartAngle { get; set; } = -0.5 * Math.PI;
 
         /// <summary>
-        /// Gets or sets the animation the chart uses.
+        /// Gets or sets the animation-configuration for this chart.
         /// </summary>
         public ArcAnimation Animation { get; set; }
 
