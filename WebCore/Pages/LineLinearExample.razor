@@ -15,7 +15,7 @@
 <ChartJsLineChart @ref="lineChartJs" @ref:suppressField Config="@lineChartConfig" Width="600" Height="300" />
 <Button @onclick="@UpdateChart">Add random point</Button>
 
-@functions
+@code
 {
     LineChartConfig lineChartConfig;
     ChartJsLineChart lineChartJs;
