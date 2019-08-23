@@ -52,7 +52,7 @@ dotnet add package ChartJs.Blazor.Fork
 
 ## Usage
 
-For detailed instruction go to the [Wiki](https://github.com/Joelius300/ChartJSBlazor/wiki). Since the example here and those in the wiki might be outdated very fast because of the many breaking changes, I would also advise you to go look at the [WebCore-project](https://github.com/Joelius300/ChartJSBlazor/tree/master/WebCore) in this repos where you can find some examples.  
+For detailed instructions read the [Chart.Js](https://www.chartjs.org/docs/latest/charts/) documentation to understand how each chart works in detail or go to the [Wiki](https://github.com/Joelius300/ChartJSBlazor/wiki) to check the examples provided there. Since the example here and those in the wiki might be outdated very fast because of the many breaking changes, I would also advise you to go look at the [WebCore-project](https://github.com/Joelius300/ChartJSBlazor/tree/master/WebCore) in this repos where you can find some examples.  
 
 Before you can start creating a chart with a config etc, you have to include some static assets to your project.
 
