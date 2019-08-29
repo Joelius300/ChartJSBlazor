@@ -111,6 +111,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <returns>true if the objects are considered equal; otherwise, false.</returns>
         public override bool Equals(object obj)
         {
+            // an indexable option cannot store null
             if (obj == null) return false;
 
             if (obj is IndexableOption<T> option)
@@ -131,5 +132,21 @@ namespace ChartJs.Blazor.ChartJS.Common
         {
             return -1937169414 + Value.GetHashCode();
         }
+
+        /// <summary>
+        /// Determines whether two specified <see cref="IndexableOption{T}"/> instances contain the same value.
+        /// </summary>
+        /// <param name="a">The first <see cref="IndexableOption{T}"/> to compare</param>
+        /// <param name="b">The second <see cref="IndexableOption{T}"/> to compare</param>
+        /// <returns>true if the value of a is the same as the value of b; otherwise, false.</returns>
+        public static bool operator ==(IndexableOption<T> a, IndexableOption<T> b) => a.Equals(b);
+
+        /// <summary>
+        /// Determines whether two specified <see cref="IndexableOption{T}"/> instances contain different values.
+        /// </summary>
+        /// <param name="a">The first <see cref="IndexableOption{T}"/> to compare</param>
+        /// <param name="b">The second <see cref="IndexableOption{T}"/> to compare</param>
+        /// <returns>true if the value of a is different from the value of b; otherwise, false.</returns>
+        public static bool operator !=(IndexableOption<T> a, IndexableOption<T> b) => !(a == b);
     }
 }
