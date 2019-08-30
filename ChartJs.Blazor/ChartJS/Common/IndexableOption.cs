@@ -42,7 +42,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         {
             get
             {
-                if (!IsIndexed)
+                if (IsIndexed)
                     throw new InvalidOperationException("This instance represents an array of values. The single value is not available.");
 
                 return _singleValue;
@@ -103,6 +103,7 @@ namespace ChartJs.Blazor.ChartJS.Common
 
         private static void CheckIsNotIndexableOption(Type type)
         {
+            if (!type.IsGenericType) return;
             if (type.GetGenericTypeDefinition() == typeof(IndexableOption<>))
                 throw new ArgumentException("You cannot use an indexable option inside an indexable option.");
         }
