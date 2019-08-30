@@ -12,14 +12,41 @@ namespace ChartJs.Blazor.ChartJS.Common
     public struct IndexableOption<T> : IEquatable<IndexableOption<T>>
     {
         /// <summary>
-        /// The compile-time name of the property which stores the wrapped value. This is used internally for serialization.
+        /// The compile-time name of the property which gets the wrapped value. This is used internally for serialization.
         /// </summary>
-        internal const string PropertyName = nameof(Value);
+        internal const string PropertyName = nameof(BoxedValue);
 
+        // for serialization, there has to be a cast to object anyway
+        internal object BoxedValue => IsIndexed ? (object)IndexedValues : SingleValue;
+
+        private readonly T[] _indexedValues;
         /// <summary>
-        /// The actual value represented by this instance.
+        /// The indexed values represented by this instance.
         /// </summary>
-        public object Value { get; }
+        internal T[] IndexedValues {
+            get
+            {
+                if (!IsIndexed)
+                    throw new InvalidOperationException("This instance represents a single value. The indexed values are not available.");
+
+                return _indexedValues;
+            }
+        }
+
+        private readonly T _singleValue;
+        /// <summary>
+        /// The single value represented by this instance.
+        /// </summary>
+        internal T SingleValue
+        {
+            get
+            {
+                if (!IsIndexed)
+                    throw new InvalidOperationException("This instance represents an array of values. The single value is not available.");
+
+                return _singleValue;
+            }
+        }
 
         /// <summary>
         /// Gets the value indicating whether the option wrapped in this <see cref="IndexableOption{T}"/> is indexed. 
@@ -33,8 +60,10 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <param name="singleValue">The single value this <see cref="IndexableOption{T}"/> should represent.</param>
         public IndexableOption(T singleValue)
         {
-            Value = singleValue ?? throw new ArgumentNullException(nameof(singleValue));
+            _singleValue = singleValue ?? throw new ArgumentNullException(nameof(singleValue));
             IsIndexed = false;
+
+            _indexedValues = default;
         }
 
         /// <summary>
@@ -43,46 +72,38 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <param name="indexedValues">The array of values this <see cref="IndexableOption{T}"/> should represent.</param>
         public IndexableOption(T[] indexedValues)
         {
-            Value = indexedValues ?? throw new ArgumentNullException(nameof(indexedValues));
+            _indexedValues = indexedValues ?? throw new ArgumentNullException(nameof(indexedValues));
             IsIndexed = true;
+
+            _singleValue = default;
         }
 
         /// <summary>
         /// Implicitly wraps a single value of <typeparamref name="T"/> to a new instance of <see cref="IndexableOption{T}"/>.
         /// </summary>
         /// <param name="singleValue">The single value to wrap</param>
-        public static implicit operator IndexableOption<T>(T singleValue) => new IndexableOption<T>(singleValue);
+        public static implicit operator IndexableOption<T>(T singleValue)
+        {
+            CheckIsNotIndexableOption(typeof(T));
+
+            return new IndexableOption<T>(singleValue);
+        }
 
         /// <summary>
         /// Implicitly wraps an array of values of <typeparamref name="T"/> to a new instance of <see cref="IndexableOption{T}"/>.
         /// </summary>
         /// <param name="indexedValues">The array of values to wrap</param>
-        public static implicit operator IndexableOption<T>(T[] indexedValues) => new IndexableOption<T>(indexedValues);
-
-        /// <summary>
-        /// Explicitly unwraps an <see cref="IndexableOption{T}"/> to a single value.
-        /// <para>If this instance represents an array of values instead of a single value, an <see cref="InvalidCastException"/> will be thrown.</para>
-        /// </summary>
-        /// <param name="wrappedValue">The wrapped single value</param>
-        public static explicit operator T(IndexableOption<T> wrappedValue)
+        public static implicit operator IndexableOption<T>(T[] indexedValues)
         {
-            if (wrappedValue.IsIndexed)
-                throw new InvalidCastException("This instance represents an array of values and can't be converted to a single value.");
+            CheckIsNotIndexableOption(typeof(T));
 
-            return (T)wrappedValue.Value;
+            return new IndexableOption<T>(indexedValues);
         }
 
-        /// <summary>
-        /// Explicitly unwraps an <see cref="IndexableOption{T}"/> to an array of values.
-        /// <para>If this instance represents a single value instead of an array of values, an <see cref="InvalidCastException"/> will be thrown.</para>
-        /// </summary>
-        /// <param name="wrappedValue">The wrapped array of values</param>
-        public static explicit operator T[](IndexableOption<T> wrappedValue)
+        private static void CheckIsNotIndexableOption(Type type)
         {
-            if (!wrappedValue.IsIndexed)
-                throw new InvalidCastException("This instance represents a single value and can't be converted to an array of values.");
-
-            return (T[])wrappedValue.Value;
+            if (type.GetGenericTypeDefinition() == typeof(IndexableOption<>))
+                throw new ArgumentException("You cannot use an indexable option inside an indexable option.");
         }
 
         /// <summary>
@@ -96,11 +117,11 @@ namespace ChartJs.Blazor.ChartJS.Common
 
             if (IsIndexed)
             {
-                return EqualityComparer<T[]>.Default.Equals((T[])Value, (T[])other.Value);
+                return EqualityComparer<T[]>.Default.Equals(IndexedValues, other.IndexedValues);
             }
             else
             {
-                return EqualityComparer<T>.Default.Equals((T)Value, (T)other.Value);
+                return EqualityComparer<T>.Default.Equals(SingleValue, other.SingleValue);
             }
         }
 
@@ -120,7 +141,14 @@ namespace ChartJs.Blazor.ChartJS.Common
             }
             else
             {
-                return Value.Equals(obj);
+                if (IsIndexed)
+                {
+                    return IndexedValues.Equals(obj);
+                }
+                else
+                {
+                    return SingleValue.Equals(obj);
+                }
             }
         }
 
@@ -130,7 +158,11 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <returns>The hash of the underlying object.</returns>
         public override int GetHashCode()
         {
-            return -1937169414 + Value.GetHashCode();
+            var hashCode = -506568782;
+            hashCode = hashCode * -1521134295 + EqualityComparer<T[]>.Default.GetHashCode(_indexedValues);
+            hashCode = hashCode * -1521134295 + EqualityComparer<T>.Default.GetHashCode(_singleValue);
+            hashCode = hashCode * -1521134295 + IsIndexed.GetHashCode();
+            return hashCode;
         }
 
         /// <summary>
