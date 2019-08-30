@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace ChartJs.Blazor.ChartJS.Common
@@ -31,7 +32,7 @@ namespace ChartJs.Blazor.ChartJS.Common
             // prop.Value.WriteTo(writer);
 
             // get the value using reflection and write it to the writer
-            object toWrite = value.GetType().GetProperty(IndexableOption<object>.PropertyName).GetValue(value);
+            object toWrite = value.GetType().GetProperty(IndexableOption<object>.PropertyName, BindingFlags.Instance | BindingFlags.NonPublic).GetValue(value);
             JToken.FromObject(toWrite).WriteTo(writer);
         }
     }
