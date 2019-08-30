@@ -85,7 +85,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <param name="singleValue">The single value to wrap</param>
         public static implicit operator IndexableOption<T>(T singleValue)
         {
-            CheckIsNotIndexableOption(typeof(T));
+            CheckIsNotIndexableOption(singleValue.GetType());
 
             return new IndexableOption<T>(singleValue);
         }
@@ -96,7 +96,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <param name="indexedValues">The array of values to wrap</param>
         public static implicit operator IndexableOption<T>(T[] indexedValues)
         {
-            CheckIsNotIndexableOption(typeof(T));
+            CheckIsNotIndexableOption(indexedValues.GetType());
 
             return new IndexableOption<T>(indexedValues);
         }
