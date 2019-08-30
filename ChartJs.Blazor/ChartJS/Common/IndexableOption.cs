@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ChartJs.Blazor.ChartJS.Common
@@ -117,7 +118,9 @@ namespace ChartJs.Blazor.ChartJS.Common
 
             if (IsIndexed)
             {
-                return EqualityComparer<T[]>.Default.Equals(IndexedValues, other.IndexedValues);
+                if (IndexedValues == other.IndexedValues) return true;
+
+                return Enumerable.SequenceEqual(IndexedValues, other.IndexedValues);
             }
             else
             {
