@@ -99,16 +99,27 @@ function WireUpGenerateLabelsFunc(config) {
         var generateLabelsFunc = window[generateLabelsNamespaceAndFunc[0]][generateLabelsNamespaceAndFunc[1]];
         if (typeof generateLabels === "function")
             config.options.legend.labels.generateLabels = generateLabelsFunc;
-    // https://github.com/mariusmuntean/ChartJs.Blazor/pull/18
-    //    } else { // fallback to the default
-    //        config.options.legend.labels.generateLabels = Chart.defaults.global.legend.labels.generateLabels;
-    //    }
-    //} else { // fallback to the default
-    //    config.options.legend.labels.generateLabels = Chart.defaults.global.legend.labels.generateLabels;
+        // https://github.com/mariusmuntean/ChartJs.Blazor/pull/18
+        //    } else { // fallback to the default
+        //        config.options.legend.labels.generateLabels = Chart.defaults.global.legend.labels.generateLabels;
+        //    }
+        //} else { // fallback to the default
+        //    config.options.legend.labels.generateLabels = Chart.defaults.global.legend.labels.generateLabels;
     }
 }
 
 function WireUpOnClick(config) {
+    let getDefaultHandler = function (type) {
+        switch (type) {
+            case "pie":
+                return Chart.defaults.pie.legend.onClick;
+            case "polarArea":
+                return Chart.defaults.polarArea.legend.onClick;
+            default:
+                return Chart.defaults.global.legend.onClick;
+        }
+    }
+
     if (config.options.legend.onClick) {
         // Js function
         if (typeof config.options.legend.onClick === "object" &&
@@ -118,7 +129,7 @@ function WireUpOnClick(config) {
             if (typeof onClickFunc === "function") {
                 config.options.legend.onClick = onClickFunc;
             } else { // fallback to the default
-                config.options.legend.onClick = Chart.defaults.global.legend.onClick;
+                config.options.legend.onClick = getDefaultHandler(config.type);
             }
         }
         // .Net static method
@@ -146,7 +157,7 @@ function WireUpOnClick(config) {
             })();
         }
     } else { // fallback to the default
-        config.options.legend.onClick = Chart.defaults.global.legend.onClick;
+        config.options.legend.onClick = getDefaultHandler(config.type);
     }
 }
 
