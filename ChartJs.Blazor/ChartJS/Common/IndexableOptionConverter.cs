@@ -26,14 +26,26 @@ namespace ChartJs.Blazor.ChartJS.Common
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            // this doesn't work because it will apparently use the converter also in here resulting in an endless loop -> StackOverflowException
-            // JObject o = JObject.FromObject(value, serializer);
-            // JProperty prop = o.Property(IndexableOption<object>.PropertyName);
-            // prop.Value.WriteTo(writer);
+            // get the correct property using reflection
+            var prop = value.GetType().GetProperty(IndexableOption<object>.PropertyName, BindingFlags.Instance | BindingFlags.NonPublic);
 
-            // get the value using reflection and write it to the writer
-            object toWrite = value.GetType().GetProperty(IndexableOption<object>.PropertyName, BindingFlags.Instance | BindingFlags.NonPublic).GetValue(value);
-            JToken.FromObject(toWrite).WriteTo(writer);
+            try
+            {
+                // if the indexable option was not initialized, this will throw an InvalidOperationException wrapped in a TargetInvocationException
+                object toWrite = prop.GetValue(value);
+
+                // write the property
+                JToken.FromObject(toWrite).WriteTo(writer);
+            }
+            catch (TargetInvocationException oex)
+                when (oex.InnerException is InvalidOperationException iex)
+            {
+                Console.WriteLine("Error while trying to serialize an indexable option:");
+                Console.WriteLine(iex.Message);
+
+                // write non-defined value, chart.js will use their default
+                writer.WriteUndefined();
+            }
         }
     }
 }
