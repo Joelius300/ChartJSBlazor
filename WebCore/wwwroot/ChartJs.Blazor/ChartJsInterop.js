@@ -90,6 +90,7 @@ function WireUpLegendItemFilterFunc(config) {
 
 function WireUpGenerateLabelsFunc(config) {
     let getDefaultFunc = function (type) {
+        // if there are other places we have this, don't use a switch, use [type]
         switch (type) {
             case "pie":
                 return Chart.defaults.pie.legend.labels.generateLabels;
@@ -120,6 +121,7 @@ function WireUpGenerateLabelsFunc(config) {
 
 function WireUpOnClick(config) {
     let getDefaultHandler = function (type) {
+        // if there are other places we have this, don't use a switch, use [type]
         switch (type) {
             case "pie":
                 return Chart.defaults.pie.legend.onClick;
