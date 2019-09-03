@@ -11,10 +11,17 @@ assignees: ''
 Is your feature request related to a problem? Please describe.
 A clear and concise description of what the problem is. Example. I'm am trying to do [...] but [...]
 
-### Which Blazor project type is your feature request related to?
+### Which charts does this feature request apply to?
 <!-- Remove the items which don't apply from the following list -->
-- Client-Side
-- Server-Side
+- Bar charts
+- Bubble charts
+- Dougnut and pie charts
+- Line charts
+- Polar area charts
+- Radar charts
+- Scatter charts
+- Mixed charts
+- All
 
 ### Describe the solution you'd like
 A clear and concise description of what you want to happen.

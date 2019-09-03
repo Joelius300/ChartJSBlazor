@@ -14,3 +14,15 @@ A clear and concise description of what you want to know.
 <!-- Remove the items which don't apply from the following list -->
 - Client-Side
 - Server-Side
+
+### Which charts is this question related to?
+<!-- Remove the items which don't apply from the following list -->
+- Bar charts
+- Bubble charts
+- Dougnut and pie charts
+- Line charts
+- Polar area charts
+- Radar charts
+- Scatter charts
+- Mixed charts
+- All

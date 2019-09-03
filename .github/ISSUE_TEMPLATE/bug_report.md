@@ -15,6 +15,18 @@ A clear and concise description of what the bug is.
 - Client-Side
 - Server-Side
 
+### Which charts does this bug apply to?
+<!-- Remove the items which don't apply from the following list -->
+- Bar charts
+- Bubble charts
+- Dougnut and pie charts
+- Line charts
+- Polar area charts
+- Radar charts
+- Scatter charts
+- Mixed charts
+- All
+
 ### To Reproduce
 Steps to reproduce the behavior:
 1. Using this version of ChartJSBlazor '...'.
