@@ -90,15 +90,14 @@ function WireUpLegendItemFilterFunc(config) {
 
 function WireUpGenerateLabelsFunc(config) {
     let getDefaultFunc = function (type) {
-        // if there are other places we have this, don't use a switch, use [type]
-        switch (type) {
-            case "pie":
-                return Chart.defaults.pie.legend.labels.generateLabels;
-            case "polarArea":
-                return Chart.defaults.polarArea.legend.labels.generateLabels;
-            default:
-                return Chart.defaults.global.legend.labels.generateLabels;
+        let defaults = Chart.defaults[type] || Chart.defaults.global;
+        if (defaults.legend &&
+            defaults.legend.labels &&
+            defaults.legend.labels.generateLabels) {
+            return defaults.legend.labels.generateLabels;
         }
+
+        return Chart.defaults.global.legend.labels.generateLabels;
     }
 
     if (config.options.legend.labels === undefined)
@@ -121,15 +120,13 @@ function WireUpGenerateLabelsFunc(config) {
 
 function WireUpOnClick(config) {
     let getDefaultHandler = function (type) {
-        // if there are other places we have this, don't use a switch, use [type]
-        switch (type) {
-            case "pie":
-                return Chart.defaults.pie.legend.onClick;
-            case "polarArea":
-                return Chart.defaults.polarArea.legend.onClick;
-            default:
-                return Chart.defaults.global.legend.onClick;
+        let defaults = Chart.defaults[type] || Chart.defaults.global;
+        if (defaults.legend &&
+            defaults.legend.onClick) {
+            return defaults.legend.onClick;
         }
+
+        return Chart.defaults.global.legend.onClick;
     }
 
     if (config.options.legend.onClick) {
