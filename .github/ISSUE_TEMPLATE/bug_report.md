@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve.
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
@@ -16,16 +16,7 @@ A clear and concise description of what the bug is.
 - Server-Side
 
 ### Which charts does this bug apply to?
-<!-- Remove the items which don't apply from the following list -->
-- Bar charts
-- Bubble charts
-- Dougnut and pie charts
-- Line charts
-- Polar area charts
-- Radar charts
-- Scatter charts
-- Mixed charts
-- All
+<!-- Please list the charts you experienced this bug with. If it applies to all of them, just write 'all charts'. -->
 
 ### To Reproduce
 Steps to reproduce the behavior:
