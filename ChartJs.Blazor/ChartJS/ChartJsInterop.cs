@@ -16,7 +16,7 @@ namespace ChartJs.Blazor.ChartJS
 {
     public static class ChartJsInterop
     {
-        public static Task<bool> SetupChart(this IJSRuntime jsRuntime, ConfigBase chartConfig)
+        public static ValueTask<bool> SetupChart(this IJSRuntime jsRuntime, ConfigBase chartConfig)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace ChartJs.Blazor.ChartJS
                 Console.WriteLine($"Error while setting up chart: {exp.Message}");
             }
 
-            return Task.FromResult<bool>(false);
+            return new ValueTask<bool>(false);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace ChartJs.Blazor.ChartJS
                 }
             );
 
-        public static Task<bool> UpdateChart(this IJSRuntime jsRuntime, ConfigBase chartConfig)
+        public static ValueTask<bool> UpdateChart(this IJSRuntime jsRuntime, ConfigBase chartConfig)
         {
             try
             {
@@ -87,7 +87,7 @@ namespace ChartJs.Blazor.ChartJS
                 Console.WriteLine($"Error while updating chart: {exp.Message}");
             }
 
-            return Task.FromResult<bool>(false);
+            return new ValueTask<bool>(false);
         }
 
         /// <summary>

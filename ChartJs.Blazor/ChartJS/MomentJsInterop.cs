@@ -16,12 +16,12 @@ namespace ChartJs.Blazor.ChartJS
 {
     public static class MomentJsInterop
     {
-        public static Task<string[]> GetAvailableLocales(this IJSRuntime jsRuntime)
+        public static ValueTask<string[]> GetAvailableLocales(this IJSRuntime jsRuntime)
         {
             return jsRuntime.InvokeAsync<string[]>("getAvailableMomentLocales");
         }
 
-        public static Task<bool> ChangeLocale(this IJSRuntime jsRuntime, string locale)
+        public static ValueTask<bool> ChangeLocale(this IJSRuntime jsRuntime, string locale)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace ChartJs.Blazor.ChartJS
             }
             catch
             {
-                return Task.FromResult(false);
+                return  new ValueTask<bool>(false);
             }
         }
     }
