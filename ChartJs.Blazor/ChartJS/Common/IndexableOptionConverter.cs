@@ -43,7 +43,7 @@ namespace ChartJs.Blazor.ChartJS.Common
                 Console.WriteLine("Error while trying to serialize an indexable option:");
                 Console.WriteLine(iex.Message);
 
-                // write non-defined value, chart.js will use their default
+                // write undefined value, chart.js will use their default
                 writer.WriteUndefined();
             }
         }
