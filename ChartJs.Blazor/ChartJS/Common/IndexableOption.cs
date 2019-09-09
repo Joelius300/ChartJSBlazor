@@ -10,14 +10,8 @@ namespace ChartJs.Blazor.ChartJS.Common
     /// </summary>
     /// <typeparam name="T">The type of data this <see cref="IndexableOption{T}"/> is supposed to hold.</typeparam>
     [Newtonsoft.Json.JsonConverter(typeof(IndexableOptionConverter))]   // newtonsoft for now
-    public struct IndexableOption<T> : IEquatable<IndexableOption<T>>
+    public class IndexableOption<T> : IEquatable<IndexableOption<T>>
     {
-        /// <summary>
-        /// This represents a non-initialized <see cref="IndexableOption{T}"/>. If serialized, the value will be undefined.
-        /// <para>This is the default value for all non-defined IndexableOptions.</para>
-        /// </summary>
-        public static IndexableOption<T> Empty => new IndexableOption<T>();
-
         /// <summary>
         /// The compile-time name of the property which gets the wrapped value. This is used internally for serialization.
         /// </summary>
@@ -33,10 +27,6 @@ namespace ChartJs.Blazor.ChartJS.Common
         internal T[] IndexedValues {
             get
             {
-                if (!IsInitialized)
-                    throw new InvalidOperationException("This instance was not initialized");
-
-
                 if (!IsIndexed)
                     throw new InvalidOperationException("This instance represents a single value. The indexed values are not available.");
 
@@ -52,21 +42,12 @@ namespace ChartJs.Blazor.ChartJS.Common
         {
             get
             {
-                if (!IsInitialized)
-                    throw new InvalidOperationException("This instance was not initialized");
-
                 if (IsIndexed)
                     throw new InvalidOperationException("This instance represents an array of values. The single value is not available.");
 
                 return _singleValue;
             }
         }
-
-        /// <summary>
-        /// Gets the value indicating whether this <see cref="IndexableOption{T}"/> has been initialized.
-        /// True, if it represents a value (is initialized); otherwise, false.
-        /// </summary>
-        public bool IsInitialized { get; }
 
         /// <summary>
         /// Gets the value indicating whether the option wrapped in this <see cref="IndexableOption{T}"/> is indexed. 
@@ -82,9 +63,6 @@ namespace ChartJs.Blazor.ChartJS.Common
         {
             _singleValue = singleValue ?? throw new ArgumentNullException(nameof(singleValue));
             IsIndexed = false;
-
-            IsInitialized = true;
-            _indexedValues = default;
         }
 
         /// <summary>
@@ -95,9 +73,6 @@ namespace ChartJs.Blazor.ChartJS.Common
         {
             _indexedValues = indexedValues ?? throw new ArgumentNullException(nameof(indexedValues));
             IsIndexed = true;
-
-            IsInitialized = true;
-            _singleValue = default;
         }
 
         /// <summary>
@@ -117,7 +92,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <param name="indexedValues">The array of values to wrap</param>
         public static implicit operator IndexableOption<T>(T[] indexedValues)
         {
-            CheckIsNotIndexableOption(indexedValues.GetType());
+            CheckIsNotIndexableOption(indexedValues.GetType().GetElementType());
 
             return new IndexableOption<T>(indexedValues);
         }
