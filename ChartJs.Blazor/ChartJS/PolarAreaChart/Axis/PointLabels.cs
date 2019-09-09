@@ -14,7 +14,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         /// Gets or sets the font color for a point label.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public IndexableOption<string>? FontColor { get; set; }
+        public IndexableOption<string> FontColor { get; set; }
 
         /// <summary>
         /// Gets or sets the font size in pixels.

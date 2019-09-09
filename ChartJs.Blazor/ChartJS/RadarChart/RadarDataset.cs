@@ -67,60 +67,60 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
         /// The fill color for points.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public IndexableOption<string>? PointBackgroundColor { get; set; }
+        public IndexableOption<string> PointBackgroundColor { get; set; }
 
         /// <summary>
         /// The border color for points.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public IndexableOption<string>? PointBorderColor { get; set; }
+        public IndexableOption<string> PointBorderColor { get; set; }
 
         /// <summary>
         /// The width of the point border in pixels.
         /// </summary>
-        public IndexableOption<int>? PointBorderWidth { get; set; }
+        public IndexableOption<int> PointBorderWidth { get; set; }
 
         /// <summary>
         /// The radius of the point shape. If set to 0, the point is not rendered.
         /// </summary>
-        public IndexableOption<int>? PointRadius { get; set; }
+        public IndexableOption<int> PointRadius { get; set; }
 
         /// <summary>
         /// The rotation of the point in degrees
         /// </summary>
-        public IndexableOption<int>? PointRotation { get; set; }
+        public IndexableOption<int> PointRotation { get; set; }
 
         /// <summary>
         /// Style of the point
         /// </summary>
-        public IndexableOption<RadarPointStyles>? PointStyle { get; set; }
+        public IndexableOption<RadarPointStyles> PointStyle { get; set; }
 
         /// <summary>
         /// The pixel size of the non-displayed point that reacts to mouse events.
         /// </summary>
-        public IndexableOption<int>? PointHitRadius { get; set; }
+        public IndexableOption<int> PointHitRadius { get; set; }
 
         /// <summary>
         /// Point background color when hovered.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public IndexableOption<string>? PointHoverBackgroundColor { get; set; }
+        public IndexableOption<string> PointHoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Point border color when hovered.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
-        public IndexableOption<string>? PointHoverBorderColor { get; set; }
+        public IndexableOption<string> PointHoverBorderColor { get; set; }
 
         /// <summary>
         /// Border width of point when hovered.
         /// </summary>
-        public IndexableOption<int>? PointHoverBorderWidth { get; set; }
+        public IndexableOption<int> PointHoverBorderWidth { get; set; }
 
         /// <summary>
         /// The radius of the point when hovered
         /// </summary>
-        public IndexableOption<int>? PointHoverRadius { get; set; }
+        public IndexableOption<int> PointHoverRadius { get; set; }
 
         public List<double> Data { get; set; }
     }
