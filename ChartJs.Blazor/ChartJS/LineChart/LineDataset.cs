@@ -111,13 +111,13 @@ namespace ChartJs.Blazor.ChartJS.LineChart
         public bool Fill { get; set; }
 
         /// <summary>
-        /// Bezier curve tension of the line. Set to 0 to draw straightlines. This option is ignored if monotone cubic interpolation is used.
+        /// Bezier curve tension of the line. Set to 0 to draw straight lines. This option is ignored if monotone cubic interpolation is used.
         /// </summary>
         public double LineTension { get; set; } = 0.4;
 
         /// <summary>
         /// If false, the line is not drawn for this dataset.
-        /// Default is true. If you are filling and dont want to show the line, then change to false.
+        /// Default is true. If you are filling and don't want to show the line, then change to false.
         /// </summary>
         public bool ShowLine { get; set; } = true;
 
