@@ -1,8 +1,8 @@
-﻿namespace ChartJs.Blazor.Util
-{
-    using System;
-    using System.Globalization;
+﻿using System;
+using System.Globalization;
 
+namespace ChartJs.Blazor.Util
+{
     /// <summary>
     /// Provides useful methods for working with colors. Particularly the conversion from different kinds of C#-colors to string colors which are understood by javascript/css.
     /// </summary>
