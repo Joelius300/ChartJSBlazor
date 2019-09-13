@@ -1,5 +1,4 @@
 using ChartJs.Blazor.ChartJS.Common.Enums;
-using Newtonsoft.Json;
 using System;
 
 namespace ChartJs.Blazor.ChartJS.Common

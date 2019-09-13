@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ChartJs.Blazor.ChartJS.Common.Enums;
 using ChartJs.Blazor.ChartJS.MixedChart;
-using ChartJs.Blazor.Util.Color;
+using ChartJs.Blazor.Util;
 
 namespace ChartJs.Blazor.ChartJS.LineChart
 {
@@ -73,7 +73,7 @@ namespace ChartJs.Blazor.ChartJS.LineChart
         /// <summary>
         /// Length and spacing of dashes. It's an int array. Whatever JS!
         /// </summary>
-        public int[] BorderDash { get; set; } = new int[] {0, 0};
+        public int[] BorderDash { get; set; } = { 0, 0 };
 
         /// <summary>
         /// Offset for line dashes.

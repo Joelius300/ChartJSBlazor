@@ -97,7 +97,7 @@
 
         var forecasts = await ForecastService.GetForecastAsync(DateTime.Now, 2);
 
-        var tempDataSet = new LineDataset<TimeTupel<int>>
+        var tempDataSet = new LineDataset<TimeTuple<int>>
         {
             BackgroundColor = "#ff6384",
             BorderColor = "#ff6384",
@@ -109,7 +109,7 @@
             SteppedLine = SteppedLine.False
         };
 
-        tempDataSet.AddRange(forecasts.Select(p => new TimeTupel<int>(new Moment(p.Date), p.TemperatureC)));
+        tempDataSet.AddRange(forecasts.Select(p => new TimeTuple<int>(new Moment(p.Date), p.TemperatureC)));
         lineConfig.Data.Datasets.Add(tempDataSet);
     }
 
