@@ -419,6 +419,33 @@
             </summary>
             <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle">
+            <summary>
+            Specifies the border join style.
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Bevel">
+            <summary>
+            The bevel border join style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Round">
+            <summary>
+            The round border join style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Miter">
+            <summary>
+            The miter border join style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes">
             <summary>
             Defines the type of a chart
@@ -1587,13 +1614,13 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineDataset`1.BorderCapStyle">
             <summary>
-            Cap style of the line.
+            Gets or sets the cap style of the line.
             <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineDataset`1.BorderJoinStyle">
             <summary>
-            Line joint style.
+            Gets or sets the line join style.
             <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
             </summary>
         </member>
@@ -2358,12 +2385,14 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.BorderCapStyle">
             <summary>
-            Cap style of the line.
+            Gets or sets the cap style of the line.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.BorderJoinStyle">
             <summary>
-            Line joint style
+            Gets or sets the line join style.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.Fill">
@@ -2459,12 +2488,14 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.BorderCapStyle">
             <summary>
-            Cap style of the line.
+            Gets or sets the cap style of the line.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.BorderJoinStyle">
             <summary>
-            Line joint style.
+            Gets or sets the line join style.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.CubicInterpolationMode">

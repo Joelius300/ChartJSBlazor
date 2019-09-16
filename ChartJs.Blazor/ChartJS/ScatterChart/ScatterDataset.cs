@@ -32,14 +32,16 @@ namespace ChartJs.Blazor.ChartJS.ScatterChart
         public int BorderWidth { get; set; } = 1;
 
         /// <summary>
-        /// Cap style of the line.
+        /// Gets or sets the cap style of the line.
+        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
         /// </summary>
         public BorderCapStyle BorderCapStyle { get; set; }
 
         /// <summary>
-        /// Line joint style.
+        /// Gets or sets the line join style.
+        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
         /// </summary>
-        public string BorderJoinStyle { get; set; }
+        public BorderJoinStyle BorderJoinStyle { get; set; }
 
         /// <summary>
         /// Algorithm used to interpolate a smooth curve from the discrete data points.

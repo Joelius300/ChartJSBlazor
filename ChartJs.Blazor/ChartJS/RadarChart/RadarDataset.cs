@@ -38,14 +38,16 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
         public double BorderDashOffset { get; set; }
 
         /// <summary>
-        /// Cap style of the line.
+        /// Gets or sets the cap style of the line.
+        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
         /// </summary>
         public BorderCapStyle BorderCapStyle { get; set; }
 
         /// <summary>
-        /// Line joint style
+        /// Gets or sets the line join style.
+        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
         /// </summary>
-        public string BorderJoinStyle { get; set; }
+        public BorderJoinStyle BorderJoinStyle { get; set; }
 
         /// <summary>
         /// Both line and radar charts support a fill option on the dataset object which can be used to create area between two datasets or a dataset and a boundary, i.e. the scale origin, start or end
