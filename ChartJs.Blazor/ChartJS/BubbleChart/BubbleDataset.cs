@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ChartJs.Blazor.ChartJS.Common;
 using ChartJs.Blazor.ChartJS.Common.Enums;
 using ChartJs.Blazor.Util;
 
@@ -46,7 +47,11 @@ namespace ChartJs.Blazor.ChartJS.BubbleChart
         /// </summary>
         public string Label { get; set; }
 
-        public string PointStyle { get; set; } = BubblePointStyle.circle.ToString();
+        /// <summary>
+        /// Gets or sets the point style.
+        /// <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
+        /// </summary>
+        public IndexableOption<PointStyle> PointStyle { get; set; }
 
         public int Rotation { get; set; } = 0;
 

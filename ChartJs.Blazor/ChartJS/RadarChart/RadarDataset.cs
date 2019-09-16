@@ -94,9 +94,10 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
         public IndexableOption<int> PointRotation { get; set; }
 
         /// <summary>
-        /// Style of the point
+        /// Gets or sets the point style.
+        /// <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
         /// </summary>
-        public IndexableOption<RadarPointStyles> PointStyle { get; set; }
+        public IndexableOption<PointStyle> PointStyle { get; set; }
 
         /// <summary>
         /// The pixel size of the non-displayed point that reacts to mouse events.

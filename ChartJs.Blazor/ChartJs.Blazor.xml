@@ -189,6 +189,12 @@
             Defines the text associated to the dataset and which appears in the legend and tooltips.
             </summary>
         </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BubbleChart.BubbleDataset.PointStyle">
+            <summary>
+            Gets or sets the point style.
+            <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
+            </summary>
+        </member>
         <member name="M:ChartJs.Blazor.ChartJS.ChartJsInterop.ConvertExpandoObjectToDictionary(System.Dynamic.ExpandoObject)">
             <summary>
             This method is specifically used to convert an <see cref="T:System.Dynamic.ExpandoObject"/> with a Tree structure to a <see cref="!:Dictionary&lt;string, object&gt;"/>.
@@ -596,6 +602,68 @@
             Returns the hash of the underlying object.
             </summary>
             <returns>The hash of the underlying object.</returns>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle">
+            <summary>
+            Specifies the point style.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles</para>
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Circle">
+            <summary>
+            The circle point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Cross">
+            <summary>
+            The cross point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.CrossRot">
+            <summary>
+            The crossRot point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Dash">
+            <summary>
+            The dash point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Line">
+            <summary>
+            The line point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Rect">
+            <summary>
+            The rect point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRounded">
+            <summary>
+            The rectRounded point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRot">
+            <summary>
+            The rectRot point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Star">
+            <summary>
+            The star point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Triangle">
+            <summary>
+            The triangle point style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.Positions">
             <summary>
@@ -2466,7 +2534,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.PointStyle">
             <summary>
-            Style of the point
+            Gets or sets the point style.
+            <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.PointHitRadius">
