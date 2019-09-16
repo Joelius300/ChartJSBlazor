@@ -370,6 +370,28 @@
             When building its ticks, it will automatically calculate the most comfortable unit base on the size of the scale.
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign">
+            <summary>
+            Specifies the border alignment of a <see cref="N:ChartJs.Blazor.ChartJS.PieChart"/> and a <see cref="N:ChartJs.Blazor.ChartJS.PolarAreaChart"/>.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center">
+            <summary>
+            When 'center' is set, the borders of arcs next to each other will overlap. The default value.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner">
+            <summary>
+            When 'inner' is set, it is guaranteed that all the borders are not overlap.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes">
             <summary>
             Defines the type of a chart
