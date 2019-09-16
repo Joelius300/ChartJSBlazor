@@ -21,7 +21,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         public string FontColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the font family for the <see cref="Ticks"/> labels, follows CSS font-family options.
+        /// Gets or sets the font family for the <see cref="Ticks"/> labels.
         /// </summary>
         public string FontFamily { get; set; }
 
@@ -31,7 +31,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         public int FontSize { get; set; } = 12;
 
         /// <summary>
-        /// Gets or sets the font style for the <see cref="Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+        /// Gets or sets the font style for the <see cref="Ticks"/> labels.
         /// </summary>
         public FontStyle FontStyle { get; set; } = FontStyle.Normal;
 

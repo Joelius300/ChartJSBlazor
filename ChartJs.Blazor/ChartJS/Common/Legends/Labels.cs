@@ -19,7 +19,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Legends
         public int FontSize { get; set; } = 12;
 
         /// <summary>
-        /// Gets or sets the font style for a text, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+        /// Gets or sets the font style for a text.
         /// </summary>
         public FontStyle FontStyle { get; set; } = FontStyle.Normal;
 

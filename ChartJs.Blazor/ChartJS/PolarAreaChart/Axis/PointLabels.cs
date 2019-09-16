@@ -22,7 +22,7 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         public int FontSize { get; set; } = 10;
 
         /// <summary>
-        /// Gets or sets the font style to use when rendering a point label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+        /// Gets or sets the font style to use when rendering a point label.
         /// </summary>
         public FontStyle FontStyle { get; set; } = FontStyle.Normal;
 
