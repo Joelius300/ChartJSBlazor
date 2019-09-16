@@ -2,6 +2,8 @@
 {
     /// <summary>
     /// Specifies the cubic interpolation mode.
+    /// The 'monotone' algorithm is more suited to y = f(x) datasets:
+    /// It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
     /// </summary>
     public class CubicInterpolationMode : StringEnum
@@ -19,8 +21,6 @@
 
         /// <summary>
         /// Creates a new instance of the <see cref="CubicInterpolationMode"/> class.
-        /// The 'monotone' algorithm is more suited to y = f(x) datasets:
-        /// It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
         /// </summary>
         /// <param name="stringValue">The <see cref="string"/> value to set.</param>
         private CubicInterpolationMode(string stringValue) : base(stringValue) { }
