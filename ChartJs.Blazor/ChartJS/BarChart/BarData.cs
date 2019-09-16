@@ -3,11 +3,22 @@ using ChartJs.Blazor.ChartJS.MixedChart;
 
 namespace ChartJs.Blazor.ChartJS.BarChart
 {
+    /// <summary>
+    /// The data-subconfig of a <see cref="BarConfig"/>.
+    /// </summary>
     public class BarData
     {
-        public List<string> Labels { get; set; } = new List<string>();
+        /// <summary>
+        /// Creates a new instance of <see cref="BarData"/>
+        /// </summary>
+        public BarData()
+        {
+            Datasets = new HashSet<IMixableDataset<object>>();
+        }
 
-        // TODO: implement like LineData
-        public List<IMixableDataset<object>> Datasets { get; set; }
+        /// <summary>
+        /// The Datasets displayed in this chart.
+        /// </summary>
+        public HashSet<IMixableDataset<object>> Datasets { get; }
     }
 }

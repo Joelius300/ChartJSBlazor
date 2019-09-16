@@ -1,48 +1,46 @@
-﻿using ChartJs.Blazor.ChartJS.Common;
-using ChartJs.Blazor.Util;
+﻿using ChartJs.Blazor.Util;
+using ChartJs.Blazor.ChartJS.Common;
 
-namespace ChartJs.Blazor.ChartJS.BarChart.Dataset
+namespace ChartJs.Blazor.ChartJS.BarChart
 {
     /// <summary>
-    /// Dataset for a bar chart with type safe data. Source: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties
-    /// <para>
-    ///  The first value applies to the first bar, the second value to the second bar, and so on.
-    /// </para>
+    /// A dataset for a <see cref="Charts.ChartJsBarChart"/>.
     /// </summary>
+    /// <para>As per documentation here: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties.</para>
     /// <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="Common.Wrappers"/> for value types.</typeparam>
-    public class IndividualBarDataset<TData> : BaseBarDataset<TData> where TData : class
+    public class BarDataset<TData> : BaseBarDataset<TData> where TData : class
     {
         /// <summary>
-        /// The fill color of the bar.
+        /// Gets or sets the fill color of the bars in the dataset.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
         public IndexableOption<string> BackgroundColor { get; set; }
 
         /// <summary>
-        /// The color of the bar border.
+        /// Gets or sets the border color of the bars in the dataset.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
         public IndexableOption<string> BorderColor { get; set; }
 
         /// <summary>
-        /// The stroke width of the bar in pixels.
+        /// Gets or sets the border width of the bars in the dataset.
         /// </summary>
         public IndexableOption<int> BorderWidth { get; set; }
 
         /// <summary>
-        /// The fill color of the bars when hovered.
+        /// Gets or sets the fill colour of the bars when hovered.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
         public IndexableOption<string> HoverBackgroundColor { get; set; }
 
         /// <summary>
-        /// The stroke color of the bars when hovered.
+        /// Gets or sets the stroke colour of the bars when hovered.
         /// <para>See <see cref="ColorUtil"/> for working with colors.</para>
         /// </summary>
         public IndexableOption<string> HoverBorderColor { get; set; }
 
         /// <summary>
-        /// The stroke width of the bars when hovered.
+        /// Gets or sets the stroke width of the bars when hovered.
         /// </summary>
         public IndexableOption<int> HoverBorderWidth { get; set; }
     }
