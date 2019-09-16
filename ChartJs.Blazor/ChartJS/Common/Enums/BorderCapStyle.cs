@@ -4,7 +4,7 @@
     /// Specifies the border cap style.
     /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap</para>
     /// </summary>
-    public class BorderCapStyle: StringEnum
+    public class BorderCapStyle : StringEnum
     {
         /// <summary>
         /// The butt border cap style.
