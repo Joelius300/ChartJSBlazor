@@ -1,5 +1,6 @@
 @page "/BarExample"
 @using ChartJs.Blazor.ChartJS.BarChart
+@using ChartJs.Blazor.ChartJS.BarChart.Axes
 @using ChartJs.Blazor.ChartJS.Common
 @using ChartJs.Blazor.Charts
 @using ChartJs.Blazor.ChartJS.Common.Properties
@@ -23,6 +24,17 @@
                 {
                     Display = true,
                     Text = "Sample chart from Blazor"
+                },
+                Scales = new BarScales
+                {
+                    YAxes = new List<BarAxis>
+                    {
+                        new BarAxis
+                        {
+                            BarPercentage = 0.5,
+                            BarThickness = BarThickness.Flex
+                        }
+                    }
                 },
                 Responsive = true
             }
