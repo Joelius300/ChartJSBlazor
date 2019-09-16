@@ -509,20 +509,20 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode">
             <summary>
             Specifies the cubic interpolation mode.
-            The <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone" /> algorithm is more suited to y = f(x) datasets:
-            It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
             <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Default">
             <summary>
             The default cubic interpolation mode.
+            The <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Default" /> algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone">
             <summary>
             The monotone cubic interpolation mode.
-            The <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone" /> algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
+            The <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone" /> algorithm is more suited to y = f(x) datasets:
+            It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.#ctor(System.String)">
