@@ -1,6 +1,6 @@
 @page "/BarExample"
 @using ChartJs.Blazor.ChartJS.BarChart
-@using ChartJs.Blazor.ChartJS.BarChart.Axes
+@using ChartJs.Blazor.ChartJS.Common
 @using ChartJs.Blazor.Charts
 @using ChartJs.Blazor.ChartJS.Common.Properties
 
@@ -29,7 +29,7 @@
 
         config.Data.Labels.AddRange(new[] { "A", "B", "C", "D" });
 
-        var barSet = new BarDataset<BarExampleData>
+        var barSet = new BarDataset<Point>
         {
             BackgroundColor = new[] { "#ff6384", "#55ee84", "#4463ff", "#efefef" },
             BorderWidth = 0,
@@ -39,7 +39,7 @@
             BorderColor = "#ffffff",
         };
 
-        barSet.AddRange(new[] { new BarExampleData{X = 0, Y = 4}, new BarExampleData{X = 1, Y = 5}, new BarExampleData{X = 2, Y = 6}, new BarExampleData{X = 3, Y = 7} });
+        barSet.AddRange(new[] { new Point{X = 0, Y = 4}, new Point{X = 1, Y = 5}, new Point{X = 2, Y = 6}, new Point{X = 3, Y = 7} });
         config.Data.Datasets.Add(barSet);
     }
 }
