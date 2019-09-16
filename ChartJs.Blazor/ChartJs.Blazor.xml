@@ -4,152 +4,230 @@
         <name>ChartJs.Blazor</name>
     </assembly>
     <members>
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis">
+            <summary>
+            The bar axis for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#scale-configuration</para>
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis"/> class.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.BarPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each bar should be within the category width.
+            1.0 will take the whole category width and put the bars right next to each other.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.CategoryPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each category should be within the sample width.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.BarThickness">
+            <summary>
+            Gets or sets the width of each bar in pixels.
+            If set to 'flex', it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.MaxBarThickness">
+            <summary>
+            Gets or sets the maximum bar thickness.
+            Set this to ensure that bars are not sized thicker than this.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.MinBarLength">
+            <summary>
+            Gets or sets the minimum bar length.
+            Set this to ensure that bars have a minimum length in pixels.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.OffsetGridLines">
+            <summary>
+            Gets or sets a value indicating whether grid lines will be shifted to be between labels or not.
+            If <c>true</c>, the bars for a particular data point fall between the grid lines.
+            The grid line will move to the left by one half of the tick interval.
+            If <c>false</c>, the grid line will go right down the middle of the bars.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.Stacked">
+            <summary>
+            Gets or sets a value indicating whether the bar chart is stacked or not.
+            Bar charts can be configured into stacked bar charts by changing the settings on the X and Y axes to enable stacking.
+            Stacked bar charts can be used to show how one data series is made up of a number of smaller pieces.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#stacked-bar-chart </para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.GridLines">
+            <summary>
+            Gets or sets the grid lines.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarConfig">
             <summary>
-            Config for a bar chart with type safe data
-            <para>Either 'bar' or 'horizontalBar'</para>
+            Config for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarConfig.#ctor(ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarConfig"/> class.
+            </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarData">
+            <summary>
+            The data-subconfig of a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarConfig"/>.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarData.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarData"/>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarData.Datasets">
+            <summary>
+            The Datasets displayed in this chart.
+            </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1">
+            <summary>
+            A dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
+            </summary>
+            <para>As per documentation here: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties.</para>
+            <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.BackgroundColor">
+            <summary>
+            Gets or sets the fill color of the bars in the dataset.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.BorderColor">
+            <summary>
+            Gets or sets the border color of the bars in the dataset.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.BorderWidth">
+            <summary>
+            Gets or sets the border width of the bars in the dataset.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.HoverBackgroundColor">
+            <summary>
+            Gets or sets the fill colour of the bars when hovered.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.HoverBorderColor">
+            <summary>
+            Gets or sets the stroke colour of the bars when hovered.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.HoverBorderWidth">
+            <summary>
+            Gets or sets the stroke width of the bars when hovered.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarOptions">
             <summary>
-            Bar Chart Config Options. Source: http://www.chartjs.org/docs/latest/charts/bar.html#configuration-options
+            The options-subconfig of a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarConfig"/>.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarOptions.BarPercentage">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarOptions.Scales">
             <summary>
-            Percent (0-1) of the available width each bar should be within the category width. 1.0 will take the whole category width and put the bars right next to each other
+            Gets or sets the scales fore the <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarOptions.CategoryPercentage">
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarScales">
             <summary>
-            Percent (0-1) of the available width each category should be within the sample width.
+            Defines the scales for bar charts by holding the x and y axes.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarOptions.BarThickness">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarScales.XAxes">
             <summary>
-            Manually set width of each bar in pixels. If set to 'flex', it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
+            Gets or sets the axes on the x coordinate.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarOptions.MaxBarThickness">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarScales.YAxes">
             <summary>
-            Set this to ensure that bars are not sized thicker than this.
+            Gets or sets the axes on the y coordinate.
             </summary>
         </member>
-        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1">
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness">
             <summary>
-            Dataset for a bar chart with type safe data. Source: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties
-            </summary>
-            <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1.BackgroundColor">
-            <summary>
-            The fill color of the bar.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            The bar thickness for a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis"/>.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#barthickness</para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1.BorderColor">
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarThickness.#ctor(System.String)">
             <summary>
-            The color of the bar border.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness" /> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String" /> value to set.</param>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarThickness.#ctor(System.Double)">
+            <summary>
+                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness" /> class.
+            </summary>
+            <param name="doubleValue">The <see cref="T:System.Double" /> value to set.</param>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex">
+            <summary>
+                The bottom border skipped style.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1.BorderWidth">
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1">
             <summary>
-            The stroke width of the bar in pixels.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1.HoverBackgroundColor">
-            <summary>
-            The fill color of the bars when hovered.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1.HoverBorderColor">
-            <summary>
-            The stroke color of the bars when hovered.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BarDataset`1.HoverBorderWidth">
-            <summary>
-            The stroke width of the bars when hovered.
-            </summary>
-        </member>
-        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Dataset.BaseBarDataset`1">
-            <summary>
-            A base dataset for a bar chart.
+            A base dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
             </summary>
             <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BaseBarDataset`1.Label">
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
             <summary>
-            The label for the dataset which appears in the legend and tooltips.
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1"/> class.
+            </summary>
+            <param name="data">The data to initialize the chart with.</param>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1"/> class.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BaseBarDataset`1.XAxisID">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Type">
             <summary>
-            The ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis
+            Gets or sets the chart type. <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Bar"/> in this case. This is needed for mixed datasets only.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BaseBarDataset`1.YAxisID">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.BorderSkipped">
             <summary>
-            The ID of the y axis to plot this dataset on. If not specified, this defaults to the ID of the first found y axis
+            Gets or sets a value to avoid drawing the bar stroke at the base of the fill.
+            In general, this does not need to be changed except when creating chart types that derive from a bar chart.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BaseBarDataset`1.BorderSkipped">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Label">
             <summary>
-            Which edge to skip drawing the border for. 
+            Gets or sets the label for the dataset which appears in the legend and tooltips.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.BaseBarDataset`1.Stack">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.XAxisId">
             <summary>
-            The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack)
+            Gets or sets the ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.YAxisId">
+            <summary>
+            Gets or sets the ID of the y axis to plot this dataset on. If not specified, this defaults to the ID of the first found y axis.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Stack">
+            <summary>
+            Gets or sets the id of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
             <para>
-            Specific for stacked bar charts
+            Specific for stacked bar charts.
             </para>
-            </summary>
-        </member>
-        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1">
-            <summary>
-            Dataset for a bar chart with type safe data. Source: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties
-            <para>
-             The first value applies to the first bar, the second value to the second bar, and so on.
-            </para>
-            </summary>
-            <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1.BackgroundColor">
-            <summary>
-            The fill color of the bar.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1.BorderColor">
-            <summary>
-            The color of the bar border.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1.BorderWidth">
-            <summary>
-            The stroke width of the bar in pixels.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1.HoverBackgroundColor">
-            <summary>
-            The fill color of the bars when hovered.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1.HoverBorderColor">
-            <summary>
-            The stroke color of the bars when hovered.
-            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Dataset.IndividualBarDataset`1.HoverBorderWidth">
-            <summary>
-            The stroke width of the bars when hovered.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BubbleChart.BubbleDataPoint.r">
@@ -370,10 +448,107 @@
             When building its ticks, it will automatically calculate the most comfortable unit base on the size of the scale.
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped">
+            <summary>
+                This setting is used to avoid drawing the bar stroke at the base of the fill.
+                In general, this does not need to be changed except when creating chart types that derive from a bar chart.
+                Note: For negative bars in vertical chart, top and bottom are flipped. Same goes for left and right in horizontal
+                chart.
+                <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#borderskipped</para>
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.#ctor(System.String)">
+            <summary>
+                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped" /> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String" /> value to set.</param>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.#ctor(System.Boolean)">
+            <summary>
+                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped" /> class.
+            </summary>
+            <param name="boolValue">The <see cref="T:System.Boolean" /> value to set.</param>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Bottom">
+            <summary>
+                The bottom border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.False">
+            <summary>
+                The false border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Left">
+            <summary>
+                The left border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Right">
+            <summary>
+                The right border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Top">
+            <summary>
+                The top border skipped style.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes">
             <summary>
-            Defines the type of a chart
+            Defines the chart types.
             </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Bar">
+            <summary>
+            The bar chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.HorizontalBar">
+            <summary>
+            The horizontal bar chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Line">
+            <summary>
+            The line chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Pie">
+            <summary>
+            The pie chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Doughnut">
+            <summary>
+            The doughnut chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Radar">
+            <summary>
+            The radar chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Bubble">
+            <summary>
+            The bubble chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.PolarArea">
+            <summary>
+            The polar area chart type.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Scatter">
+            <summary>
+            The scatter chart type.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.InteractionMode">
             <summary>
