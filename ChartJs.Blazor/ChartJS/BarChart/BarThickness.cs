@@ -26,10 +26,7 @@ namespace ChartJs.Blazor.ChartJS.BarChart
         /// </summary>
         /// <param name="thickness">The thickness to use.</param>
         /// <returns>A <see cref="BarThickness"/> from a <see cref="double"/> value.</returns>
-        public static BarThickness Absolute(double thickness)
-        {
-            return new BarThickness(thickness);
-        }
+        public static BarThickness Absolute(double thickness) => new BarThickness(thickness);
 
         /// <summary>
         /// Converts the <see cref="double"/> value to a <see cref="BarThickness"/> value.

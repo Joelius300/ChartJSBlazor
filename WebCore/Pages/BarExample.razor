@@ -12,7 +12,7 @@
     private BarConfig config;
     private ChartJsBarChart barChartJs;
 
-    @*protected override void OnInitialized()
+    protected override void OnInitialized()
     {
         config = new BarConfig
         {
@@ -29,7 +29,7 @@
 
         config.Data.Labels.AddRange(new[] { "A", "B", "C", "D" });
 
-        var barSet = new BarDataset
+        var barSet = new BarDataset<BarExampleData>
         {
             BackgroundColor = new[] { "#ff6384", "#55ee84", "#4463ff", "#efefef" },
             BorderWidth = 0,
@@ -39,7 +39,7 @@
             BorderColor = "#ffffff",
         };
 
-        barSet.Data.AddRange(new double[] { 4, 5, 6, 7 });
-        config.Data.Datasets.Add(barSet);*@
+        barSet.AddRange(new[] { new BarExampleData{X = 0, Y = 4}, new BarExampleData{X = 1, Y = 5}, new BarExampleData{X = 2, Y = 6}, new BarExampleData{X = 3, Y = 7} });
+        config.Data.Datasets.Add(barSet);
     }
 }

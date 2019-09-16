@@ -87,7 +87,12 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarData.Datasets">
             <summary>
-            The Datasets displayed in this chart.
+            The data sets displayed in this chart.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarData.Labels">
+            <summary>
+            Gets or sets the labels.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1">

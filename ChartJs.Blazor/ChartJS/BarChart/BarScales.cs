@@ -19,6 +19,6 @@ namespace ChartJs.Blazor.ChartJS.BarChart
         /// Gets or sets the axes on the y coordinate.
         /// </summary>
         [JsonProperty("yAxes")]
-        public BarAxis[] YAxes { get; set; }
+        public List<BarAxis> YAxes { get; set; }
     }
 }
