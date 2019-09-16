@@ -340,7 +340,6 @@
             <summary>
             As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/
             </summary>
-            
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisType.Linear">
             <summary>
@@ -363,7 +362,7 @@
             If only data.labels is defined, this will be used. If data.xLabels is defined and the axis is horizontal, this will be used. 
             Similarly, if data.yLabels is defined and the axis is vertical, this property will be used.
             Using both xLabels and yLabels together can create a chart that uses strings for both the X and Y axes. 
-            Specifying any of the settings above defines the x axis as type: 'category' if not defined otherwise.
+            Specifying any of the settings above defines the x axis as type: <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.AxisType.Category" /> if not defined otherwise.
             For more fine-grained control of category labels it is also possible to add labels as part of the category axis definition.
             Doing so does not apply the global defaults.
             <para>See https://www.chartjs.org/docs/latest/axes/cartesian/category.html </para>
@@ -383,12 +382,12 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center">
             <summary>
-            When 'center' is set, the borders of arcs next to each other will overlap. The default value.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center" /> is set, the borders of arcs next to each other will overlap. The default value.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner">
             <summary>
-            When 'inner' is set, it is guaranteed that all the borders are not overlap.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.#ctor(System.String)">
@@ -510,7 +509,7 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode">
             <summary>
             Specifies the cubic interpolation mode.
-            The 'monotone' algorithm is more suited to y = f(x) datasets:
+            The <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone" /> algorithm is more suited to y = f(x) datasets:
             It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
             <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
             </summary>
@@ -523,7 +522,7 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone">
             <summary>
             The monotone cubic interpolation mode.
-            The 'default' algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
+            The <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone" /> algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.#ctor(System.String)">
@@ -992,7 +991,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontStyle">
             <summary>
-            Gets or sets the font style for a text, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            Gets or sets the font style for a text.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontColor">
@@ -1314,7 +1313,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontFamily">
             <summary>
-            Gets or sets the font family for a tick's label, follows CSS font-family options.
+            Gets or sets the font family for a tick's label.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontSize">
@@ -1324,7 +1323,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontStyle">
             <summary>
-            Gets or sets the font style for a tick's label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            Gets or sets the font style for a tick's label.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.LineHeight">
@@ -1352,7 +1351,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.FontFamily">
             <summary>
-            Gets or sets the font family for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-family options.
+            Gets or sets the font family for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.FontSize">
@@ -1362,7 +1361,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.FontStyle">
             <summary>
-            Gets or sets the font style for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            Gets or sets the font style for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.LineHeight">
@@ -2152,8 +2151,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PieChart.PieDataset.BorderAlign">
             <summary>
-            Gets or sets the border align. When 'center' is set, the borders of arcs next to each other will overlap.
-            When 'inner' is set, it is guaranteed that all the borders are not overlap.
+            Gets or sets the border align. When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center" /> is set, the borders of arcs next to each other will overlap.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PieChart.PieDataset.BorderColor">
@@ -2382,7 +2381,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.FontStyle">
             <summary>
-            Gets or sets the font style to use when rendering a point label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            Gets or sets the font style to use when rendering a point label.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.LineHeight">
@@ -2434,8 +2433,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaDataset.BorderAlign">
             <summary>
-            Gets or sets the border align. When 'center' is set, the borders of arcs next to each other will overlap.
-            When 'inner' is set, it is guaranteed that all the borders are not overlap.
+            Gets or sets the border align. When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center" /> is set, the borders of arcs next to each other will overlap.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.PolarAreaDataset.BorderColor">
