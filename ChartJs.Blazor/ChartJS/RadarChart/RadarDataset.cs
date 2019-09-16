@@ -38,9 +38,9 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
         public double BorderDashOffset { get; set; }
 
         /// <summary>
-        /// Cap style of the line
+        /// Cap style of the line.
         /// </summary>
-        public string BorderCapStyle { get; set; }
+        public BorderCapStyle BorderCapStyle { get; set; }
 
         /// <summary>
         /// Line joint style

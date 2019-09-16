@@ -392,6 +392,33 @@
             </summary>
             <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle">
+            <summary>
+            Specifies the border cap style.
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Butt">
+            <summary>
+            The butt border cap style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Round">
+            <summary>
+            The round border cap style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Square">
+            <summary>
+            The square border cap style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes">
             <summary>
             Defines the type of a chart
@@ -2331,7 +2358,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.BorderCapStyle">
             <summary>
-            Cap style of the line
+            Cap style of the line.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.BorderJoinStyle">

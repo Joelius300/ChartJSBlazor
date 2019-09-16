@@ -34,7 +34,7 @@ namespace ChartJs.Blazor.ChartJS.ScatterChart
         /// <summary>
         /// Cap style of the line.
         /// </summary>
-        public string BorderCapStyle { get; set; }
+        public BorderCapStyle BorderCapStyle { get; set; }
 
         /// <summary>
         /// Line joint style.

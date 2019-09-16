@@ -49,12 +49,11 @@ namespace ChartJs.Blazor.ChartJS.LineChart
         /// </summary>
         public int BorderWidth { get; set; } = 1;
 
-        // TODO: Implement options
         /// <summary>
         /// Cap style of the line.
         /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
         /// </summary>
-        public string BorderCapStyle { get; set; }
+        public BorderCapStyle BorderCapStyle { get; set; }
 
         // TODO: Implement options
         /// <summary>
