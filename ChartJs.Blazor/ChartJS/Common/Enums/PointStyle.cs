@@ -5,7 +5,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Enums
     /// Specifies the point style.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles</para>
     /// </summary>
-    public class PointStyle: StringEnum
+    public class PointStyle : StringEnum
     {
         /// <summary>
         /// The circle point style.
