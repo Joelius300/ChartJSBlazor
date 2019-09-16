@@ -44,9 +44,10 @@ namespace ChartJs.Blazor.ChartJS.ScatterChart
         public BorderJoinStyle BorderJoinStyle { get; set; }
 
         /// <summary>
-        /// Algorithm used to interpolate a smooth curve from the discrete data points.
+        /// Gets or sets the algorithm used to interpolate a smooth curve from the discrete data points.
+        /// <para>See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for options.</para>
         /// </summary>
-        public string CubicInterpolationMode { get; set; }
+        public CubicInterpolationMode CubicInterpolationMode { get; set; }
 
         /// <summary>
         /// Length and spacing of dashes. It's an int array. Whatever JS!

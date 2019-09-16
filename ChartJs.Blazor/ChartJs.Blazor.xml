@@ -451,6 +451,31 @@
             Defines the type of a chart
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode">
+            <summary>
+            Specifies the cubic interpolation mode.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Default">
+            <summary>
+            The default cubic interpolation mode.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone">
+            <summary>
+            The monotone cubic interpolation mode.
+            The 'default' algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode"/> class.
+            The 'monotone' algorithm is more suited to y = f(x) datasets:
+            It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle">
             <summary>
             Specifies the font style of axes.
@@ -1626,7 +1651,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineDataset`1.CubicInterpolationMode">
             <summary>
-            Algorithm used to interpolate a smooth curve from the discrete data points.
+            Gets or sets the algorithm used to interpolate a smooth curve from the discrete data points.
             <para>See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for options.</para>
             </summary>
         </member>
@@ -2500,7 +2525,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.CubicInterpolationMode">
             <summary>
-            Algorithm used to interpolate a smooth curve from the discrete data points.
+            Gets or sets the algorithm used to interpolate a smooth curve from the discrete data points.
+            <para>See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.BorderDash">
