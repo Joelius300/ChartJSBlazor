@@ -4,7 +4,7 @@
     /// Specifies the border alignment of a <see cref="PieChart"/> and a <see cref="PolarAreaChart"/>.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
     /// </summary>
-    public class BorderAlign : StringEnum
+    public sealed class BorderAlign : StringEnum
     {
         /// <summary>
         /// When <see cref="BorderAlign.Center" /> is set, the borders of arcs next to each other will overlap. The default value.

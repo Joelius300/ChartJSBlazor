@@ -6,7 +6,7 @@
     /// It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
     /// </summary>
-    public class CubicInterpolationMode : StringEnum
+    public sealed class CubicInterpolationMode : StringEnum
     {
         /// <summary>
         /// The default cubic interpolation mode.

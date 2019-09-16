@@ -4,7 +4,7 @@
     /// Specifies the font style of axes.
     /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html</para>
     /// </summary>
-    public class FontStyle : StringEnum
+    public sealed class FontStyle : StringEnum
     {
         /// <summary>
         /// The normal font style.

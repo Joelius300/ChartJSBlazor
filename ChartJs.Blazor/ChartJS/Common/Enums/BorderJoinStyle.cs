@@ -4,7 +4,7 @@
     /// Specifies the border join style.
     /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin</para>
     /// </summary>
-    public class BorderJoinStyle : StringEnum
+    public sealed class BorderJoinStyle : StringEnum
     {
         /// <summary>
         /// The bevel border join style.

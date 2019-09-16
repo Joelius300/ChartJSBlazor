@@ -3,7 +3,6 @@
     /// <summary>
     /// As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/
     /// </summary>
-    /// 
     public sealed class AxisType : StringEnum
     {
         /// <summary>
