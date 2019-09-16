@@ -39,13 +39,11 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
 
         /// <summary>
         /// Gets or sets the cap style of the line.
-        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
         /// </summary>
         public BorderCapStyle BorderCapStyle { get; set; }
 
         /// <summary>
         /// Gets or sets the line join style.
-        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
         /// </summary>
         public BorderJoinStyle BorderJoinStyle { get; set; }
 
@@ -95,7 +93,6 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
 
         /// <summary>
         /// Gets or sets the point style.
-        /// <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
         /// </summary>
         public IndexableOption<PointStyle> PointStyle { get; set; }
 

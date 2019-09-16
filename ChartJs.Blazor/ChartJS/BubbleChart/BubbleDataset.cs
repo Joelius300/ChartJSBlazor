@@ -49,7 +49,6 @@ namespace ChartJs.Blazor.ChartJS.BubbleChart
 
         /// <summary>
         /// Gets or sets the point style.
-        /// <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
         /// </summary>
         public IndexableOption<PointStyle> PointStyle { get; set; }
 

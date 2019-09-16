@@ -51,19 +51,16 @@ namespace ChartJs.Blazor.ChartJS.LineChart
 
         /// <summary>
         /// Gets or sets the cap style of the line.
-        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
         /// </summary>
         public BorderCapStyle BorderCapStyle { get; set; }
 
         /// <summary>
         /// Gets or sets the line join style.
-        /// <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
         /// </summary>
         public BorderJoinStyle BorderJoinStyle { get; set; }
 
         /// <summary>
         /// Gets or sets the algorithm used to interpolate a smooth curve from the discrete data points.
-        /// <para>See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for options.</para>
         /// </summary>
         public CubicInterpolationMode CubicInterpolationMode { get; set; }
 
