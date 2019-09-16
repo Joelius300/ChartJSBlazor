@@ -27,7 +27,7 @@ namespace ChartJs.Blazor.ChartJS.Common
         /// <summary>
         /// Gets or sets the font style for a tick's label.
         /// </summary>
-        public FontStyle FontStyle { get; set; } = FontStyle.Normal;
+        public FontStyle FontStyle { get; set; }
 
         /// <summary>
         /// Gets or sets the height of an individual line of text.

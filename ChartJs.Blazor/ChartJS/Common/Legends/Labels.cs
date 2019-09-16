@@ -21,7 +21,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Legends
         /// <summary>
         /// Gets or sets the font style for a text.
         /// </summary>
-        public FontStyle FontStyle { get; set; } = FontStyle.Normal;
+        public FontStyle FontStyle { get; set; }
 
         /// <summary>
         /// Color of text.
