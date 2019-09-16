@@ -26,7 +26,7 @@ namespace ChartJs.Blazor.ChartJS.PieChart
         /// Gets or sets the border align. When 'center' is set, the borders of arcs next to each other will overlap.
         /// When 'inner' is set, it is guaranteed that all the borders are not overlap.
         /// </summary>
-        public BorderAlign BorderAlign { get; set; } = BorderAlign.Center;
+        public IndexableOption<BorderAlign> BorderAlign { get; set; }
 
         /// <summary>
         /// Gets or sets the border color of the arcs in the dataset.
