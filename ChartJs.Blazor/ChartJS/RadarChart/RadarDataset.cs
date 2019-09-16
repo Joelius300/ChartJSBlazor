@@ -8,7 +8,7 @@ namespace ChartJs.Blazor.ChartJS.RadarChart
 {
     public class RadarDataset
     {
-        public ChartTypes Type { get; } = ChartTypes.Radar;
+        public ChartType Type { get; } = ChartType.Radar;
 
         /// <summary>
         /// The label for the dataset which appears in the legend and tooltips.

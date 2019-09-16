@@ -56,6 +56,6 @@ namespace ChartJs.Blazor.ChartJS.BubbleChart
 
         public int Radius { get; set; } = 3;
 
-        public ChartTypes Type { get; } = ChartTypes.Bubble;
+        public ChartType Type { get; } = ChartType.Bubble;
     }
 }

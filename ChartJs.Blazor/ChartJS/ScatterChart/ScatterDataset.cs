@@ -12,7 +12,7 @@ namespace ChartJs.Blazor.ChartJS.ScatterChart
 
         public List<Point> Data { get; set; }
 
-        public ChartTypes Type { get; } = ChartTypes.Scatter;
+        public ChartType Type { get; } = ChartType.Scatter;
 
         public string Label { get; set; } = "";
 

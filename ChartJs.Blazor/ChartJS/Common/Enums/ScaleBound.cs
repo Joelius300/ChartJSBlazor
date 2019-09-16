@@ -3,19 +3,18 @@
     /// <summary>
     /// As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/time.html#scale-bounds
     /// </summary>
-    /// 
-    public sealed class ScaleBounds : StringEnum
+    public sealed class ScaleBound : StringEnum
     {
         /// <summary>
         /// Makes sure data are fully visible, labels outside are removed
         /// </summary>
-        public static ScaleBounds Data => new ScaleBounds("data");
+        public static ScaleBound Data => new ScaleBound("data");
 
         /// <summary>
         /// Makes sure ticks are fully visible, data outside are truncated
         /// </summary>
-        public static ScaleBounds Ticks => new ScaleBounds("ticks");
+        public static ScaleBound Ticks => new ScaleBound("ticks");
 
-        private ScaleBounds(string stringRep) : base(stringRep) { }
+        private ScaleBound(string stringRep) : base(stringRep) { }
     }
 }

@@ -13,9 +13,9 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
     public class PolarAreaDataset
     {
         /// <summary>
-        /// Gets the chart type. <see cref="ChartTypes.PolarArea"/> in this case. This is needed for mixed datasets only.
+        /// Gets the chart type. <see cref="ChartType.PolarArea"/> in this case. This is needed for mixed datasets only.
         /// </summary>
-        public ChartTypes Type { get; } = ChartTypes.PolarArea;
+        public ChartType Type { get; } = ChartType.PolarArea;
 
         /// <summary>
         /// Gets or sets the fill color of the arcs in the dataset.

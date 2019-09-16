@@ -27,7 +27,7 @@ namespace ChartJs.Blazor.ChartJS.LineChart
         /// <summary>
         /// The type of chart this dataset is for.
         /// </summary>
-        public override ChartTypes Type => ChartTypes.Line;
+        public override ChartType Type => ChartType.Line;
 
         /// <summary>
         /// The label for the dataset which appears in the legend and tooltips.

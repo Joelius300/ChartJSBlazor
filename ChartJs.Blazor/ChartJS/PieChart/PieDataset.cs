@@ -11,9 +11,9 @@ namespace ChartJs.Blazor.ChartJS.PieChart
     public class PieDataset
     {
         /// <summary>
-        /// Gets or sets the chart type. <see cref="ChartTypes.Pie"/> in this case. This is needed for mixed datasets only.
+        /// Gets or sets the chart type. <see cref="ChartType.Pie"/> in this case. This is needed for mixed datasets only.
         /// </summary>
-        public ChartTypes Type { get; } = ChartTypes.Pie;
+        public ChartType Type { get; } = ChartType.Pie;
 
         /// <summary>
         /// Gets or sets the fill color of the arcs in the dataset.
