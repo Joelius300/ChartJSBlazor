@@ -36,8 +36,8 @@ Since it has now become apparent that the old repo is not maintained anymore, th
 The detailed changelog can be found [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/CHANGELOG.md).
 
 #### How to update (breaking changes):
-* Remove any assignment of the charts CanvasId. It will be handeled automatically for you using a GUID string.
-* Use pie-chart-classes anywhere you used dougnut chart and either manually set the `CutoutPercentage` to 50 or pass in `true` for the `PieChartOptions`. It will yield the exact same results unless you have made manual changes to the chart.js-defaults using your own js.
+* Remove any assignment of the charts `CanvasId`. It will be handeled automatically for you using a GUID string.
+* Use pie-chart-classes anywhere you used dougnut chart and either manually set the `CutoutPercentage` to 50 or pass in `true` for the `PieOptions` constructor. It will yield the exact same results unless you have made manual changes to the chart.js-defaults using your own js.
 * Many classes and properties have been removed, added, moved, renamed and more. You might have to add new using-directives and use the new class names. This is especially the case for the charts we've reworked (Pie (& Doughnut), Polar-Area, Line). Also a typo was fixed from `TimeTupel` to `TimeTuple`. The properties should all comply with the ones from chart.js written in PascalCase ([chart.js documentation](https://www.chartjs.org/docs/latest/)).  
 For more details take a look at the detailed changelog, the chart.js-docs and our samples.
 * **If you aren't referencing the js-interop-file dynamically using `_content`, you need to copy the new file manually from [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/ChartJs.Blazor/wwwroot/ChartJsInterop.js) (there were two bug fixes).**
@@ -105,7 +105,7 @@ Now to creating the chart. Below is a simple example for a line-chart. Examples 
 The example covers a few static options, how to use a simple point-dataset and how to dynamically initialize and update the data and the chart.  
 
 ```csharp
-@page "/SimpleLineLinearExample"
+@page "/LineLinearExample"
 @using WebCore.Data
 @using ChartJs.Blazor.Charts
 @using ChartJs.Blazor.ChartJS.Common
@@ -115,7 +115,8 @@ The example covers a few static options, how to use a simple point-dataset and h
 @using ChartJs.Blazor.ChartJS.LineChart
 @using ChartJs.Blazor.ChartJS.LineChart.Axes
 @using ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks
-@using ChartJs.Blazor.Util.Color
+@using ChartJs.Blazor.Util
+@inject WeatherForecastService ForecastService
 
 <h2>Line Linear Chart</h2>
 <ChartJsLineChart @ref="lineChartJs" Config="@lineConfig" Width="600" Height="300" />
@@ -126,11 +127,12 @@ The example covers a few static options, how to use a simple point-dataset and h
     LineConfig lineConfig;
     ChartJsLineChart lineChartJs;
 
-    private LineDataset<Point> pointDataset;
+    private LineDataset<Point> tempPerHourSet;
+    private LineDataset<Point> tempPerDaySet;
 
-    private Random rnd = new Random();
+    private readonly Random rnd = new Random();
 
-    protected override void OnInit()
+    protected override async Task OnInitializedAsync()
     {
         lineConfig = new LineConfig
         {
@@ -140,7 +142,7 @@ The example covers a few static options, how to use a simple point-dataset and h
                 Title = new OptionsTitle
                 {
                     Display = true,
-                    Text = "Simple Line Chart"
+                    Text = "Line Chart"
                 },
                 Legend = new Legend
                 {
@@ -163,7 +165,15 @@ The example covers a few static options, how to use a simple point-dataset and h
                         {
                             ScaleLabel = new ScaleLabel
                             {
-                                LabelString = "X-value"
+                                LabelString = "Zeit"
+                            },
+                            GridLines = new GridLines
+                            {
+                                 Display = false
+                            },
+                            Ticks = new LinearCartesianTicks
+                            {
+                                SuggestedMin = -2
                             }
                         }
                     },
@@ -173,35 +183,62 @@ The example covers a few static options, how to use a simple point-dataset and h
                         {
                             ScaleLabel = new ScaleLabel
                             {
-                                LabelString = "Random value"
+                                LabelString = "Temp"
                             }
                         }
                     }
+                },
+                Hover = new LineOptionsHover
+                {
+                    Intersect = true,
+                    Mode = InteractionMode.Y
                 }
             }
         };
 
 
-        pointDataset = new LineDataset<Point>()
+        tempPerHourSet = new LineDataset<Point>()
         {
             BackgroundColor = ColorUtil.ColorString(0, 255, 0, 1.0),
             BorderColor = ColorUtil.ColorString(0, 0, 255, 1.0),
-            Label = "Some values",
+            Label = "Temp (C) per Hour",
             Fill = false,
             PointBackgroundColor = ColorUtil.RandomColorString(),
             BorderWidth = 1,
             PointRadius = 3,
-            PointBorderWidth = 1
+            PointBorderWidth = 1,
+            SteppedLine = SteppedLine.False,
         };
 
-        pointDataset.AddRange(Enumerable.Range(1, 10).Select(i => new Point(i, rnd.Next(30))));
+        tempPerDaySet = new LineDataset<Point>()
+        {
+            BackgroundColor = "#63ff84",
+            BorderColor = "#63ff84",
+            Label = "Temp (F) per Day",
+            Fill = false,
+            BorderWidth = 1,
+            PointRadius = 2,
+            PointBorderWidth = 1,
+            SteppedLine = SteppedLine.False,
+            Hidden = true
+        };
 
-        lineConfig.Data.Datasets.Add(pointDataset);
+        WeatherForecast[] forecasts = await ForecastService.GetStaticForecastAsync(DateTime.Now, 5);
+
+        var onlyDays = forecasts.GroupBy(f => f.Date.Day).Select(g => g.First());
+
+        IEnumerable<WeatherForecast> weatherForecasts = onlyDays.ToList();
+        tempPerHourSet.AddRange(weatherForecasts.Select(p => new Point(p.Date.Hour, p.TemperatureC)));
+        tempPerDaySet.AddRange(weatherForecasts.Select(p => new Point(p.Date.Day, p.TemperatureF)));
+
+        lineConfig.Data.Datasets.Add(tempPerHourSet);
+        lineConfig.Data.Datasets.Add(tempPerDaySet);
     }
 
     private void UpdateChart()
     {
-        pointDataset.Add(new Point(pointDataset.Data.Last().X +1, rnd.Next(rnd.Next(50))));
+        tempPerDaySet.Add(new Point(rnd.Next(100), rnd.Next(100)));
+        tempPerHourSet.Add(new Point(rnd.Next(100), rnd.Next(100)));
         lineChartJs.Update();
     }
 }
