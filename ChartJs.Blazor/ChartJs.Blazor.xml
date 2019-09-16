@@ -189,6 +189,12 @@
             Defines the text associated to the dataset and which appears in the legend and tooltips.
             </summary>
         </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BubbleChart.BubbleDataset.PointStyle">
+            <summary>
+            Gets or sets the point style.
+            <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
+            </summary>
+        </member>
         <member name="M:ChartJs.Blazor.ChartJS.ChartJsInterop.ConvertExpandoObjectToDictionary(System.Dynamic.ExpandoObject)">
             <summary>
             This method is specifically used to convert an <see cref="T:System.Dynamic.ExpandoObject"/> with a Tree structure to a <see cref="!:Dictionary&lt;string, object&gt;"/>.
@@ -370,10 +376,148 @@
             When building its ticks, it will automatically calculate the most comfortable unit base on the size of the scale.
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign">
+            <summary>
+            Specifies the border alignment of a <see cref="N:ChartJs.Blazor.ChartJS.PieChart"/> and a <see cref="N:ChartJs.Blazor.ChartJS.PolarAreaChart"/>.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center">
+            <summary>
+            When 'center' is set, the borders of arcs next to each other will overlap. The default value.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner">
+            <summary>
+            When 'inner' is set, it is guaranteed that all the borders are not overlap.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle">
+            <summary>
+            Specifies the border cap style.
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Butt">
+            <summary>
+            The butt border cap style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Round">
+            <summary>
+            The round border cap style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Square">
+            <summary>
+            The square border cap style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle">
+            <summary>
+            Specifies the border join style.
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Bevel">
+            <summary>
+            The bevel border join style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Round">
+            <summary>
+            The round border join style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Miter">
+            <summary>
+            The miter border join style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes">
             <summary>
             Defines the type of a chart
             </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode">
+            <summary>
+            Specifies the cubic interpolation mode.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Default">
+            <summary>
+            The default cubic interpolation mode.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Monotone">
+            <summary>
+            The monotone cubic interpolation mode.
+            The 'default' algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode"/> class.
+            The 'monotone' algorithm is more suited to y = f(x) datasets:
+            It preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extrema (if any) stay at input data points.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle">
+            <summary>
+            Specifies the font style of axes.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Normal">
+            <summary>
+            The normal font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Italic">
+            <summary>
+            The italic font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Oblique">
+            <summary>
+            The oblique font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Initial">
+            <summary>
+            The initial font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Inherit">
+            <summary>
+            The inherit font style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.InteractionMode">
             <summary>
@@ -458,6 +602,68 @@
             Returns the hash of the underlying object.
             </summary>
             <returns>The hash of the underlying object.</returns>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle">
+            <summary>
+            Specifies the point style.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles</para>
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Circle">
+            <summary>
+            The circle point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Cross">
+            <summary>
+            The cross point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.CrossRot">
+            <summary>
+            The crossRot point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Dash">
+            <summary>
+            The dash point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Line">
+            <summary>
+            The line point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Rect">
+            <summary>
+            The rect point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRounded">
+            <summary>
+            The rectRounded point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRot">
+            <summary>
+            The rectRot point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Star">
+            <summary>
+            The star point style.
+            </summary>
+        </member>
+        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Triangle">
+            <summary>
+            The triangle point style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.Positions">
             <summary>
@@ -736,11 +942,10 @@
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontStyle">
-             <summary>
-             Font style of text.
-            
-             <para>Supported fonts: http://www.chartjs.org/docs/latest/configuration/legend.html#legend-label-configuration </para>
-             </summary>
+            <summary>
+            Font style of text, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
+            </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontColor">
             <summary>
@@ -1072,6 +1277,7 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontStyle">
             <summary>
             Gets or sets the font style for a tick's label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.LineHeight">
@@ -1110,6 +1316,7 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.FontStyle">
             <summary>
             Gets or sets the font style for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.LineHeight">
@@ -1500,19 +1707,19 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineDataset`1.BorderCapStyle">
             <summary>
-            Cap style of the line.
+            Gets or sets the cap style of the line.
             <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineDataset`1.BorderJoinStyle">
             <summary>
-            Line joint style.
+            Gets or sets the line join style.
             <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineDataset`1.CubicInterpolationMode">
             <summary>
-            Algorithm used to interpolate a smooth curve from the discrete data points.
+            Gets or sets the algorithm used to interpolate a smooth curve from the discrete data points.
             <para>See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for options.</para>
             </summary>
         </member>
@@ -2132,7 +2339,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.FontStyle">
             <summary>
-            Gets or sets the font style to use when rendering a point label.
+            Gets or sets the font style to use when rendering a point label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.LineHeight">
@@ -2270,12 +2478,14 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.BorderCapStyle">
             <summary>
-            Cap style of the line
+            Gets or sets the cap style of the line.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.BorderJoinStyle">
             <summary>
-            Line joint style
+            Gets or sets the line join style.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.Fill">
@@ -2324,7 +2534,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.PointStyle">
             <summary>
-            Style of the point
+            Gets or sets the point style.
+            <para>See https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.RadarChart.RadarDataset.PointHitRadius">
@@ -2371,17 +2582,20 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.BorderCapStyle">
             <summary>
-            Cap style of the line.
+            Gets or sets the cap style of the line.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.BorderJoinStyle">
             <summary>
-            Line joint style.
+            Gets or sets the line join style.
+            <para>See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.CubicInterpolationMode">
             <summary>
-            Algorithm used to interpolate a smooth curve from the discrete data points.
+            Gets or sets the algorithm used to interpolate a smooth curve from the discrete data points.
+            <para>See https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode for options.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.ScatterChart.ScatterDataset.BorderDash">

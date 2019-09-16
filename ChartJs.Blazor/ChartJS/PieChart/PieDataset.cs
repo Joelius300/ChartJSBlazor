@@ -22,12 +22,11 @@ namespace ChartJs.Blazor.ChartJS.PieChart
         /// </summary>
         public IndexableOption<string> BackgroundColor { get; set; }
 
-        // Todo: Make this an enum later?!
         /// <summary>
         /// Gets or sets the border align. When 'center' is set, the borders of arcs next to each other will overlap.
         /// When 'inner' is set, it is guaranteed that all the borders are not overlap.
         /// </summary>
-        public string BorderAlign { get; set; } = "center";
+        public IndexableOption<BorderAlign> BorderAlign { get; set; }
 
         /// <summary>
         /// Gets or sets the border color of the arcs in the dataset.

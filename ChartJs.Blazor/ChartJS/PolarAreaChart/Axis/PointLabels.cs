@@ -1,4 +1,5 @@
 ﻿using ChartJs.Blazor.ChartJS.Common;
+using ChartJs.Blazor.ChartJS.Common.Enums;
 using ChartJs.Blazor.Util;
 
 namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
@@ -21,9 +22,10 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
         public int FontSize { get; set; } = 10;
 
         /// <summary>
-        /// Gets or sets the font style to use when rendering a point label.
+        /// Gets or sets the font style to use when rendering a point label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+        /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
         /// </summary>
-        public string FontStyle { get; set; }
+        public FontStyle FontStyle { get; set; } = FontStyle.Normal;
 
         /// <summary>
         /// Gets or sets the height of an individual line of text.
