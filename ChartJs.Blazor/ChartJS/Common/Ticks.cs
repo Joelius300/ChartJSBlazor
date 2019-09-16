@@ -1,4 +1,5 @@
 ﻿using ChartJs.Blazor.Util;
+using ChartJs.Blazor.ChartJS.Common.Enums;
 
 namespace ChartJs.Blazor.ChartJS.Common
 {
@@ -31,8 +32,9 @@ namespace ChartJs.Blazor.ChartJS.Common
 
         /// <summary>
         /// Gets or sets the font style for the <see cref="Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+        /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
         /// </summary>
-        public string FontStyle { get; set; }
+        public FontStyle FontStyle { get; set; } = FontStyle.Normal;
 
         /// <summary>
         /// Gets or sets the height of an individual line of text.

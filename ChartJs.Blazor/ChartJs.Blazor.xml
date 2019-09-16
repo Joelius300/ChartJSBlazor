@@ -397,6 +397,43 @@
             Defines the type of a chart
             </summary>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle">
+            <summary>
+            Specifies the font style of axes.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Normal">
+            <summary>
+            The normal font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Italic">
+            <summary>
+            The italic font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Oblique">
+            <summary>
+            The oblique font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Initial">
+            <summary>
+            The initial font style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Inherit">
+            <summary>
+            The inherit font style.
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.InteractionMode">
             <summary>
             As per documentation here https://www.chartjs.org/docs/latest/general/interactions/modes.html
@@ -758,11 +795,10 @@
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontStyle">
-             <summary>
-             Font style of text.
-            
-             <para>Supported fonts: http://www.chartjs.org/docs/latest/configuration/legend.html#legend-label-configuration </para>
-             </summary>
+            <summary>
+            Font style of text, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
+            </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontColor">
             <summary>
@@ -1094,6 +1130,7 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.FontStyle">
             <summary>
             Gets or sets the font style for a tick's label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.SubTicks.LineHeight">
@@ -1132,6 +1169,7 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.FontStyle">
             <summary>
             Gets or sets the font style for the <see cref="T:ChartJs.Blazor.ChartJS.Common.Ticks"/> labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Ticks.LineHeight">
@@ -2154,7 +2192,8 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.FontStyle">
             <summary>
-            Gets or sets the font style to use when rendering a point label.
+            Gets or sets the font style to use when rendering a point label, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.PolarAreaChart.Axis.PointLabels.LineHeight">
