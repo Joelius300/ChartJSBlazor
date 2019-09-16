@@ -7,12 +7,12 @@
     public class BorderAlign : StringEnum
     {
         /// <summary>
-        /// When 'center' is set, the borders of arcs next to each other will overlap. The default value.
+        /// When <see cref="BorderAlign.Center" /> is set, the borders of arcs next to each other will overlap. The default value.
         /// </summary>
         public static BorderAlign Center => new BorderAlign("center");
 
         /// <summary>
-        /// When 'inner' is set, it is guaranteed that all the borders are not overlap.
+        /// When <see cref="BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
         /// </summary>
         public static BorderAlign Inner => new BorderAlign("inner");
 

@@ -24,8 +24,8 @@ namespace ChartJs.Blazor.ChartJS.PolarAreaChart
         public IndexableOption<string> BackgroundColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the border align. When 'center' is set, the borders of arcs next to each other will overlap.
-        /// When 'inner' is set, it is guaranteed that all the borders are not overlap.
+        /// Gets or sets the border align. When <see cref="BorderAlign.Center" /> is set, the borders of arcs next to each other will overlap.
+        /// When <see cref="BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
         /// </summary>
         public IndexableOption<BorderAlign> BorderAlign { get; set; }
 
