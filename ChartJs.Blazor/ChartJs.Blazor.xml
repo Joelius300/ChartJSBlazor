@@ -568,6 +568,27 @@
             </summary>
             <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle">
+            <summary>
+            Represents the font style
+            </summary>
+            
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Normal">
+            <summary>
+            Font is normal
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Italic">
+            <summary>
+            Font is in italic
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Oblique">
+            <summary>
+            Font is in oblique
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.InteractionMode">
             <summary>
             As per documentation here https://www.chartjs.org/docs/latest/general/interactions/modes.html
@@ -810,6 +831,22 @@
             As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/time.html#time-units
             </summary>
             
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition">
+            <summary>
+            As per documentation here https://www.chartjs.org/docs/latest/configuration/tooltip.html#position-modes
+            </summary>
+            
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Average">
+            <summary>
+            Average mode will place the tooltip at the average position of the items displayed in the tooltip.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Nearest">
+            <summary>
+            Nearest will place the tooltip at the position of the element closest to the event position.
+            </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.GridLines">
             <summary>
@@ -1303,6 +1340,160 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Intersect">
             <summary>
             If true, the hover mode only applies when the mouse position intersects an item on the chart.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Enabled">
+            <summary>
+            Are on-canvas tooltips enabled
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Position">
+            <summary>
+            The mode for positioning the tooltip.
+            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition"/> for working with tooltip position.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BackgroundColor">
+            <summary>
+            Background color of the tooltip.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontFamily">
+            <summary>
+            Title font
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontSize">
+            <summary>
+            Title font size.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontStyle">
+            <summary>
+            Title font style.
+            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> for working with font styles.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontColor">
+            <summary>
+            Title font color.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleSpacing">
+            <summary>
+            Spacing to add to top and bottom of each title line.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleMarginBottom">
+            <summary>
+            Spacing to add to top and bottom of each title line.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodyFontFamily">
+            <summary>
+            Body line font.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodyFontSize">
+            <summary>
+            Body font size.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodyFontStyle">
+            <summary>
+            Body font style.
+            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> for working with font styles.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodyFontColor">
+            <summary>
+            Body font color.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodySpacing">
+            <summary>
+            Spacing to add to top and bottom of each tooltip item.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterFontFamily">
+            <summary>
+            Footer font.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterFontSize">
+            <summary>
+            Footer font size.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterFontStyle">
+            <summary>
+            Footer font style.
+            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> for working with font styles.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterFontColor">
+            <summary>
+            Footer font color.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterSpacing">
+            <summary>
+            Spacing to add to top and bottom of each footer line.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterMarginTop">
+            <summary>
+            Margin to add before drawing the footer.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.XPadding">
+            <summary>
+            Padding to add on left and right of tooltip.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.YPadding">
+            <summary>
+            Padding to add on top and bottom of tooltip.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.CaretPadding">
+            <summary>
+            Extra distance to move the end of the tooltip arrow away from the tooltip point.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.CaretSize">
+            <summary>
+            Size, in px, of the tooltip arrow.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.CornerRadius">
+            <summary>
+            Radius of tooltip corner curves.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.MultiKeyBackground">
+            <summary>
+            Color to draw behind the colored boxes when multiple items are in the tooltip.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.DisplayColors">
+            <summary>
+            If true, color boxes are shown in the tooltip.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BorderColor">
+            <summary>
+            Color of the border.
+            <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BorderWidth">
+            <summary>
+            Size of the border.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.SubTicks">
