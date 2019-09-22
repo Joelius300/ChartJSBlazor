@@ -16,12 +16,12 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
         /// <summary>
         /// If true, the hover mode only applies when the mouse position intersects an item on the chart.
         /// </summary>
-        public bool Intersect { get; set; }
+        public bool Intersect { get; set; } = true;
 
         /// <summary>
         /// Are on-canvas tooltips enabled
         /// </summary>
-        public bool Enabled { get; set; }
+        public bool Enabled { get; set; } = true;
 
         /// <summary>
         /// The mode for positioning the tooltip.
