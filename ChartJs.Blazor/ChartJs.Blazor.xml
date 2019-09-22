@@ -1350,7 +1350,6 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Position">
             <summary>
             The mode for positioning the tooltip.
-            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition"/> for working with tooltip position.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BackgroundColor">
@@ -1372,7 +1371,6 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontStyle">
             <summary>
             Title font style.
-            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> for working with font styles.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontColor">
@@ -1404,7 +1402,6 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodyFontStyle">
             <summary>
             Body font style.
-            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> for working with font styles.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BodyFontColor">
@@ -1431,7 +1428,6 @@
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterFontStyle">
             <summary>
             Footer font style.
-            <para>See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle"/> for working with font styles.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.FooterFontColor">
