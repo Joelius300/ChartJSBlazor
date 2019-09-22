@@ -25,7 +25,6 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
 
         /// <summary>
         /// The mode for positioning the tooltip.
-        /// <para>See <see cref="Enums.TooltipPosition"/> for working with tooltip position.</para>
         /// </summary>
         public TooltipPosition Position { get; set; } = TooltipPosition.Average;
 
@@ -47,7 +46,6 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
 
         /// <summary>
         /// Title font style.
-        /// <para>See <see cref="Enums.FontStyle"/> for working with font styles.</para>
         /// </summary>
         public FontStyle TitleFontStyle { get; set; }
 
@@ -79,7 +77,6 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
 
         /// <summary>
         /// Body font style.
-        /// <para>See <see cref="Enums.FontStyle"/> for working with font styles.</para>
         /// </summary>
         public FontStyle BodyFontStyle { get; set; }
 
@@ -106,7 +103,6 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
 
         /// <summary>
         /// Footer font style.
-        /// <para>See <see cref="Enums.FontStyle"/> for working with font styles.</para>
         /// </summary>
         public FontStyle FooterFontStyle { get; set; }
 
