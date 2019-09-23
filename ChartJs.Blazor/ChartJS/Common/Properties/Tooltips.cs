@@ -9,162 +9,163 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
     public class Tooltips
     {
         /// <summary>
-        /// Sets which elements appear in the tooltip. See <see cref="InteractionMode"/> for details.
+        /// Gets or sets which elements appear in the tooltip. See <see cref="InteractionMode"/> for details.
         /// </summary>
         public InteractionMode Mode { get; set; }
 
         /// <summary>
-        /// If true, the hover mode only applies when the mouse position intersects an item on the chart.
+        /// Gets or sets the value indicating if the hover mode only applies when the mouse position intersects an item on the chart.
         /// </summary>
         public bool Intersect { get; set; } = true;
 
         /// <summary>
-        /// Are on-canvas tooltips enabled
+        /// Gets or sets the value indicating if the tooltips are enabled
         /// </summary>
         public bool Enabled { get; set; } = true;
 
         /// <summary>
-        /// The mode for positioning the tooltip.
+        /// Gets or sets the mode for positioning the tooltip.
         /// </summary>
         public TooltipPosition Position { get; set; } = TooltipPosition.Average;
 
         /// <summary>
-        /// Background color of the tooltip.
+        /// Gets or sets the background color of the tooltip.
         /// <para>See <see cref="Util.ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string BackgroundColor { get; set; }
 
         /// <summary>
-        /// Title font
+        /// Gets or sets the title font
         /// </summary>
         public string TitleFontFamily { get; set; }
 
         /// <summary>
-        /// Title font size.
+        /// Gets or sets the title font size.
         /// </summary>
         public double TitleFontSize { get; set; } = 12;
 
         /// <summary>
-        /// Title font style.
+        /// Gets or sets the title font style.
         /// </summary>
         public FontStyle TitleFontStyle { get; set; }
 
         /// <summary>
-        /// Title font color.
+        /// Gets or sets the title font color.
         /// <para>See <see cref="Util.ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string TitleFontColor { get; set; }
 
         /// <summary>
-        /// Spacing to add to top and bottom of each title line.
+        /// Gets or sets the spacing to add to top and bottom of each title line.
         /// </summary>
         public double TitleSpacing { get; set; } = 2;
 
         /// <summary>
-        /// Spacing to add to top and bottom of each title line.
+        /// Gets or sets the spacing to add to top and bottom of each title line.
         /// </summary>
         public double TitleMarginBottom { get; set; } = 6;
 
         /// <summary>
-        /// Body line font.
+        /// Gets or sets the body line font.
         /// </summary>
         public string BodyFontFamily { get; set; }
 
         /// <summary>
-        /// Body font size.
+        /// Gets or sets the body font size.
         /// </summary>
         public double BodyFontSize { get; set; } = 12;
 
         /// <summary>
-        /// Body font style.
+        /// Gets or sets the body font style.
         /// </summary>
         public FontStyle BodyFontStyle { get; set; }
 
         /// <summary>
-        /// Body font color.
+        /// Gets or sets the body font color.
         /// <para>See <see cref="Util.ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string BodyFontColor { get; set; }
 
         /// <summary>
-        /// Spacing to add to top and bottom of each tooltip item.
+        /// Gets or sets the spacing to add to top and bottom of each tooltip item.
         /// </summary>
         public double BodySpacing { get; set; } = 2;
 
         /// <summary>
-        /// Footer font.
+        /// Gets or sets the footer font.
         /// </summary>
         public string FooterFontFamily { get; set; }
 
         /// <summary>
-        /// Footer font size.
+        /// Gets or sets the footer font size.
         /// </summary>
         public double FooterFontSize { get; set; } = 12;
 
         /// <summary>
-        /// Footer font style.
+        /// Gets or sets the footer font style.
         /// </summary>
         public FontStyle FooterFontStyle { get; set; }
 
         /// <summary>
-        /// Footer font color.
+        /// Gets or sets the footer font color.
         /// <para>See <see cref="Util.ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string FooterFontColor { get; set; }
 
         /// <summary>
-        /// Spacing to add to top and bottom of each footer line.
+        /// Gets or sets the spacing to add to top and bottom of each footer line.
         /// </summary>
         public double FooterSpacing { get; set; } = 2;
 
         /// <summary>
-        /// Margin to add before drawing the footer.
+        /// Gets or sets the margin to add before drawing the footer.
         /// </summary>
         public double FooterMarginTop { get; set; } = 6;
 
         /// <summary>
-        /// Padding to add on left and right of tooltip.
+        /// Gets or sets the padding to add on left and right of tooltip.
         /// </summary>
         public double XPadding { get; set; } = 6;
 
         /// <summary>
-        /// Padding to add on top and bottom of tooltip.
+        /// Gets or sets the padding to add on top and bottom of tooltip.
         /// </summary>
         public double YPadding { get; set; } = 6;
 
         /// <summary>
-        /// Extra distance to move the end of the tooltip arrow away from the tooltip point.
+        /// Gets or sets the extra distance to move the end of the tooltip arrow away from the tooltip point.
         /// </summary>
         public double CaretPadding { get; set; } = 2;
 
         /// <summary>
-        /// Size, in px, of the tooltip arrow.
+        /// Gets or sets the size, in px, of the tooltip arrow.
         /// </summary>
         public double CaretSize { get; set; } = 5;
 
         /// <summary>
-        /// Radius of tooltip corner curves.
+        /// Gets or sets the radius of tooltip corner curves.
         /// </summary>
         public double CornerRadius { get; set; } = 6;
 
         /// <summary>
-        /// Color to draw behind the colored boxes when multiple items are in the tooltip.
+        /// Gets or sets the color to draw behind the colored boxes when multiple items are in the tooltip.
+        /// <para>See <see cref="Util.ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string MultiKeyBackground { get; set; }
 
         /// <summary>
-        /// If true, color boxes are shown in the tooltip.
+        /// Gets or sets the value indicating if, color boxes are shown in the tooltip.
         /// </summary>
         public bool DisplayColors { get; set; } = true;
 
         /// <summary>
-        /// Color of the border.
+        /// Gets or sets the color of the border.
         /// <para>See <see cref="Util.ColorUtil"/> for working with colors.</para>
         /// </summary>
         public string BorderColor { get; set; }
 
         /// <summary>
-        /// Size of the border.
+        /// Gets or sets the size of the border.
         /// </summary>
         public double BorderWidth { get; set; } = 0;
     }
