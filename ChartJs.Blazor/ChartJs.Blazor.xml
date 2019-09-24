@@ -203,7 +203,7 @@
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.ChartJsInterop.RecursivelyConvertIDictToDict(System.Collections.Generic.IDictionary{System.String,System.Object})">
             <summary>
-            This method takes an <see cref="!:IDictionary&lt;string, object&gt;"/> and recursively converts it to a <see cref="!:Dictionary&lt;string, object&gt;"/>.
+            This method takes an <see cref="!:IDictionary&lt;string, object&gt;"/> and recursively converts it to a <see cref="!:Dictionary&lt;string, object&gt;"/>. 
             The idea is that every <see cref="!:IDictionary&lt;string, object&gt;"/> in the tree will be of type <see cref="!:Dictionary&lt;string, object&gt;"/> instead of some other implementation like <see cref="T:System.Dynamic.ExpandoObject"/>.
             </summary>
             <param name="value">The <see cref="!:IDictionary&lt;string, object&gt;"/> to convert</param>
@@ -1344,7 +1344,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Enabled">
             <summary>
-            Gets or sets the value indicating if the tooltips are enabled
+            Gets or sets the value indicating if the tooltips are enabled.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Position">
@@ -1360,7 +1360,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontFamily">
             <summary>
-            Gets or sets the title font
+            Gets or sets the title font.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.TitleFontSize">
@@ -1479,7 +1479,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.DisplayColors">
             <summary>
-            Gets or sets the value indicating if, color boxes are shown in the tooltip.
+            Gets or sets the value indicating if color boxes are shown in the tooltip.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.BorderColor">

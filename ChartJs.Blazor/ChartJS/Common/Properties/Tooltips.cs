@@ -19,7 +19,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
         public bool Intersect { get; set; } = true;
 
         /// <summary>
-        /// Gets or sets the value indicating if the tooltips are enabled
+        /// Gets or sets the value indicating if the tooltips are enabled.
         /// </summary>
         public bool Enabled { get; set; } = true;
 
@@ -35,7 +35,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
         public string BackgroundColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the title font
+        /// Gets or sets the title font.
         /// </summary>
         public string TitleFontFamily { get; set; }
 
@@ -154,7 +154,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
         public string MultiKeyBackground { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating if, color boxes are shown in the tooltip.
+        /// Gets or sets the value indicating if color boxes are shown in the tooltip.
         /// </summary>
         public bool DisplayColors { get; set; } = true;
 
