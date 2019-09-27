@@ -201,6 +201,17 @@ The example covers a few static options, how to use a simple point-dataset and h
 }
 ```
 
+For running on client-side Blazor there is currently a bug on JSON.NET tracked by this [issue](https://github.com/JamesNK/Newtonsoft.Json/issues/2020)
+
+The known workaround is to include the following line on the parent component
+
+
+```csharp
+private ReferenceConverter ReferenceConverter = new ReferenceConverter(typeof(PROBLEMATIC_COMPONENT));
+```
+
+For more information please check our [known-issues](https://github.com/Joelius300/ChartJSBlazor/wiki/Known-issues)
+
 # Contributors
 * [Joelius300](https://github.com/Joelius300)
 * [SeppPenner](https://github.com/SeppPenner)
