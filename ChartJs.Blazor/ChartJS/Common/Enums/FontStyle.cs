@@ -1,33 +1,33 @@
 ﻿namespace ChartJs.Blazor.ChartJS.Common.Enums
 {
     /// <summary>
-    /// Specifies the font style of axes.
-    /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html </para>
+    /// Specifies the css font style of text.
+    /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/CSS/font-style </para>
     /// </summary>
     public sealed class FontStyle : StringEnum
     {
         /// <summary>
-        /// The normal font style.
+        /// Specifies a font that is classified as normal within a font-family.
         /// </summary>
         public static FontStyle Normal => new FontStyle("normal");
 
         /// <summary>
-        /// The italic font style.
+        /// Specifies a font that is classified as italic. If no italic version of the face is available, one classified as oblique is used instead. If neither is available, the style is artificially simulated.
         /// </summary>
         public static FontStyle Italic => new FontStyle("italic");
 
         /// <summary>
-        /// The oblique font style.
+        /// Specifies a font that is classified as oblique. If no oblique version of the face is available, one classified as italic is used instead. If neither is available, the style is artificially simulated.
         /// </summary>
         public static FontStyle Oblique => new FontStyle("oblique");
 
         /// <summary>
-        /// The initial font style.
+        /// Specifies a font with its font style set to its default value.
         /// </summary>
         public static FontStyle Initial => new FontStyle("initial");
 
         /// <summary>
-        /// The inherit font style.
+        /// Specifies a font that inherits the font style from its parent element.
         /// </summary>
         public static FontStyle Inherit => new FontStyle("inherit");
 
