@@ -19,14 +19,28 @@ Since it has now become apparent that the old repo is not maintained anymore, th
 ## Changelog
 
 ### Latest changes
-**0.10.2:**
-    
-* Update ReadMe
-* Clean and update .csproj file
-* Create nuget package
-* Update XML-docs handling
+**0.10.3:**
 
-The full changelog can be found [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/CHANGELOG.md).
+* Remove unnecessary highlight.js
+* Lots of XML-documentation improvements
+* Lots of bug-fixes
+* Make the canvas-id read-only
+* Rename classes to comply with the consistent naming conventions. From XXChartYY to XXYY.
+* Lots of general improvements (refactoring, remove redundancies, etc)
+* Implement [indexable options](https://www.chartjs.org/docs/latest/general/options.html#indexable-options)
+* Update to preview9
+* Rework Pie-Chart
+* Remove Doughnut-Chart
+* Rework Polar-Area-Chart
+
+The detailed changelog can be found [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/CHANGELOG.md).
+
+#### How to update (breaking changes):
+* Remove any assignment of the charts `CanvasId`. It will be handled automatically for you using a GUID string.
+* Use pie-chart-classes anywhere you used dougnut chart and either manually set the `CutoutPercentage` to 50 or pass in `true` for the `PieOptions` constructor. It will yield the exact same results unless you have made manual changes to the chart.js-defaults using your own js.
+* Many classes and properties have been removed, added, moved, renamed and more. You might have to add new using-directives and use the new class names. This is especially the case for the charts we've reworked (Pie (& Doughnut), Polar-Area, Line). Also a typo was fixed from `TimeTupel` to `TimeTuple`. The properties should all comply with the ones from chart.js written in PascalCase ([chart.js documentation](https://www.chartjs.org/docs/latest/)).  
+For more details take a look at the detailed changelog, the chart.js-docs and our samples.
+* **If you aren't referencing the js-interop-file dynamically using `_content`, you need to copy the new file manually from [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/ChartJs.Blazor/wwwroot/ChartJsInterop.js) (there were two bug fixes).**
 
 ## Please keep in mind that this is still a preview. Expect breaking changes during the next releases. We're reworking all the charts because most of them contain errors and inconsistencies.
 
@@ -73,12 +87,11 @@ or this code if you want the bundled version of `Chart.Js`, but without the loca
 ```
 
 Furthermore, you need to include the js-interop and the css-file which enables responsiveness.  
-Since those are static assets in the library, you should be able to reference them via your `_Host.cshtml`/`index.html`-file directly, without copying the files. However there a few catches.  
-First of all, it doesn't seem to work on server-side yet even though they've removed the mention in [the docs](https://docs.microsoft.com/de-de/aspnet/core/razor-pages/ui-class?view=aspnetcore-3.0&tabs=visual-studio). I'm not sure what the issue is but in case it doesn't work just manually grab them from [here](https://github.com/Joelius300/ChartJSBlazor/tree/master/ChartJs.Blazor/wwwroot) and reference them directly in your project.  
-Otherwise the code to reference them would be the following.
+Since those are static assets in the library, you should be able to reference them via your `_Host.cshtml`/`index.html`-file directly, without copying the files. You can do that using `_content` as seen below:
+
 ```html
-<script src="_content/ChartJs.Blazor/ChartJsInterop.js" type="text/javascript" language="javascript"></script>
-<link rel="stylesheet" href="_content/ChartJs.Blazor/ChartJsBlazor.css" />
+<script src="_content/ChartJs.Blazor.Fork/ChartJsInterop.js" type="text/javascript" language="javascript"></script>
+<link rel="stylesheet" href="_content/ChartJs.Blazor.Fork/ChartJsBlazor.css" />
 ```
 
 Now to creating the chart. Below is a simple example for a line-chart. Examples of the other chart types can be found in the [Wiki](https://github.com/Joelius300/ChartJSBlazor/wiki/Chart-types). You can find the examples also [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/WebCore/Pages/) (the examples are probably more up to date in case the below code doesn't work).
