@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Specifies the border alignment of a <see cref="PieChart"/> and a <see cref="PolarAreaChart"/>.
-    /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
+    /// <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment </para>
     /// </summary>
     public sealed class BorderAlign : StringEnum
     {
@@ -12,7 +12,7 @@
         public static BorderAlign Center => new BorderAlign("center");
 
         /// <summary>
-        /// When <see cref="BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
+        /// When <see cref="BorderAlign.Inner" /> is set, it is guaranteed that all the borders will not overlap.
         /// </summary>
         public static BorderAlign Inner => new BorderAlign("inner");
 

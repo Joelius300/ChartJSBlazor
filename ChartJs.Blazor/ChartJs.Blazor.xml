@@ -377,7 +377,7 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign">
             <summary>
             Specifies the border alignment of a <see cref="N:ChartJs.Blazor.ChartJS.PieChart"/> and a <see cref="N:ChartJs.Blazor.ChartJS.PolarAreaChart"/>.
-            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment</para>
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/doughnut.html#border-alignment </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Center">
@@ -387,7 +387,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner">
             <summary>
-            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner" /> is set, it is guaranteed that all the borders are not overlap.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.Inner" /> is set, it is guaranteed that all the borders will not overlap.
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderAlign.#ctor(System.String)">
@@ -399,22 +399,22 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle">
             <summary>
             Specifies the border cap style.
-            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap</para>
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Butt">
             <summary>
-            The butt border cap style.
+            The ends of lines are squared off at the endpoints.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Round">
             <summary>
-            The round border cap style.
+            The ends of lines are rounded.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.Square">
             <summary>
-            The square border cap style.
+            The ends of lines are squared off by adding a box with an equal width and half the height of the line's thickness.
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderCapStyle.#ctor(System.String)">
@@ -426,22 +426,22 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle">
             <summary>
             Specifies the border join style.
-            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin</para>
+            <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Bevel">
             <summary>
-            The bevel border join style.
+            Fills an additional triangular area between the common endpoint of connected segments, and the separate outside rectangular corners of each segment.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Round">
             <summary>
-            The round border join style.
+            Rounds off the corners of a shape by filling an additional sector of disc centered at the common endpoint of connected segments. The radius for these rounded corners is equal to the line width.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.Miter">
             <summary>
-            The miter border join style.
+            Connected segments are joined by extending their outside edges to connect at a single point, with the effect of filling an additional lozenge-shaped area.
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderJoinStyle.#ctor(System.String)">
@@ -509,7 +509,7 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode">
             <summary>
             Specifies the cubic interpolation mode.
-            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode</para>
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Default">
@@ -534,7 +534,7 @@
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle">
             <summary>
             Specifies the font style of axes.
-            <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html</para>
+            <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Normal">
@@ -654,56 +654,60 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle">
             <summary>
-            Specifies the point style.
-            <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles</para>
+            Specifies how a data-point on the chart will be styled.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles </para>
+            <para>Some samples showcasing the different styles can be found here https://www.chartjs.org/samples/latest/charts/line/point-styles.html </para>
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Circle">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Circle">
             <summary>
             The circle point style.
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Cross">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Cross">
             <summary>
             The cross point style.
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.CrossRot">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.CrossRot">
             <summary>
-            The crossRot point style.
+            The rotated (45°) cross point style.
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Dash">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Dash">
             <summary>
             The dash point style.
+            <para>Unlike <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Line"/>, this style only displayes a dash on the right side of the point.</para>
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Line">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Line">
             <summary>
             The line point style.
+            <para>Unlike <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Dash"/>, this style displayes a dash on both the right and the left side of the point.</para>
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Rect">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Rect">
             <summary>
-            The rect point style.
+            The rectangle point style.
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRounded">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRounded">
             <summary>
-            The rectRounded point style.
+            The rounded rectangle point style.
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRot">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.RectRot">
             <summary>
-            The rectRot point style.
+            The rotated (45°) rectangle point style.
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Star">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Star">
             <summary>
             The star point style.
+            <para>Same as <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Cross"/> and <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.CrossRot"/> overlapping.</para>
             </summary>
         </member>
-        <member name="F:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Triangle">
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.PointStyle.Triangle">
             <summary>
             The triangle point style.
             </summary>
@@ -716,22 +720,23 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.Position">
             <summary>
-            Represents a relative direction or position on a 2D canvas
+            Represents a relative direction or position on a 2D canvas.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ScaleBound">
             <summary>
-            As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/time.html#scale-bounds
+            Specifies the scale boundary strategy.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/time.html#scale-bounds </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ScaleBound.Data">
             <summary>
-            Makes sure data are fully visible, labels outside are removed
+            Makes sure data are fully visible, labels outside are removed.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.ScaleBound.Ticks">
             <summary>
-            Makes sure ticks are fully visible, data outside are truncated
+            Makes sure ticks are fully visible, data outside are truncated.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.SteppedLine">
@@ -991,7 +996,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontStyle">
             <summary>
-            Gets or sets the font style for a text.
+            Gets or sets the font style for the labels text.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Legends.LegendLabelConfiguration.FontColor">

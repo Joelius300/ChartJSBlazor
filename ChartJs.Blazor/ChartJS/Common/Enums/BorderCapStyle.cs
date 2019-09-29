@@ -2,22 +2,22 @@
 {
     /// <summary>
     /// Specifies the border cap style.
-    /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap</para>
+    /// <para>As per documentation here https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap </para>
     /// </summary>
     public sealed class BorderCapStyle : StringEnum
     {
         /// <summary>
-        /// The butt border cap style.
+        /// The ends of lines are squared off at the endpoints.
         /// </summary>
         public static BorderCapStyle Butt => new BorderCapStyle("butt");
 
         /// <summary>
-        /// The round border cap style.
+        /// The ends of lines are rounded.
         /// </summary>
         public static BorderCapStyle Round => new BorderCapStyle("round");
 
         /// <summary>
-        /// The square border cap style.
+        /// The ends of lines are squared off by adding a box with an equal width and half the height of the line's thickness.
         /// </summary>
         public static BorderCapStyle Square => new BorderCapStyle("square");
 

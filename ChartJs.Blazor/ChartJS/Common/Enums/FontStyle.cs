@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Specifies the font style of axes.
-    /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html</para>
+    /// <para>As per documentation here https://www.chartjs.org/docs/latest/axes/labelling.html </para>
     /// </summary>
     public sealed class FontStyle : StringEnum
     {

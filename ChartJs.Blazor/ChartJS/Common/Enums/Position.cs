@@ -1,7 +1,7 @@
 ﻿namespace ChartJs.Blazor.ChartJS.Common.Enums
 {
     /// <summary>
-    /// Represents a relative direction or position on a 2D canvas
+    /// Represents a relative direction or position on a 2D canvas.
     /// </summary>
     public sealed class Position : StringEnum
     {
