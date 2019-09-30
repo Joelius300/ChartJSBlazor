@@ -100,7 +100,11 @@ Since those are static assets in the library, you should be able to reference th
 
 Now to creating the chart. Below is a simple example for a line-chart. Examples of the other chart types can be found in the [Wiki](https://github.com/Joelius300/ChartJSBlazor/wiki/Chart-types). You can find the examples also [here](https://github.com/Joelius300/ChartJSBlazor/blob/master/WebCore/Pages/) (the examples are probably more up to date in case the below code doesn't work).
 
-The example covers a few static options, how to use a simple point-dataset and how to dynamically initialize and update the data and the chart.  
+The example covers a few static options, how to use a simple point-dataset and how to dynamically initialize and update the data and the chart.
+
+**Disclaimer:**
+Make sure to include the Blazor `_framework`-stuff before including the library stuff. Otherwise, you will face the error: [Uncaught reference error: "Blazor is not defined at ChartJsInterop.js:5"](https://github.com/Joelius300/ChartJSBlazor/issues/94).
+Checkout the [Wiki](https://github.com/Joelius300/ChartJSBlazor/wiki/Known-issues#uncaught-reference-error-blazor-is-not-defined-at-chartjsinteropjs5) as well. 
 
 ```csharp
 @page "/SimpleLineLinearExample"
