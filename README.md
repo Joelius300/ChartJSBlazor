@@ -54,8 +54,8 @@ Don't know what Blazor is? Read [here](https://dotnet.microsoft.com/apps/aspnet/
 
 The prerequisites are:
 
-1. [Visual Studio 2019 16.3.0 preview 3.0](https://visualstudio.microsoft.com/de/vs/preview/)
-2. [.Net core 3 preview9](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+1. [Visual Studio 2019 16.4.0 preview 1.0](https://visualstudio.microsoft.com/de/vs/preview/)
+2. [.Net core 3](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 
 ## Installation
