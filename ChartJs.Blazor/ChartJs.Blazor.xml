@@ -271,6 +271,11 @@
             The legend for this chart
             </summary>
         </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.BaseConfigOptions.Tooltips">
+            <summary>
+            Gets or sets the tooltip options for this chart.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.ConfigBase">
             <summary>
             Base class for chart-configs
@@ -568,27 +573,6 @@
             </summary>
             <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
-        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle">
-            <summary>
-            Represents the font style
-            </summary>
-            
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Normal">
-            <summary>
-            Font is normal
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Italic">
-            <summary>
-            Font is in italic
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.FontStyle.Oblique">
-            <summary>
-            Font is in oblique
-            </summary>
-        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.InteractionMode">
             <summary>
             As per documentation here https://www.chartjs.org/docs/latest/general/interactions/modes.html
@@ -834,18 +818,18 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition">
             <summary>
-            As per documentation here https://www.chartjs.org/docs/latest/configuration/tooltip.html#position-modes
+            Specifies where the tooltip will be displayed.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/tooltip.html#position-modes </para>
             </summary>
-            
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Average">
             <summary>
-            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Average" /> is set, the tooltips will be placed at the average position of the items displayed in the tooltip.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Average" /> is set, the tooltip will be placed at the average position of the items displayed in the tooltip.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Nearest">
             <summary>
-            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Nearest" /> is set, the tooltips will be placed at the position of the element closest to the event position.
+            When <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.TooltipPosition.Nearest" /> is set, the tooltip will be placed at the position of the element closest to the event position.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.GridLines">
@@ -1329,12 +1313,13 @@
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips">
             <summary>
-            Defines how tooltips are displayed
+            The tooltips-subconfig of the common options (applies to all charts).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/tooltip.html#tooltip-configuration </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Mode">
             <summary>
-            Gets or sets which elements appear in the tooltip. See <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.InteractionMode"/> for details.
+            Gets or sets which elements appear in the tooltip.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Properties.Tooltips.Intersect">
@@ -2051,11 +2036,6 @@
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineOptions.Hover">
             <summary>
             Hover options for hovering over an item
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineOptions.Tooltips">
-            <summary>
-            Tooltip options for this chart
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.LineChart.LineOptions.Scales">
