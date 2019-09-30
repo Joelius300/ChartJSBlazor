@@ -2,14 +2,14 @@
 
 namespace ChartJs.Blazor.ChartJS.Common.Properties
 {
-    // TODO: expand (https://www.chartjs.org/docs/latest/configuration/tooltip.html)
     /// <summary>
-    /// Defines how tooltips are displayed
+    /// The tooltips-subconfig of the common options (applies to all charts).
+    /// <para>As per documentation here https://www.chartjs.org/docs/latest/configuration/tooltip.html#tooltip-configuration </para>
     /// </summary>
     public class Tooltips
     {
         /// <summary>
-        /// Gets or sets which elements appear in the tooltip. See <see cref="InteractionMode"/> for details.
+        /// Gets or sets which elements appear in the tooltip.
         /// </summary>
         public InteractionMode Mode { get; set; }
 
@@ -26,7 +26,7 @@ namespace ChartJs.Blazor.ChartJS.Common.Properties
         /// <summary>
         /// Gets or sets the mode for positioning the tooltip.
         /// </summary>
-        public TooltipPosition Position { get; set; } = TooltipPosition.Average;
+        public TooltipPosition Position { get; set; }
 
         /// <summary>
         /// Gets or sets the background color of the tooltip.
