@@ -209,6 +209,17 @@ Checkout the [Wiki](https://github.com/Joelius300/ChartJSBlazor/wiki/Known-issue
 }
 ```
 
+For running on client-side Blazor there is currently a bug with JSON.NET tracked by this [issue](https://github.com/JamesNK/Newtonsoft.Json/issues/2020).
+The known workaround is to include the following line on the parent component:
+
+```csharp
+private ReferenceConverter ReferenceConverter = new ReferenceConverter(typeof(PROBLEMATIC_COMPONENT));
+```
+
+where `PROBLEMATIC_COMPONENT` is a placeholder for either `ChartJsBarChart`, `ChartJsBubbleChart`, `ChartJsLineChart`, `ChartJsPieChart`, `ChartJsPolarAreaChart`, , `ChartJsRadarChart` or `ChartJsScatterChart`.
+
+For more information please check our [known issues page](https://github.com/Joelius300/ChartJSBlazor/wiki/Known-issues) as well.
+
 # Contributors
 * [Joelius300](https://github.com/Joelius300)
 * [SeppPenner](https://github.com/SeppPenner)
