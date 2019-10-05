@@ -70,7 +70,7 @@
             Config for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
             </summary>
         </member>
-        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarConfig.#ctor(ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes)">
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarConfig.#ctor(ChartJs.Blazor.ChartJS.Common.Enums.ChartType)">
             <summary>
             Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarConfig"/> class.
             </summary>
@@ -216,7 +216,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Type">
             <summary>
-            Gets or sets the chart type. <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartTypes.Bar"/> in this case. This is needed for mixed datasets only.
+            Gets or sets the chart type. <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartType.Bar"/> in this case. This is needed for mixed datasets only.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.BorderSkipped">
@@ -551,6 +551,52 @@
             </summary>
             <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
+        <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped">
+            <summary>
+                This setting is used to avoid drawing the bar stroke at the base of the fill.
+                In general, this does not need to be changed except when creating chart types that derive from a bar chart.
+                Note: For negative bars in vertical chart, top and bottom are flipped. Same goes for left and right in horizontal
+                chart.
+                <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#borderskipped</para>
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.#ctor(System.String)">
+            <summary>
+                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped" /> class.
+            </summary>
+            <param name="stringValue">The <see cref="T:System.String" /> value to set.</param>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.#ctor(System.Boolean)">
+            <summary>
+                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped" /> class.
+            </summary>
+            <param name="boolValue">The <see cref="T:System.Boolean" /> value to set.</param>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Bottom">
+            <summary>
+                The bottom border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.False">
+            <summary>
+                The false border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Left">
+            <summary>
+                The left border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Right">
+            <summary>
+                The right border skipped style.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.BorderSkipped.Top">
+            <summary>
+                The top border skipped style.
+            </summary>
+        </member>
         <member name="T:ChartJs.Blazor.ChartJS.Common.Enums.ChartType">
             <summary>
             Defines the chart types.
@@ -612,7 +658,6 @@
             Specifies the cubic interpolation mode.
             <para>As per documentation here https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode </para>
             </summary>
-            <param name="stringValue">The <see cref="T:System.String"/> value to set.</param>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.Common.Enums.CubicInterpolationMode.Default">
             <summary>

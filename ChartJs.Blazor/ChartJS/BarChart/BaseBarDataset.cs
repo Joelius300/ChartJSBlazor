@@ -28,9 +28,9 @@ namespace ChartJs.Blazor.ChartJS.BarChart
         public BaseBarDataset() { }
 
         /// <summary>
-        /// Gets or sets the chart type. <see cref="ChartTypes.Bar"/> in this case. This is needed for mixed datasets only.
+        /// Gets or sets the chart type. <see cref="ChartType.Bar"/> in this case. This is needed for mixed datasets only.
         /// </summary>
-        public override ChartTypes Type => ChartTypes.Bar;
+        public override ChartType Type => ChartType.Bar;
 
         /// <summary>
         /// Gets or sets a value to avoid drawing the bar stroke at the base of the fill.
