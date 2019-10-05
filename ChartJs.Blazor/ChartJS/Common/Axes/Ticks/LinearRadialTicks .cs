@@ -1,7 +1,7 @@
 ﻿using ChartJs.Blazor.ChartJS.Common;
 using ChartJs.Blazor.Util;
 
-namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
+namespace ChartJs.Blazor.ChartJS.Common.Axes.Ticks
 {
     /// <summary>
     /// The ticks sub-config of the <see cref="LinearRadialAxis"/>.

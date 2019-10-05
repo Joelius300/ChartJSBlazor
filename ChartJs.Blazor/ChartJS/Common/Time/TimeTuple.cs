@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common.Time
 {
     /// <summary>
     /// Represents a point on a graph where the X-Value (<see cref="Time"></see>) is represented by a <see cref="Moment"></see>

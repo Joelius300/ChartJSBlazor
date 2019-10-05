@@ -1,5 +1,5 @@
 ﻿
-namespace ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks
+namespace ChartJs.Blazor.ChartJS.Common.Axes.Ticks
 {
     public class LogarithmicTicks : CartesianTicks
     {

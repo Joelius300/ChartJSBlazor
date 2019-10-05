@@ -1,7 +1,7 @@
 ﻿using ChartJs.Blazor.ChartJS.Common.Enums;
 using System.Collections.Generic;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common.Time
 {
     /// <summary>
     /// This is a helper class containing pre-made display formats to use in <see cref="TimeOptions.DisplayFormats"/> for certain locales.

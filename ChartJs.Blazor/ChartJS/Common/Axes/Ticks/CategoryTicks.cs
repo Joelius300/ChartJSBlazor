@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks
+namespace ChartJs.Blazor.ChartJS.Common.Axes.Ticks
 {
     public class CategoryTicks : CartesianTicks
     {

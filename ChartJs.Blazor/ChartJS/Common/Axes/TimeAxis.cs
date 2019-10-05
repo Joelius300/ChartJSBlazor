@@ -1,7 +1,8 @@
 ﻿using ChartJs.Blazor.ChartJS.Common.Enums;
-using ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks;
+using ChartJs.Blazor.ChartJS.Common.Axes.Ticks;
+using ChartJs.Blazor.ChartJS.Common.Time;
 
-namespace ChartJs.Blazor.ChartJS.LineChart.Axes
+namespace ChartJs.Blazor.ChartJS.Common.Axes
 {
     /// <summary>
     /// The time scale is used to display times and dates. 

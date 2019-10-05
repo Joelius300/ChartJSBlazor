@@ -1,7 +1,7 @@
 ﻿using ChartJs.Blazor.ChartJS.Common;
 using Newtonsoft.Json;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common.Time
 {
     internal class JsonMomentConverter : JsonWriteOnlyConverter<Moment>
     {

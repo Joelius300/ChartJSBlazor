@@ -1,5 +1,5 @@
 ﻿
-namespace ChartJs.Blazor.ChartJS.Common
+namespace ChartJs.Blazor.ChartJS.Common.Axes.Ticks
 {
     /// <summary>
     /// The major ticks sub-config of the tick-configuration (see <see cref="Ticks"/>).

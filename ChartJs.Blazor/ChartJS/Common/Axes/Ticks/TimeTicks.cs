@@ -1,6 +1,6 @@
 ﻿using ChartJs.Blazor.ChartJS.Common.Enums;
 
-namespace ChartJs.Blazor.ChartJS.LineChart.Axes.Ticks
+namespace ChartJs.Blazor.ChartJS.Common.Axes.Ticks
 {
     public class TimeTicks : CartesianTicks
     {

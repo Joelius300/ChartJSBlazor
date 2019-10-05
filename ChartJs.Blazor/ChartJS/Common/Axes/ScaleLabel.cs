@@ -1,6 +1,6 @@
 ﻿using ChartJs.Blazor.Util;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common.Axes
 {
     /// <summary>
     /// Defines options for how to display an axis title.

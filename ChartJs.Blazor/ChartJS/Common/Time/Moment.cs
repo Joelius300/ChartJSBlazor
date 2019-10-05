@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common.Time
 {
     /// <summary>
     /// Wrapper class for <see cref="DateTime"></see> for serialization purposes.

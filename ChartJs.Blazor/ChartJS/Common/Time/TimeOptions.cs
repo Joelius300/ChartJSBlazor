@@ -1,7 +1,7 @@
 ﻿using ChartJs.Blazor.ChartJS.Common.Enums;
 using System.Collections.Generic;
 
-namespace ChartJs.Blazor.ChartJS.LineChart
+namespace ChartJs.Blazor.ChartJS.Common.Time
 {
     /// <summary>
     /// As per documentation here https://www.chartjs.org/docs/latest/axes/cartesian/time.html#configuration-options

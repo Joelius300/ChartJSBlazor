@@ -1,6 +1,6 @@
-﻿using ChartJs.Blazor.ChartJS.Common;
+﻿using ChartJs.Blazor.ChartJS.Common.Axes.Ticks;
 
-namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
+namespace ChartJs.Blazor.ChartJS.Common.Axes
 {
     /// <summary>
     /// A linear radial axis.

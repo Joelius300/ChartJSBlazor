@@ -1,6 +1,6 @@
 ﻿using ChartJs.Blazor.Util;
 
-namespace ChartJs.Blazor.ChartJS.PolarAreaChart.Axis
+namespace ChartJs.Blazor.ChartJS.Common.Axes
 {
     /// <summary>
     /// The angle lines sub-config of the linear-radial-axis-configuration (see <see cref="LinearRadialAxis"/>).

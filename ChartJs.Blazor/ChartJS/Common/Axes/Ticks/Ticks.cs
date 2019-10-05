@@ -1,7 +1,7 @@
 ﻿using ChartJs.Blazor.Util;
 using ChartJs.Blazor.ChartJS.Common.Enums;
 
-namespace ChartJs.Blazor.ChartJS.Common
+namespace ChartJs.Blazor.ChartJS.Common.Axes.Ticks
 {
     /// <summary>
     /// The ticks-subconfig of the axis-configuration (see <see cref="Axis"/>).
