@@ -4,55 +4,56 @@
         <name>ChartJs.Blazor</name>
     </assembly>
     <members>
-        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis">
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis">
             <summary>
-            The bar axis for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
-            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#scale-configuration</para>
+            Extended version of <see cref="T:ChartJs.Blazor.ChartJS.Common.Axes.CategoryAxis"/> for use in a bar chart.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#scale-configuration </para>
             </summary>
         </member>
-        <member name="M:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.#ctor">
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.#ctor">
             <summary>
-            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis"/> class.
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis"/> class.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.BarPercentage">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.BarPercentage">
             <summary>
             Gets or sets the percentage (0-1) of the available width each bar should be within the category width.
             1.0 will take the whole category width and put the bars right next to each other.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.CategoryPercentage">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.CategoryPercentage">
             <summary>
             Gets or sets the percentage (0-1) of the available width each category should be within the sample width.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.BarThickness">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.BarThickness">
             <summary>
             Gets or sets the width of each bar in pixels.
-            If set to 'flex', it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
+            If set to <see cref="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex"/>, it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.MaxBarThickness">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.MaxBarThickness">
             <summary>
             Gets or sets the maximum bar thickness.
             Set this to ensure that bars are not sized thicker than this.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.MinBarLength">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.MinBarLength">
             <summary>
             Gets or sets the minimum bar length.
             Set this to ensure that bars have a minimum length in pixels.
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.OffsetGridLines">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.OffsetGridLines">
             <summary>
             Gets or sets a value indicating whether grid lines will be shifted to be between labels or not.
             If <c>true</c>, the bars for a particular data point fall between the grid lines.
             The grid line will move to the left by one half of the tick interval.
             If <c>false</c>, the grid line will go right down the middle of the bars.
+            <para>Changing this value will directly affect <see cref="P:ChartJs.Blazor.ChartJS.Common.GridLines.OffsetGridLines"/> of the property <see cref="P:ChartJs.Blazor.ChartJS.Common.Axes.CartesianAxis.GridLines"/> in this instance.</para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.Stacked">
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarCategoryAxis.Stacked">
             <summary>
             Gets or sets a value indicating whether the bar chart is stacked or not.
             Bar charts can be configured into stacked bar charts by changing the settings on the X and Y axes to enable stacking.
@@ -60,9 +61,175 @@
             <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#stacked-bar-chart </para>
             </summary>
         </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis.GridLines">
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis">
             <summary>
-            Gets or sets the grid lines.
+            Extended version of <see cref="T:ChartJs.Blazor.ChartJS.Common.Axes.LinearCartesianAxis"/> for use in a bar chart.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#scale-configuration </para>
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis"/> class.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.BarPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each bar should be within the category width.
+            1.0 will take the whole category width and put the bars right next to each other.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.CategoryPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each category should be within the sample width.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.BarThickness">
+            <summary>
+            Gets or sets the width of each bar in pixels.
+            If set to <see cref="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex"/>, it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.MaxBarThickness">
+            <summary>
+            Gets or sets the maximum bar thickness.
+            Set this to ensure that bars are not sized thicker than this.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.MinBarLength">
+            <summary>
+            Gets or sets the minimum bar length.
+            Set this to ensure that bars have a minimum length in pixels.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.OffsetGridLines">
+            <summary>
+            Gets or sets a value indicating whether grid lines will be shifted to be between labels or not.
+            If <c>true</c>, the bars for a particular data point fall between the grid lines.
+            The grid line will move to the left by one half of the tick interval.
+            If <c>false</c>, the grid line will go right down the middle of the bars.
+            <para>Changing this value will directly affect <see cref="P:ChartJs.Blazor.ChartJS.Common.GridLines.OffsetGridLines"/> of the property <see cref="P:ChartJs.Blazor.ChartJS.Common.Axes.CartesianAxis.GridLines"/> in this instance.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLinearCartesianAxis.Stacked">
+            <summary>
+            Gets or sets a value indicating whether the bar chart is stacked or not.
+            Bar charts can be configured into stacked bar charts by changing the settings on the X and Y axes to enable stacking.
+            Stacked bar charts can be used to show how one data series is made up of a number of smaller pieces.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#stacked-bar-chart </para>
+            </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis">
+            <summary>
+            Extended version of <see cref="T:ChartJs.Blazor.ChartJS.Common.Axes.LogarithmicAxis"/> for use in a bar chart.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#scale-configuration </para>
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis"/> class.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.BarPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each bar should be within the category width.
+            1.0 will take the whole category width and put the bars right next to each other.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.CategoryPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each category should be within the sample width.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.BarThickness">
+            <summary>
+            Gets or sets the width of each bar in pixels.
+            If set to <see cref="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex"/>, it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.MaxBarThickness">
+            <summary>
+            Gets or sets the maximum bar thickness.
+            Set this to ensure that bars are not sized thicker than this.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.MinBarLength">
+            <summary>
+            Gets or sets the minimum bar length.
+            Set this to ensure that bars have a minimum length in pixels.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.OffsetGridLines">
+            <summary>
+            Gets or sets a value indicating whether grid lines will be shifted to be between labels or not.
+            If <c>true</c>, the bars for a particular data point fall between the grid lines.
+            The grid line will move to the left by one half of the tick interval.
+            If <c>false</c>, the grid line will go right down the middle of the bars.
+            <para>Changing this value will directly affect <see cref="P:ChartJs.Blazor.ChartJS.Common.GridLines.OffsetGridLines"/> of the property <see cref="P:ChartJs.Blazor.ChartJS.Common.Axes.CartesianAxis.GridLines"/> in this instance.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarLogarithmicAxis.Stacked">
+            <summary>
+            Gets or sets a value indicating whether the bar chart is stacked or not.
+            Bar charts can be configured into stacked bar charts by changing the settings on the X and Y axes to enable stacking.
+            Stacked bar charts can be used to show how one data series is made up of a number of smaller pieces.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#stacked-bar-chart </para>
+            </summary>
+        </member>
+        <member name="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis">
+            <summary>
+            Extended version of <see cref="T:ChartJs.Blazor.ChartJS.Common.Axes.TimeAxis"/> for use in a bar chart.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#scale-configuration </para>
+            </summary>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis"/> class.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.BarPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each bar should be within the category width.
+            1.0 will take the whole category width and put the bars right next to each other.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.CategoryPercentage">
+            <summary>
+            Gets or sets the percentage (0-1) of the available width each category should be within the sample width.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.BarThickness">
+            <summary>
+            Gets or sets the width of each bar in pixels.
+            If set to <see cref="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex"/>, it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.MaxBarThickness">
+            <summary>
+            Gets or sets the maximum bar thickness.
+            Set this to ensure that bars are not sized thicker than this.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.MinBarLength">
+            <summary>
+            Gets or sets the minimum bar length.
+            Set this to ensure that bars have a minimum length in pixels.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.OffsetGridLines">
+            <summary>
+            Gets or sets a value indicating whether grid lines will be shifted to be between labels or not.
+            If <c>true</c>, the bars for a particular data point fall between the grid lines.
+            The grid line will move to the left by one half of the tick interval.
+            If <c>false</c>, the grid line will go right down the middle of the bars.
+            <para>Changing this value will directly affect <see cref="P:ChartJs.Blazor.ChartJS.Common.GridLines.OffsetGridLines"/> of the property <see cref="P:ChartJs.Blazor.ChartJS.Common.Axes.CartesianAxis.GridLines"/> in this instance.</para>
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.Axes.BarTimeAxis.Stacked">
+            <summary>
+            Gets or sets a value indicating whether the bar chart is stacked or not.
+            Bar charts can be configured into stacked bar charts by changing the settings on the X and Y axes to enable stacking.
+            Stacked bar charts can be used to show how one data series is made up of a number of smaller pieces.
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#stacked-bar-chart </para>
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarConfig">
@@ -154,47 +321,50 @@
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarScales.XAxes">
             <summary>
             Gets or sets the axes on the x coordinate.
+            <para>You can use any <see cref="T:ChartJs.Blazor.ChartJS.Common.Axes.CartesianAxis"/> but there are extended axes in the <see cref="N:ChartJs.Blazor.ChartJS.BarChart.Axes"/> namespace which contain additional properties to customize the bar chart axes.</para>        
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarScales.YAxes">
             <summary>
             Gets or sets the axes on the y coordinate.
+            <para>You can use any <see cref="T:ChartJs.Blazor.ChartJS.Common.Axes.CartesianAxis"/> but there are extended axes in the <see cref="N:ChartJs.Blazor.ChartJS.BarChart.Axes"/> namespace which contain additional properties to customize the bar chart axes.</para>
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness">
             <summary>
-            The bar thickness for a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.Axes.BarAxis"/>.
-            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#barthickness</para>
+            The bar thickness used to customize all bar axes (extended cartesian axes in <see cref="N:ChartJs.Blazor.ChartJS.BarChart.Axes"/>).
+            <para>As per documentation here https://www.chartjs.org/docs/latest/charts/bar.html#barthickness </para>
             </summary>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarThickness.#ctor(System.String)">
             <summary>
-                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness" /> class.
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness" /> class.
             </summary>
             <param name="stringValue">The <see cref="T:System.String" /> value to set.</param>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarThickness.#ctor(System.Double)">
             <summary>
-                Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness" /> class.
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness" /> class.
             </summary>
             <param name="doubleValue">The <see cref="T:System.Double" /> value to set.</param>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Absolute(System.Double)">
             <summary>
-            Gets a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness"/> from a <see cref="T:System.Double"/> value.
+            Gets a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness"/> from a <see cref="T:System.Double"/> value (in pixels).
             </summary>
-            <param name="thickness">The thickness to use.</param>
-            <returns>A <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness"/> from a <see cref="T:System.Double"/> value.</returns>
+            <param name="thickness">The thickness value in pixels.</param>
+            <returns>A <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness"/> from a <see cref="T:System.Double"/> value (in pixels).</returns>
         </member>
         <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarThickness.op_Implicit(System.Double)~ChartJs.Blazor.ChartJS.BarChart.BarThickness">
             <summary>
-            Converts the <see cref="T:System.Double"/> value to a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness"/> value.
+            Converts a <see cref="T:System.Double"/> value to a <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarThickness"/> value.
             </summary>
-            <param name="thickness">The thickness value to set.</param>
+            <param name="thickness">The thickness value in pixels.</param>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex">
             <summary>
-                The bottom border skipped style.
+            If set to <see cref="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex"/>, the base sample widths are calculated automatically 
+            based on the previous and following samples so that they take the full available widths without overlap.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1">

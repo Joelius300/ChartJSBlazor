@@ -1,7 +1,7 @@
 @page "/BarExample"
 @using ChartJs.Blazor.ChartJS.BarChart
 @using ChartJs.Blazor.ChartJS.BarChart.Axes
-@using ChartJs.Blazor.ChartJS.Common
+@using ChartJs.Blazor.ChartJS.Common.Axes
 @using ChartJs.Blazor.Charts
 @using ChartJs.Blazor.ChartJS.Common.Properties
 @using ChartJs.Blazor.ChartJS.Common.Wrappers
@@ -27,9 +27,9 @@
                 },
                 Scales = new BarScales
                 {
-                    YAxes = new List<BarAxis>
+                    XAxes = new List<CartesianAxis>
                     {
-                        new BarAxis
+                        new BarCategoryAxis
                         {
                             BarPercentage = 0.5,
                             BarThickness = BarThickness.Flex
