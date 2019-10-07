@@ -13,13 +13,13 @@ namespace ChartJs.Blazor.ChartJS.BarChart
         /// </summary>
         public BarData()
         {
-            Datasets = new HashSet<IMixableDataset<object>>();
+            Datasets = new List<IMixableDataset<object>>();
         }
 
         /// <summary>
         /// The data sets displayed in this chart.
         /// </summary>
-        public HashSet<IMixableDataset<object>> Datasets { get; }
+        public List<IMixableDataset<object>> Datasets { get; }
 
         /// <summary>
         /// Gets or sets the labels.
