@@ -254,7 +254,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarData.Datasets">
             <summary>
-            The data sets displayed in this chart.
+            The datasets displayed in this chart.
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarData.Labels">
@@ -266,8 +266,53 @@
             <summary>
             A dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
             </summary>
-            <para>As per documentation here: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties.</para>
+            <para>As per documentation here: http://www.chartjs.org/docs/latest/charts/bar.html#dataset-properties. </para>
             <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1"/> class.
+            </summary>
+            <param name="data">The data to initialize the dataset with.</param>
+        </member>
+        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1"/> class.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.Type">
+            <summary>
+            Gets the chart type (<see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartType.Bar"/> in this case). This is needed for mixed datasets only.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.BorderSkipped">
+            <summary>
+            Gets or sets a value to avoid drawing the bar stroke at the base of the fill.
+            In general, this does not need to be changed except when creating chart types that derive from a bar chart.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.Label">
+            <summary>
+            Gets or sets the label for the dataset which appears in the legend and tooltips.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.XAxisId">
+            <summary>
+            Gets or sets the ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.YAxisId">
+            <summary>
+            Gets or sets the ID of the y axis to plot this dataset on. If not specified, this defaults to the ID of the first found y axis.
+            </summary>
+        </member>
+        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.Stack">
+            <summary>
+            Gets or sets the id of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
+            <para>
+            Specific for stacked bar charts.
+            </para>
+            </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.BackgroundColor">
             <summary>
@@ -288,13 +333,13 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.HoverBackgroundColor">
             <summary>
-            Gets or sets the fill colour of the bars when hovered.
+            Gets or sets the fill color of the bars when hovered.
             <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarDataset`1.HoverBorderColor">
             <summary>
-            Gets or sets the stroke colour of the bars when hovered.
+            Gets or sets the stroke color of the bars when hovered.
             <para>See <see cref="T:ChartJs.Blazor.Util.ColorUtil"/> for working with colors.</para>
             </summary>
         </member>
@@ -310,7 +355,7 @@
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BarChart.BarOptions.Scales">
             <summary>
-            Gets or sets the scales fore the <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
+            Gets or sets the scales for the <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
             </summary>
         </member>
         <member name="T:ChartJs.Blazor.ChartJS.BarChart.BarScales">
@@ -365,57 +410,6 @@
             <summary>
             If set to <see cref="P:ChartJs.Blazor.ChartJS.BarChart.BarThickness.Flex"/>, the base sample widths are calculated automatically 
             based on the previous and following samples so that they take the full available widths without overlap.
-            </summary>
-        </member>
-        <member name="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1">
-            <summary>
-            A base dataset for a <see cref="T:ChartJs.Blazor.Charts.ChartJsBarChart"/>.
-            </summary>
-            <typeparam name="TData">Defines the type of data in this dataset. Use Wrappers from <see cref="N:ChartJs.Blazor.ChartJS.Common.Wrappers"/> for value types.</typeparam>
-        </member>
-        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
-            <summary>
-            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1"/> class.
-            </summary>
-            <param name="data">The data to initialize the chart with.</param>
-        </member>
-        <member name="M:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.#ctor">
-            <summary>
-            Creates a new instance of the <see cref="T:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1"/> class.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Type">
-            <summary>
-            Gets or sets the chart type. <see cref="P:ChartJs.Blazor.ChartJS.Common.Enums.ChartType.Bar"/> in this case. This is needed for mixed datasets only.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.BorderSkipped">
-            <summary>
-            Gets or sets a value to avoid drawing the bar stroke at the base of the fill.
-            In general, this does not need to be changed except when creating chart types that derive from a bar chart.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Label">
-            <summary>
-            Gets or sets the label for the dataset which appears in the legend and tooltips.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.XAxisId">
-            <summary>
-            Gets or sets the ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.YAxisId">
-            <summary>
-            Gets or sets the ID of the y axis to plot this dataset on. If not specified, this defaults to the ID of the first found y axis.
-            </summary>
-        </member>
-        <member name="P:ChartJs.Blazor.ChartJS.BarChart.BaseBarDataset`1.Stack">
-            <summary>
-            Gets or sets the id of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
-            <para>
-            Specific for stacked bar charts.
-            </para>
             </summary>
         </member>
         <member name="P:ChartJs.Blazor.ChartJS.BubbleChart.BubbleDataPoint.r">

@@ -63,7 +63,7 @@ namespace ChartJs.Blazor.ChartJS.BarChart
         /// Specific for stacked bar charts.
         /// </para>
         /// </summary>
-        public string Stack { get; set; } = Guid.NewGuid().ToString();
+        public string Stack { get; set; }
 
         /// <summary>
         /// Gets or sets the fill color of the bars in the dataset.
