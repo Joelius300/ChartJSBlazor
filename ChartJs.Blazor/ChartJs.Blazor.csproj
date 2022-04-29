@@ -8,8 +8,8 @@
     <VersionPrefix>0.3</VersionPrefix>
     <Title>ChartJs.Blazor</Title>
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
-    <Company>Joel Liechti</Company>
-    <Authors>Joel Liechti</Authors>
+    <Company>Joel L.</Company>
+    <Authors>Joel L.</Authors>
     <Description>CharJs charts for Blazor.
 Supports both client- and server-side projects. See the (soon to be existing) samples.
 
@@ -36,7 +36,7 @@ Disclaimer: This is the last published Version. Further development will take pl
     <ApplicationIcon />
     <StartupObject />
     <PackageId>ChartJs.Blazor.Fork</PackageId>
-    <Copyright>Joel Liechti © 2019</Copyright>
+    <Copyright>Joel L. © 2019</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
